@@ -142,8 +142,7 @@ struct ContentView: View {
                         }
                         .frame(maxWidth: .infinity)
                         TextField("WiFi MAC Address", text: $modifiedWifiMacAddress)
-                        TextField("LAN MAC Address", text: $modifiedLanMacAddress)
-                        Button("BIOS Information") {
+                        Button("Save New BIOS Information") {
                             saveFile()
                         }
                         .frame(maxWidth: .infinity, alignment: .center)
