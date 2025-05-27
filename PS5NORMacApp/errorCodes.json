@@ -1,164 +1,2727 @@
-{
-  "80801001": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801002": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801003": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801004": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801005": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801006": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801007": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801008": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801009": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "8080100A": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "8080100B": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "8080100C": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "8080100D": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "8080100E": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "8080100F": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801010": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801011": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801012": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801013": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801014": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801015": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801016": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801017": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801018": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801019": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "8080101A": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "8080101B": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "8080101C": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "8080101D": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "8080101E": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "8080101F": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80801160": "Bank 1,2,6,7",
-  "80801161": "Bank 1,3,6,7",
-  "80801162": "Bank 2,3,6,7",
-  "80801163": "Bank 1,2,3,6,7",
-  "80801164": "Bank 3,6,7",
-  "80801165": "Bank 1,3,6,7",
-  "80801166": "Bank 2,3,6,7",
-  "80801167": "Bank 1,2,3,6,7",
-  "80801168": "Bank 4,6,7",
-  "80801169": "Bank 1,4,6,7",
-  "8080116A": "Bank 2,4,6,7",
-  "8080116B": "Bank 1,2,4,6,7",
-  "8080116C": "Bank 3,4,6,7",
-  "8080116D": "Bank 1,3,4,6,7",
-  "8080116E": "Bank 2,3,4,6,7",
-  "8080116F": "Bank 1,2,3,4,6,7",
-  "80801170": "Bank 5,6,7",
-  "80801171": "Bank 1,5,6,7",
-  "80801172": "Bank 2,5,6,7",
-  "80801173": "Bank 1,2,5,6,7",
-  "80801174": "Bank 3,5,6,7",
-  "80801175": "Bank 1,3,5,6,7",
-  "80801176": "Bank 2,3,5,6,7",
-  "80801177": "Bank 1,2,3,5,6,7",
-  "80801178": "Bank 4,5,6,7",
-  "80801179": "Bank 1,4,5,6,7",
-  "8080117A": "Bank 2,4,5,6,7",
-  "8080117B": "Bank 1,2,4,5,6,7",
-  "8080117C": "Bank 3,4,5,6,7",
-  "8080117D": "Bank 1,3,4,5,6,7",
-  "8080117E": "Bank 2,3,4,5,6,7",
-  "8080117F": "Bank 1,2,3,4,5,6,7",
-  "80801280": "RAM GDDR6 Bank ECC Error (Single Beep, 2-second Blue Light)",
-  "80801281": "RAM GDDR6 Bank ECC Error (Single Beep, 2-second Blue Light)",
-  "80801282": "RAM GDDR6 Bank ECC Error (Single Beep, 2-second Blue Light)",
-  "80801283": "RAM GDDR6 Bank ECC Error (Single Beep, 2-second Blue Light)",
-  "80801284": "RAM GDDR6 Bank ECC Error (Single Beep, 2-second Blue Light)",
-  "80801285": "RAM GDDR6 Bank ECC Error (Single Beep, 2-second Blue Light)",
-  "80801286": "RAM GDDR6 Bank ECC Error (Single Beep, 2-second Blue Light)",
-  "80801287": "RAM GDDR6 Bank ECC Error (Single Beep, 2-second Blue Light)",
-  "808023C0": "RAM Failure (2 Beeps, 1 Second Blue Light)",
-  "80803101": "RAM GDDR6 Bank ECC Single Bit Error",
-  "80803102": "RAM GDDR6 Bank ECC Single Bit Error",
-  "80803103": "RAM GDDR6 Bank ECC Single Bit Error",
-  "80803104": "RAM GDDR6 Bank ECC Single Bit Error",
-  "80803105": "RAM GDDR6 Bank ECC Single Bit Error",
-  "80803106": "RAM GDDR6 Bank ECC Single Bit Error",
-  "80803107": "RAM GDDR6 Bank ECC Single Bit Error",
-  "80804000": "PS5 Kernel Panic (Shutdown)",
-  "8080F400": "Known Unknown \u2014 8080F400 (Power or Short) - Report Findings",
-  "8080F410": "Known Unknown \u2014 8080F410 (Power or Short) - Report Findings",
-  "80831000": "Known Unknown \u2014 80831000 - Report Findings",
-  "80840800": "Known Unknown \u2014 80840800 (Power or Short) - Report Findings",
-  "80860001": "Kernel Panic (Shutdown)",
-  "80880001": "Unknown Error",
-  "80880003": "Kernel Panic",
-  "808A0001": "Kernel Panic",
-  "808A0003": "Kernel Panic",
-  "808A0006": "Kernel Panic (Shutdown)",
-  "808A0008": "Kernel Panic",
-  "808A000B": "Kernel Panic",
-  "808A000C": "Kernel Panic",
-  "808B0000": "Kernel Panic (Shutdown)",
-  "808B0001": "Kernel Panic (Shutdown)",
-  "808C0002": "Kernel Panic (Shutdown)",
-  "808D0000": "Kernel Panic (Shutdown)",
-  "808E0000": "Kernel Panic (Shutdown)",
-  "808F0000": "Kernel Panic (Shutdown)",
-  "808F0001": "Kernel Panic (Shutdown)",
-  "808F0002": "Kernel Panic (Shutdown)",
-  "808F0003": "Kernel Panic (Shutdown)",
-  "808F0004": "Kernel Panic (Shutdown)",
-  "808F0005": "Kernel Panic (Shutdown)",
-  "808F0006": "Kernel Panic (Shutdown)",
-  "808F0007": "Kernel Panic (Shutdown)",
-  "808F0008": "Kernel Panic (Shutdown)",
-  "808F0009": "Kernel Panic (Shutdown)",
-  "808F000A": "Kernel Panic (Shutdown)",
-  "808F000B": "Kernel Panic (Shutdown)",
-  "808F000C": "Kernel Panic (Shutdown)",
-  "808F000D": "Kernel Panic (Shutdown)",
-  "808F000E": "Kernel Panic (Shutdown)",
-  "808F000F": "Kernel Panic (Shutdown)",
-  "808F0010": "Kernel Panic (Shutdown)",
-  "808F0011": "Kernel Panic (Shutdown)",
-  "808F0012": "Kernel Panic (Shutdown)",
-  "808F0013": "Kernel Panic (Shutdown)",
-  "808F0014": "Kernel Panic (Shutdown)",
-  "808F0015": "Kernel Panic (Shutdown)",
-  "808F0016": "Kernel Panic (Shutdown)",
-  "808F0017": "Kernel Panic (Shutdown)",
-  "808F0018": "Kernel Panic (Shutdown)",
-  "808F0019": "Kernel Panic (Shutdown)",
-  "808F001A": "Kernel Panic (Shutdown)",
-  "808F001B": "Kernel Panic (Shutdown)",
-  "808F001C": "Kernel Panic (Shutdown)",
-  "808F001D": "Kernel Panic (Shutdown)",
-  "808F001E": "Kernel Panic (Shutdown)",
-  "808F001F": "Kernel Panic (Shutdown)",
-  "808F0020": "Kernel Panic (Shutdown)",
-  "808F0021": "Kernel Panic (Shutdown)",
-  "808F0022": "Kernel Panic (Shutdown)",
-  "808F0023": "Kernel Panic (Shutdown)",
-  "808F0024": "Kernel Panic (Shutdown)",
-  "808F0025": "Kernel Panic (Shutdown)",
-  "808F0026": "Kernel Panic (Shutdown)",
-  "808F0027": "Kernel Panic (Shutdown)",
-  "808F0028": "Kernel Panic (Shutdown)",
-  "808F0029": "Kernel Panic (Shutdown)",
-  "808F002A": "Kernel Panic (Shutdown)",
-  "808F002B": "Kernel Panic (Shutdown)",
-  "808F002C": "Kernel Panic (Shutdown)",
-  "808F002D": "Kernel Panic (Shutdown)",
-  "808F002E": "Kernel Panic (Shutdown)",
-  "808F002F": "Kernel Panic (Shutdown)",
-  "808F0030": "Kernel Panic (Shutdown)",
-  "808F0031": "Kernel Panic (Shutdown)",
-  "808F0032": "Kernel Panic (Shutdown)",
-  "808F0033": "Kernel Panic (Shutdown)",
-  "808F0034": "Kernel Panic (Shutdown)",
-  "808F0035": "Kernel Panic (Shutdown)",
-  "808F0036": "Kernel Panic (Shutdown)",
-  "808F0037": "Kernel Panic (Shutdown)",
-  "808F0038": "Kernel Panic (Shutdown)",
-  "808F0039": "Kernel Panic (Shutdown)",
-  "808F003A": "Kernel Panic (Shutdown)",
-  "808F003B": "Kernel Panic (Shutdown)",
-  "808F003C": "Kernel Panic (Shutdown)",
-  "808F003D": "Kernel Panic (Shutdown)",
-  "808F003E": "Kernel Panic (Shutdown)",
-  "808F003F": "Kernel Panic (Shutdown)"
-}
+[
+    {
+      "code": "FFFFFFFF",
+      "description": "No Errors",
+      "solution": null
+    },
+    {
+      "code": "00100E3C",
+      "description": "Unknown error 00100E3C — cause not yet identified.",
+      "solution": null
+    },
+    {
+      "code": "0015442C",
+      "description": "Unknown error 0015442C — cause not yet identified.",
+      "solution": null
+    },
+    {
+      "code": "015E4E8B",
+      "description": "Unknown error 015E4E8B — cause not yet identified.",
+      "solution": null
+    },
+    {
+      "code": "80000001",
+      "description": "Accelerated Processing Unit (APU) Overheat or Initialization Error — thermal issue or failed startup sequence.",
+      "solution": "Check for APU overheating (ensure proper thermal paste and cooling). Verify APU initialization sequence."
+    },
+    {
+      "code": "80000008",
+      "description": "Unknown error (APU)",
+      "solution": null
+    },
+    {
+      "code": "80000009",
+      "description": "Unexpected Power Loss or Shutdown Failure",
+      "solution": "Inspect power delivery components for faults."
+    },
+    {
+      "code": "8000000C",
+      "description": "Unknown error (Power failure or short circuit) — inspect power delivery and components.",
+      "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts."
+    },
+    {
+      "code": "80050000",
+      "description": "Accelerated Processing Unit (APU) Voltage Regulator Module (VRM) (2 Phases) Power failure, Inspect Infineon XDPE14286A 16 Phase PWM Controller, Inspect mosfets Accelerated Processing Unit (APU) side for short (Caps Usually Short) - Single Beep, 1 Second Blue Light, 8.6mA draw power on.",
+      "solution": "Inspect Infineon XDPE14286A 16 Phase PWM Controller and MOSFETs on APU side for shorts. Check capacitors."
+    },
+    {
+      "code": "80050020",
+      "description": "Unknown error (Power failure or short circuit) — inspect power delivery and components.",
+      "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts."
+    },
+    {
+      "code": "80050040",
+      "description": "Unknown error (Power failure or short circuit) — inspect power delivery and components.",
+      "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts."
+    },
+    {
+      "code": "80060000",
+      "description": "Accelerated Processing Unit (APU) Voltage Regulator Module (VRM) (6 Phases) Power failure, Inspect Infineon XDPE14286A 16 Phase PWM Controller",
+      "solution": "Inspect Infineon XDPE14286A 16 Phase PWM Controller for faults."
+    },
+    {
+      "code": "80060020",
+      "description": "Unknown error (Power failure or short circuit) — inspect power delivery and components.",
+      "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts."
+    },
+    {
+      "code": "80060040",
+      "description": "Unknown error (VRM)",
+      "solution": null
+    },
+    {
+      "code": "80068000",
+      "description": "Unknown error (VRM)",
+      "solution": null
+    },
+    {
+      "code": "80097CE4",
+      "description": "Unknown error (APU)",
+      "solution": null
+    },
+    {
+      "code": "80800000",
+      "description": "Kernel Panic Shutdown",
+      "solution": "Investigate kernel-related issues, check system logs, and verify firmware integrity."
+    },
+    {
+      "code": "80800014",
+      "description": "Trusted Platform Module (TPM) 2.0 chip or Power failure — TPM issue; may relate to security chip or firmware.",
+      "solution": "Verify TPM chip functionality and firmware integrity. Update or reflash firmware if possible. Replace TPM chip if faulty."
+    },
+    {
+      "code": "8080001A",
+      "description": "Non-Native Trusted Platform Module (TPM) 2.0 Chip (After Accelerated Processing Unit (APU) Initialization) — TPM issue; may relate to security chip or firmware.",
+      "solution": "Verify TPM chip functionality and firmware integrity. Update or reflash firmware if possible. Replace TPM chip if faulty."
+    },
+    {
+      "code": "8080001F",
+      "description": "Unknown error (Power failure or short circuit) — inspect power delivery and components.",
+      "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts."
+    },
+    {
+      "code": "80800022",
+      "description": "No/Bad Communication Between Accelerated Processing Unit (APU) to RAM - Accelerated Processing Unit (APU) Initializationialized - Replace All/Some RAM (Inspect Accelerated Processing Unit (APU) for Die Cracks) — RAM not detected or failed; try replacing it.",
+      "solution": "Replace affected RAM modules. Inspect APU for die cracks. Test with known-good RAM."
+    },
+    {
+      "code": "80800023",
+      "description": "Unknown error (Power failure or short circuit) — inspect power delivery and components.",
+      "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts."
+    },
+    {
+      "code": "80800024",
+      "description": "Unknown error (APU)",
+      "solution": null
+    },
+    {
+      "code": "80801028",
+      "description": "Unknown error (SSD)",
+      "solution": "Check SSD connections and test with a known-good SSD."
+    },
+    {
+      "code": "80801101",
+      "description": "GDDR6 RAM (Bank 1) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM bank 1. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801102",
+      "description": "GDDR6 RAM (Bank 2) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM bank 2. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801103",
+      "description": "GDDR6 RAM (Bank 1,2) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1 and 2. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801104",
+      "description": "GDDR6 RAM (Bank 3) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM bank 3. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801105",
+      "description": "GDDR6 RAM (Bank 1,3) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1 and 3. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801106",
+      "description": "GDDR6 RAM (Bank 2,3) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2 and 3. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801107",
+      "description": "GDDR6 RAM (Bank 1,2,3) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, and 3. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801108",
+      "description": "GDDR6 RAM (Bank 4) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM bank 4. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801109",
+      "description": "GDDR6 RAM (Bank 1,4) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1 and 4. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080110A",
+      "description": "GDDR6 RAM (Bank 2,4) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2 and 4. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080110B",
+      "description": "GDDR6 RAM (Bank 1,2,4) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, and 4. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080110C",
+      "description": "GDDR6 RAM (Bank 3,4) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3 and 4. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080110D",
+      "description": "GDDR6 RAM (Bank 1,3,4) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, and 4. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080110E",
+      "description": "GDDR6 RAM (Bank 2,3,4) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, and 4. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080110F",
+      "description": "GDDR6 RAM (Bank 1,2,3,4) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, and 4. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801110",
+      "description": "GDDR6 RAM (Bank 5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM bank 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801111",
+      "description": "GDDR6 RAM (Bank 1,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1 and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801112",
+      "description": "GDDR6 RAM (Bank 2,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2 and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801113",
+      "description": "GDDR6 RAM (Bank 1,2,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801114",
+      "description": "GDDR6 RAM (Bank 3,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3 and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801115",
+      "description": "GDDR6 RAM (Bank 1,3,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801116",
+      "description": "GDDR6 RAM (Bank 2,3,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801117",
+      "description": "GDDR6 RAM (Bank 1,2,3,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801118",
+      "description": "GDDR6 RAM (Bank 4,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 4 and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801119",
+      "description": "GDDR6 RAM (Bank 1,4,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 4, and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080111A",
+      "description": "GDDR6 RAM (Bank 2,4,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 4, and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080111B",
+      "description": "GDDR6 RAM (Bank 1,2,4,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 4, and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080111C",
+      "description": "GDDR6 RAM (Bank 3,4,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 4, and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080111D",
+      "description": "GDDR6 RAM (Bank 1,3,4,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 4, and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080111E",
+      "description": "GDDR6 RAM (Bank 2,3,4,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 4, and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080111F",
+      "description": "GDDR6 RAM (Bank 1,2,3,4,5) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 4, and 5. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801120",
+      "description": "GDDR6 RAM (Bank 6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM bank 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801121",
+      "description": "GDDR6 RAM (Bank 1,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1 and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801122",
+      "description": "GDDR6 RAM (Bank 2,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2 and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801123",
+      "description": "GDDR6 RAM (Bank 1,2,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801124",
+      "description": "GDDR6 RAM (Bank 3,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3 and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801125",
+      "description": "GDDR6 RAM (Bank 1,3,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801126",
+      "description": "GDDR6 RAM (Bank 2,3,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801127",
+      "description": "GDDR6 RAM (Bank 1,2,3,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801128",
+      "description": "GDDR6 RAM (Bank 4,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 4 and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801129",
+      "description": "GDDR6 RAM (Bank 1,4,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 4, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080112A",
+      "description": "GDDR6 RAM (Bank 2,4,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 4, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080112B",
+      "description": "GDDR6 RAM (Bank 1,2,4,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 4, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080112C",
+      "description": "GDDR6 RAM (Bank 3,4,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 4, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080112D",
+      "description": "GDDR6 RAM (Bank 1,3,4,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 4, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080112E",
+      "description": "GDDR6 RAM (Bank 2,3,4,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 4, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080112F",
+      "description": "GDDR6 RAM (Bank 1,2,3,4,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 4, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801130",
+      "description": "GDDR6 RAM (Bank 5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 5 and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801131",
+      "description": "GDDR6 RAM (Bank 1,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801132",
+      "description": "GDDR6 RAM (Bank 2,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801133",
+      "description": "GDDR6 RAM (Bank 1,2,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801134",
+      "description": "GDDR6 RAM (Bank 3,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801135",
+      "description": "GDDR6 RAM (Bank 1,3,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801136",
+      "description": "GDDR6 RAM (Bank 2,3,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801137",
+      "description": "GDDR6 RAM (Bank 1,2,3,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801138",
+      "description": "GDDR6 RAM (Bank 4,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 4, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801139",
+      "description": "GDDR6 RAM (Bank 1,4,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 4, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080113A",
+      "description": "GDDR6 RAM (Bank 2,4,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 4, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080113B",
+      "description": "GDDR6 RAM (Bank 1,2,4,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 4, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080113C",
+      "description": "GDDR6 RAM (Bank 3,4,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 4, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080113D",
+      "description": "GDDR6 RAM (Bank 1,3,4,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 4, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080113E",
+      "description": "GDDR6 RAM (Bank 2,3,4,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 4, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080113F",
+      "description": "GDDR6 RAM (Bank 1,2,3,4,5,6) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 4, 5, and 6. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801140",
+      "description": "GDDR6 RAM (Bank 7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM bank 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801141",
+      "description": "GDDR6 RAM (Bank 1,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1 and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801142",
+      "description": "GDDR6 RAM (Bank 2,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2 and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801143",
+      "description": "GDDR6 RAM (Bank 1,2,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801144",
+      "description": "GDDR6 RAM (Bank 3,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3 and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801145",
+      "description": "GDDR6 RAM (Bank 1,3,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801146",
+      "description": "GDDR6 RAM (Bank 2,3,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801147",
+      "description": "GDDR6 RAM (Bank 1,2,3,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801148",
+      "description": "GDDR6 RAM (Bank 4,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 4 and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801149",
+      "description": "GDDR6 RAM (Bank 1,4,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 4, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080114A",
+      "description": "GDDR6 RAM (Bank 2,4,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 4, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080114B",
+      "description": "GDDR6 RAM (Bank 1,2,4,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 4, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080114C",
+      "description": "GDDR6 RAM (Bank 3,4,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 4, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080114D",
+      "description": "GDDR6 RAM (Bank 1,3,4,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 4, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080114E",
+      "description": "GDDR6 RAM (Bank 2,3,4,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 4, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080114F",
+      "description": "GDDR6 RAM (Bank 1,2,3,4,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 4, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801150",
+      "description": "GDDR6 RAM (Bank 5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 5 and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801151",
+      "description": "GDDR6 RAM (Bank 1,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801152",
+      "description": "GDDR6 RAM (Bank 2,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801153",
+      "description": "GDDR6 RAM (Bank 1,2,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801154",
+      "description": "GDDR6 RAM (Bank 3,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801155",
+      "description": "GDDR6 RAM (Bank 1,3,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801156",
+      "description": "GDDR6 RAM (Bank 2,3,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801157",
+      "description": "GDDR6 RAM (Bank 1,2,3,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801158",
+      "description": "GDDR6 RAM (Bank 4,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 4, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801159",
+      "description": "GDDR6 RAM (Bank 1,4,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 4, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080115A",
+      "description": "GDDR6 RAM (Bank 2,4,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 4, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080115B",
+      "description": "GDDR6 RAM (Bank 1,2,4,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 4, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080115C",
+      "description": "GDDR6 RAM (Bank 3,4,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 4, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080115D",
+      "description": "GDDR6 RAM (Bank 1,3,4,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 4, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080115E",
+      "description": "GDDR6 RAM (Bank 2,3,4,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 4, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080115F",
+      "description": "GDDR6 RAM (Bank 1,2,3,4,5,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 4, 5, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801160",
+      "description": "GDDR6 RAM (Bank 6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 6 and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801161",
+      "description": "GDDR6 RAM (Bank 1,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801162",
+      "description": "GDDR6 RAM (Bank 2,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801163",
+      "description": "GDDR6 RAM (Bank 1,2,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801164",
+      "description": "GDDR6 RAM (Bank 3,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801165",
+      "description": "GDDR6 RAM (Bank 1,3,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801166",
+      "description": "GDDR6 RAM (Bank 2,3,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801167",
+      "description": "GDDR6 RAM (Bank 1,2,3,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801168",
+      "description": "GDDR6 RAM (Bank 4,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 4, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801169",
+      "description": "GDDR6 RAM (Bank 1,4,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 4, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080116A",
+      "description": "GDDR6 RAM (Bank 2,4,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 4, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080116B",
+      "description": "GDDR6 RAM (Bank 1,2,4,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 4, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080116C",
+      "description": "GDDR6 RAM (Bank 3,4,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 4, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080116D",
+      "description": "GDDR6 RAM (Bank 1,3,4,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 4, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080116E",
+      "description": "GDDR6 RAM (Bank 2,3,4,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 4, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080116F",
+      "description": "GDDR6 RAM (Bank 1,2,3,4,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 4, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801170",
+      "description": "GDDR6 RAM (Bank 5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801171",
+      "description": "GDDR6 RAM (Bank 1,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801172",
+      "description": "GDDR6 RAM (Bank 2,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801173",
+      "description": "GDDR6 RAM (Bank 1,2,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801174",
+      "description": "GDDR6 RAM (Bank 3,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801175",
+      "description": "GDDR6 RAM (Bank 1,3,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801176",
+      "description": "GDDR6 RAM (Bank 2,3,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801177",
+      "description": "GDDR6 RAM (Bank 1,2,3,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801178",
+      "description": "GDDR6 RAM (Bank 4,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 4, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801179",
+      "description": "GDDR6 RAM (Bank 1,4,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 4, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080117A",
+      "description": "GDDR6 RAM (Bank 2,4,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 4, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080117B",
+      "description": "GDDR6 RAM (Bank 1,2,4,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 4, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080117C",
+      "description": "GDDR6 RAM (Bank 3,4,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 4, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080117D",
+      "description": "GDDR6 RAM (Bank 1,3,4,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 4, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080117E",
+      "description": "GDDR6 RAM (Bank 2,3,4,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 4, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080117F",
+      "description": "GDDR6 RAM (Bank 1,2,3,4,5,6,7) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 4, 5, 6, and 7. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801180",
+      "description": "GDDR6 RAM (Bank 8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM bank 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801181",
+      "description": "GDDR6 RAM (Bank 1,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1 and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801182",
+      "description": "GDDR6 RAM (Bank 2,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2 and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801183",
+      "description": "GDDR6 RAM (Bank 1,2,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801184",
+      "description": "GDDR6 RAM (Bank 3,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3 and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801185",
+      "description": "GDDR6 RAM (Bank 1,3,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801186",
+      "description": "GDDR6 RAM (Bank 2,3,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801187",
+      "description": "GDDR6 RAM (Bank 1,2,3,8) — system beeps once, blue light for 1 second, then shuts off. — RAMirement system.",
+      "solution": "Replace RAM banks 1, 2, 3, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801188",
+      "description": "GDDR6 RAM (Bank 4,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 4 and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801189",
+      "description": "GDDR6 RAM (Bank 1,4,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 4, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080118A",
+      "description": "GDDR6 RAM (Bank 2,4,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 4, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080118B",
+      "description": "GDDR6 RAM (Bank 1,2,4,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 4, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080118C",
+      "description": "GDDR6 RAM (Bank 3,4,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 4, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080118D",
+      "description": "GDDR6 RAM (Bank 1,3,4,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 4, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080118E",
+      "description": "GDDR6 RAM (Bank 2,3,4,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 4, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080118F",
+      "description": "GDDR6 RAM (Bank 1,2,3,4,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 4, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801190",
+      "description": "GDDR6 RAM (Bank 5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 5 and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801191",
+      "description": "GDDR6 RAM (Bank 1,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801192",
+      "description": "GDDR6 RAM (Bank 2,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801193",
+      "description": "GDDR6 RAM (Bank 1,2,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801194",
+      "description": "GDDR6 RAM (Bank 3,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801195",
+      "description": "GDDR6 RAM (Bank 1,3,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801196",
+      "description": "GDDR6 RAM (Bank 2,3,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801197",
+      "description": "GDDR6 RAM (Bank 1,2,3,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801198",
+      "description": "GDDR6 RAM (Bank 4,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 4, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "80801199",
+      "description": "GDDR6 RAM (Bank 1,4,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 4, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080119A",
+      "description": "GDDR6 RAM (Bank 2,4,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 4, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080119B",
+      "description": "GDDR6 RAM (Bank 1,2,4,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 4, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080119C",
+      "description": "GDDR6 RAM (Bank 3,4,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 4, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080119D",
+      "description": "GDDR6 RAM (Bank 1,3,4,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 4, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080119E",
+      "description": "GDDR6 RAM (Bank 2,3,4,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 4, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "8080119F",
+      "description": "GDDR6 RAM (Bank 1,2,3,4,5,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 4, 5, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011A0",
+      "description": "GDDR6 RAM (Bank 6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 6 and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011A1",
+      "description": "GDDR6 RAM (Bank 1,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011A2",
+      "description": "GDDR6 RAM (Bank 2,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011A3",
+      "description": "GDDR6 RAM (Bank 1,2,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011A4",
+      "description": "GDDR6 RAM (Bank 3,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011A5",
+      "description": "GDDR6 RAM (Bank 1,3,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011A6",
+      "description": "GDDR6 RAM (Bank 2,3,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011A7",
+      "description": "GDDR6 RAM (Bank 1,2,3,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011A8",
+      "description": "GDDR6 RAM (Bank 4,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 4, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011A9",
+      "description": "GDDR6 RAM (Bank 1,4,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 4, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011AA",
+      "description": "GDDR6 RAM (Bank 2,4,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 4, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011AB",
+      "description": "GDDR6 RAM (Bank 1,2,4,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 4, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011AC",
+      "description": "GDDR6 RAM (Bank 3,4,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 4, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011AD",
+      "description": "GDDR6 RAM (Bank 1,3,4,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 4, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011AE",
+      "description": "GDDR6 RAM (Bank 2,3,4,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 4, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011AF",
+      "description": "GDDR6 RAM (Bank 1,2,3,4,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 4, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011B0",
+      "description": "GDDR6 RAM (Bank 5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 5, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011B1",
+      "description": "GDDR6 RAM (Bank 1,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 5, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011B2",
+      "description": "GDDR6 RAM (Bank 2,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 5, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011B3",
+      "description": "GDDR6 RAM (Bank 1,2,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 5, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011B4",
+      "description": "GDDR6 RAM (Bank 3,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 3, 5, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011B5",
+      "description": "GDDR6 RAM (Bank 1,3,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 3, 5, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011B6",
+      "description": "GDDR6 RAM (Bank 2,3,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 2, 3, 5, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011B7",
+      "description": "GDDR6 RAM (Bank 1,2,3,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 2, 3, 5, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011B8",
+      "description": "GDDR6 RAM (Bank 4,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 4, 5, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+      "code": "808011B9",
+      "description": "GDDR6 RAM (Bank 1,4,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+      "solution": "Replace RAM banks 1, 4, 5, 6, and 8. Inspect APU for die cracks."
+    },
+    {
+        "code": "808011BA",
+        "description": "GDDR6 RAM (Bank 2,4,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 4, 5, 6, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011BB",
+            "description": "GDDR6 RAM (Bank 1,2,4,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 4, 5, 6, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011BC",
+            "description": "GDDR6 RAM (Bank 3,4,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 3, 4, 5, 6, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011BD",
+            "description": "GDDR6 RAM (Bank 1,3,4,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 3, 4, 5, 6, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011BE",
+            "description": "GDDR6 RAM (Bank 2,3,4,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 3, 4, 5, 6, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011BF",
+            "description": "GDDR6 RAM (Bank 1,2,3,4,5,6,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 3, 4, 5, 6, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011C0",
+            "description": "GDDR6 RAM (Bank 7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 7 and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011C1",
+            "description": "GDDR6 RAM (Bank 1,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011C2",
+            "description": "GDDR6 RAM (Bank 2,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011C3",
+            "description": "GDDR6 RAM (Bank 1,2,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011C4",
+            "description": "GDDR6 RAM (Bank 3,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 3, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011C5",
+            "description": "GDDR6 RAM (Bank 1,3,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 3, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011C6",
+            "description": "GDDR6 RAM (Bank 2,3,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 3, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011C7",
+            "description": "GDDR6 RAM (Bank 1,2,3,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 3, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011C8",
+            "description": "GDDR6 RAM (Bank 4,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 4, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011C9",
+            "description": "GDDR6 RAM (Bank 1,4,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 4, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011CA",
+            "description": "GDDR6 RAM (Bank 2,4,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 4, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011CB",
+            "description": "GDDR6 RAM (Bank 1,2,4,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 4, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011CC",
+            "description": "GDDR6 RAM (Bank 3,4,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 3, 4, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011CD",
+            "description": "GDDR6 RAM (Bank 1,3,4,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 3, 4, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011CE",
+            "description": "GDDR6 RAM (Bank 2,3,4,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 3, 4, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011CF",
+            "description": "GDDR6 RAM (Bank 1,2,3,4,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 3, 4, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011D0",
+            "description": "GDDR6 RAM (Bank 5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011D1",
+            "description": "GDDR6 RAM (Bank 1,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011D2",
+            "description": "GDDR6 RAM (Bank 2,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011D3",
+            "description": "GDDR6 RAM (Bank 1,2,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011D4",
+            "description": "GDDR6 RAM (Bank 3,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 3, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011D5",
+            "description": "GDDR6 RAM (Bank 1,3,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 3, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011D6",
+            "description": "GDDR6 RAM (Bank 2,3,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 3, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011D7",
+            "description": "GDDR6 RAM (Bank 1,2,3,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 3, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011D8",
+            "description": "GDDR6 RAM (Bank 4,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 4, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011D9",
+            "description": "GDDR6 RAM (Bank 1,4,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 4, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011DA",
+            "description": "GDDR6 RAM (Bank 2,4,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 4, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011DB",
+            "description": "GDDR6 RAM (Bank 1,2,4,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 4, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011DC",
+            "description": "GDDR6 RAM (Bank 3,4,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 3, 4, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011DD",
+            "description": "GDDR6 RAM (Bank 1,3,4,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 3, 4, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011DE",
+            "description": "GDDR6 RAM (Bank 2,3,4,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 3, 4, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011DF",
+            "description": "GDDR6 RAM (Bank 1,2,3,4,5,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 3, 4, 5, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011E0",
+            "description": "GDDR6 RAM (Bank 6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011E1",
+            "description": "GDDR6 RAM (Bank 1,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011E2",
+            "description": "GDDR6 RAM (Bank 2,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011E3",
+            "description": "GDDR6 RAM (Bank 1,2,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011E4",
+            "description": "GDDR6 RAM (Bank 3,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 3, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011E5",
+            "description": "GDDR6 RAM (Bank 1,3,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 3, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011E6",
+            "description": "GDDR6 RAM (Bank 2,3,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 3, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011E7",
+            "description": "GDDR6 RAM (Bank 1,2,3,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 3, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011E8",
+            "description": "GDDR6 RAM (Bank 4,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 4, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011E9",
+            "description": "GDDR6 RAM (Bank 1,4,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 4, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011EA",
+            "description": "GDDR6 RAM (Bank 2,4,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 4, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011EB",
+            "description": "GDDR6 RAM (Bank 1,2,4,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 4, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011EC",
+            "description": "GDDR6 RAM (Bank 3,4,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 3, 4, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011ED",
+            "description": "GDDR6 RAM (Bank 1,3,4,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 3, 4, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011EE",
+            "description": "GDDR6 RAM (Bank 2,3,4,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 3, 4, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011EF",
+            "description": "GDDR6 RAM (Bank 1,2,3,4,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 3, 4, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011F0",
+            "description": "GDDR6 RAM (Bank 5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011F1",
+            "description": "GDDR6 RAM (Bank 1,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011F2",
+            "description": "GDDR6 RAM (Bank 2,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011F3",
+            "description": "GDDR6 RAM (Bank 1,2,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011F4",
+            "description": "GDDR6 RAM (Bank 3,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 3, 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011F5",
+            "description": "GDDR6 RAM (Bank 1,3,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 3, 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011F6",
+            "description": "GDDR6 RAM (Bank 2,3,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 3, 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011F7",
+            "description": "GDDR6 RAM (Bank 1,2,3,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 3, 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011F8",
+            "description": "GDDR6 RAM (Bank 4,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 4, 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011F9",
+            "description": "GDDR6 RAM (Bank 1,4,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 4, 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011FA",
+            "description": "GDDR6 RAM (Bank 2,4,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 4, 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011FB",
+            "description": "GDDR6 RAM (Bank 1,2,4,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 4, 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011FC",
+            "description": "GDDR6 RAM (Bank 3,4,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 3, 4, 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011FD",
+            "description": "GDDR6 RAM (Bank 1,3,4,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 3, 4, 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011FE",
+            "description": "GDDR6 RAM (Bank 2,3,4,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. — RAM bank failure.",
+            "solution": "Replace RAM banks 2, 3, 4, 5, 6, 7, and 8. Inspect APU for die cracks."
+          },
+          {
+            "code": "808011FF",
+            "description": "GDDR6 RAM (Bank 1,2,3,4,5,6,7,8) — system beeps once, blue light for 1 second, then shuts off. - Possibly bad MEMCORE — RAM bank failure.",
+            "solution": "Replace RAM banks 1, 2, 3, 4, 5, 6, 7, and 8. Inspect APU for die cracks. Check MEMCORE for faults."
+          },
+          {
+            "code": "80801501",
+            "description": "Unknown error 80801501 — cause not yet identified.",
+            "solution": null
+          },
+          {
+            "code": "80801510",
+            "description": "Unknown error (SSD)",
+            "solution": "Check SSD connections and test with a known-good SSD."
+          },
+          {
+            "code": "80801520",
+            "description": "Unknown error (Kernel)",
+            "solution": "Investigate kernel-related issues, check system logs, and verify firmware integrity."
+          },
+          {
+            "code": "80801580",
+            "description": "Unknown error (Power failure or short circuit) — inspect power delivery and components.",
+            "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts."
+          },
+          {
+            "code": "80801608",
+            "description": "Unknown error (Kernel)",
+            "solution": "Investigate kernel-related issues, check system logs, and verify firmware integrity."
+          },
+          {
+            "code": "80801620",
+            "description": "Known Unknown 80801620 - Possible RAM Related",
+            "solution": "Replace affected RAM modules. Inspect APU for die cracks. Test with known-good RAM."
+          },
+          {
+            "code": "80801630",
+            "description": "Known Unknown 80801630 - Possible RAM Related",
+            "solution": "Replace affected RAM modules. Inspect APU for die cracks. Test with known-good RAM."
+          },
+          {
+            "code": "80801690",
+            "description": "Known Unknown 80801690 - Possible RAM Related",
+            "solution": "Replace affected RAM modules. Inspect APU for die cracks. Test with known-good RAM."
+          },
+          {
+            "code": "808016B0",
+            "description": "Known Unknown 808016B0 - Possible RAM Related",
+            "solution": "Replace affected RAM modules. Inspect APU for die cracks. Test with known-good RAM."
+          },
+          {
+            "code": "808016F0",
+            "description": "Known Unknown 808016F0 - Possible RAM Related",
+            "solution": "Replace affected RAM modules. Inspect APU for die cracks. Test with known-good RAM."
+          },
+          {
+            "code": "80801680",
+            "description": "Accelerated Processing Unit (APU) / GDDR6 - Bad Contact (User Submitted - Unverified)",
+            "solution": "Inspect APU and GDDR6 connections for poor contact. Reseat components and test."
+          },
+          {
+            "code": "80801F12",
+            "description": "Unknown error (Kernel)",
+            "solution": "Investigate kernel-related issues, check system logs, and verify firmware integrity."
+          },
+          {
+            "code": "80802001",
+            "description": "solid-state drive (SSD) controller (coprocessor) <to Accelerated Processing Unit (APU) data — check SSD for faults or disconnection.",
+            "solution": "Check SSD connections and test with a known-good SSD. Inspect APU data lines."
+          },
+          {
+            "code": "80802081",
+            "description": "solid-state drive (SSD) Controller (Co-Processor) <to Accelerated Processing Unit (APU) Data Line Error — check SSD for faults or disconnection.",
+            "solution": "Check SSD connections and test with a known-good SSD. Inspect APU data lines."
+          },
+          {
+            "code": "80802220",
+            "description": "Unknown error (Power failure or short circuit) — inspect power delivery and components.",
+            "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts."
+          },
+          {
+            "code": "80802442",
+            "description": "Unknown error (SSD)",
+            "solution": "Check SSD connections and test with a known-good SSD."
+          },
+          {
+            "code": "80802471",
+            "description": "Unknown error (SSD)",
+            "solution": "Check SSD connections and test with a known-good SSD."
+          },
+          {
+            "code": "80802660",
+            "description": "Unknown error (SSD)",
+            "solution": "Check SSD connections and test with a known-good SSD."
+          },
+          {
+            "code": "80802669",
+            "description": "Unknown error (SSD)",
+            "solution": "Check SSD connections and test with a known-good SSD."
+          },
+          {
+            "code": "80810001",
+            "description": "General Power failure (Peripheral, GDDR6, Accelerated Processing Unit (APU), Data Line Short)",
+            "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts. Check peripherals, GDDR6, and APU."
+          },
+          {
+            "code": "8081001A",
+            "description": "Unknown error (General Power failure)",
+            "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts."
+          },
+          {
+            "code": "80830000",
+            "description": "Shutdown or Freeze After SAM_IPL Loaded - GDDR6 Data Line Issue (Replace)",
+            "solution": "Replace affected GDDR6 RAM modules. Inspect APU for die cracks."
+          },
+          {
+            "code": "80830018",
+            "description": "Unknown error (Power)",
+            "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts."
+          },
+          {
+            "code": "80830019",
+            "description": "Unknown error 80830019 — cause not yet identified.",
+            "solution": null
+          },
+          {
+            "code": "808300F0",
+            "description": "Secure Loader Error",
+            "solution": "Verify firmware integrity. Update or reflash firmware if possible."
+          },
+          {
+            "code": "808300F1",
+            "description": "Unknown error (SSD)",
+            "solution": "Check SSD connections and test with a known-good SSD."
+          },
+          {
+            "code": "80870003",
+            "description": "Post Secure Loader Error - Inspect fuse F7001 - (No beep, no light)",
+            "solution": "Inspect fuse F7001 for faults. Verify firmware integrity."
+          },
+          {
+            "code": "80870004",
+            "description": "Unknown error 80870004 - Possible Secure Loader Related — cause not yet identified.",
+            "solution": "Verify firmware integrity. Update or reflash firmware if possible."
+          },
+          {
+            "code": "80871001",
+            "description": "DDR4 Error (Power failure or Short Circuit)",
+            "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts. Test DDR4 modules."
+          },
+          {
+            "code": "80871054",
+            "description": "solid-state drive (SSD) Banks IO Error Between solid-state drive (SSD) Controller — check SSD for faults or disconnection.",
+            "solution": "Check SSD connections and test with a known-good SSD."
+          },
+          {
+            "code": "80871055",
+            "description": "solid-state drive (SSD) Banks IO Error Between solid-state drive (SSD) Controller — check SSD for faults or disconnection.",
+            "solution": "Check SSD connections and test with a known-good SSD."
+          },
+          {
+            "code": "80871062",
+            "description": "solid-state drive (SSD) Controller <to Syscon (Bridge) Data Line Error — check SSD for faults or disconnection.",
+            "solution": "Check SSD connections and test with a known-good SSD. Inspect Syscon bridge."
+          },
+          {
+            "code": "808710FF",
+            "description": "Unknown error (MISO MOSI)",
+            "solution": "Inspect SPI communication lines (MISO/MOSI) for faults."
+          },
+          {
+            "code": "80891001",
+            "description": "solid-state drive (SSD) Controller or DDR4 Error (Power failure or Short Circuit) — check SSD for faults or disconnection.",
+            "solution": "Check SSD connections and test with a known-good SSD. Inspect DDR4 modules and power delivery components."
+          },
+          {
+            "code": "80892003",
+            "description": "solid-state drive (SSD) Controller or DDR4 Error (Power failure or Short Circuit) — check SSD for faults or disconnection.",
+            "solution": "Check SSD connections and test with a known-good SSD. Inspect DDR4 modules and power delivery components."
+          },
+          {
+            "code": "80894003",
+            "description": "solid-state drive (SSD) Controller or DDR4 Error (Power failure or Short Circuit) - Missing 2.5v on DA9081 — check SSD for faults or disconnection.",
+            "solution": "Check SSD connections and test with a known-good SSD. Inspect DDR4 modules and DA9081 for 2.5V output."
+          },
+          {
+            "code": "8089400F",
+            "description": "solid-state drive (SSD) Controller or DDR4 Error (Power failure or Short Circuit) — check SSD for faults or disconnection.",
+            "solution": "Check SSD connections and test with a known-good SSD. Inspect DDR4 modules and power delivery components."
+          },
+          {
+            "code": "808940AE",
+            "description": "NOR Modification Error.",
+            "solution": "Verify NOR flash integrity. Regenerate or reflash NOR with appropriate tools."
+          },
+          {
+            "code": "808B0000",
+            "description": "Unknown error (Power failure or short circuit) — inspect power delivery and components.",
+            "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts."
+          },
+          {
+            "code": "808B0027",
+            "description": "Power Short 5V Line (F7002) - Single Beep, No LED.",
+            "solution": "Inspect fuse F7002 for short circuit. Check 5V power line components."
+          },
+          {
+            "code": "808B0098",
+            "description": "DDR4 Error (Communication Issue)",
+            "solution": "Test DDR4 modules. Inspect APU and memory controller for communication faults."
+          },
+          {
+            "code": "808B00FF",
+            "description": "Unknown error (Power)",
+            "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts."
+          },
+          {
+            "code": "808C2092",
+            "description": "Possibly Accelerated Processing Unit (APU) I2C lines damaged or disconnected. Inspect Accelerated Processing Unit (APU) for die cracks.",
+            "solution": "Inspect APU I2C lines for damage or disconnection. Check APU for die cracks."
+          },
+          {
+            "code": "808C3090",
+            "description": "Power failure - PWM or Unspecific",
+            "solution": "Inspect PWM controller and power delivery components for faults."
+          },
+          {
+            "code": "808C3790",
+            "description": "Power failure - PWM or Unspecific",
+            "solution": "Inspect PWM controller and power delivery components for faults."
+          },
+          {
+            "code": "808C3F90",
+            "description": "Power failure - PWM or Unspecific",
+            "solution": "Inspect PWM controller and power delivery components for faults."
+          },
+          {
+            "code": "808C4E90",
+            "description": "Unknown error (Power failure or short circuit) — inspect power delivery and components.",
+            "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts."
+          },
+          {
+            "code": "808C4F90",
+            "description": "Power failure - PWM or Unspecific",
+            "solution": "Inspect PWM controller and power delivery components for faults."
+          },
+          {
+            "code": "808D0000",
+            "description": "Unknown error (User Submitted Inspect for Overheating, 3 second BLOD or at times very quick white light)",
+            "solution": "Check for overheating issues. Ensure proper cooling and thermal paste application."
+          },
+          {
+            "code": "808D0002",
+            "description": "Issue with daughter board (LED Board) Inspect Flex and Daughter Board Repair or Replace - Three Beeps, White Light, Immediate Shutdown.",
+            "solution": "Inspect flex cable and daughter board (LED board). Repair or replace faulty components."
+          },
+          {
+            "code": "808E0005",
+            "description": "Unknown error (TPM)",
+            "solution": "Verify TPM chip functionality and firmware integrity. Update or reflash firmware if possible."
+          },
+          {
+            "code": "808E0006",
+            "description": "Unknown error (TPM)",
+            "solution": "Verify TPM chip functionality and firmware integrity. Update or reflash firmware if possible."
+          },
+          {
+            "code": "808E0109",
+            "description": "Unknown error (TPM)",
+            "solution": "Verify TPM chip functionality and firmware integrity. Update or reflash firmware if possible."
+          },
+          {
+            "code": "808E829A",
+            "description": "Unknown error (TPM)",
+            "solution": "Verify TPM chip functionality and firmware integrity. Update or reflash firmware if possible."
+          },
+          {
+            "code": "808F0002",
+            "description": "Trusted Platform Module (TPM) 2.0 chip or Power failure — TPM issue; may relate to security chip or firmware.",
+            "solution": "Verify TPM chip functionality and firmware integrity. Update or reflash firmware if possible. Replace TPM chip if faulty."
+          },
+          {
+            "code": "808F0003",
+            "description": "Trusted Platform Module (TPM) 2.0 chip or Power failure — TPM issue; may relate to security chip or firmware.",
+            "solution": "Verify TPM chip functionality and firmware integrity. Update or reflash firmware if possible. Replace TPM chip if faulty."
+          },
+          {
+            "code": "80900100",
+            "description": "Unknown error (Console Crashes at PS5 Logo Displayed in 480p, Attempting to power on again results in storage repair and repeats unknown repair yet)",
+            "solution": "Check SSD for faults. Verify firmware integrity and attempt storage repair."
+          },
+          {
+            "code": "80910002",
+            "description": "Unknown error (SSD)",
+            "solution": "Check SSD connections and test with a known-good SSD."
+          },
+          {
+            "code": "80910200",
+            "description": "solid-state drive (SSD) Controller or DDR4 Error (Power failure or Short Circuit) - Possible DA9081 1.2v Side: Accelerated Processing Unit (APU) — check SSD for faults or disconnection.",
+            "solution": "Check SSD connections and test with a known-good SSD. Inspect DDR4 modules and DA9081 for 1.2V output. Check APU."
+          },
+          {
+            "code": "80910800",
+            "description": "solid-state drive (SSD) Controller or DDR4 Error (Power failure or Short Circuit) - Possible DA9081 1.2v Side: Fan — check SSD for faults or disconnection.",
+            "solution": "Check SSD connections and test with a known-good SSD. Inspect DDR4 modules and DA9081 for 1.2V output. Check fan operation."
+          },
+          {
+            "code": "80910A00",
+            "description": "Unknown error (Power failure or Short Circuit)",
+            "solution": "Inspect power delivery components, including fuses, MOSFETs, and capacitors for shorts."
+          },
+          {
+            "code": "80912000",
+            "description": "Unknown error 80912000 - Possible DA9081 2.5v — cause not yet identified.",
+            "solution": "Inspect DA9081 for 2.5V output. Check power delivery components."
+          },
+          {
+            "code": "80918000",
+            "description": "Unknown error 80918000 - Possible DA9081 0.8v — cause not yet identified.",
+            "solution": "Inspect DA9081 for 0.8V output. Check power delivery components."
+          },
+          {
+            "code": "80C00114",
+            "description": "Unknown error (APU)",
+            "solution": null
+          },
+          {
+            "code": "80C0012D",
+            "description": "Unknown error (Data)",
+            "solution": null
+          },
+          {
+            "code": "80C00134",
+            "description": "solid-state drive (SSD) Banks Error — check SSD for faults or disconnection.",
+            "solution": "Check SSD connections and test with a known-good SSD."
+          },
+          {
+            "code": "80C00136",
+            "description": "WI-FI or BT Problem or Power failure - (Inspect WI-FI/Bluetooth Module code thrown when module removed), Inspect Fuse F7002 - Powers off after 2 seconds",
+            "solution": "Inspect WI-FI/Bluetooth module and fuse F7002. Check power delivery components."
+          },
+          {
+            "code": "80C00140",
+            "description": "Accelerated Processing Unit (APU) Halt (No Response) - Forced Power Off Via Power Button",
+            "solution": "Inspect APU for faults. Check power delivery and cooling systems."
+          },
+          {
+            "code": "80D002F5",
+            "description": "Unknown error 80D002F5 - Possible South Bridge Issue — cause not yet identified.",
+            "solution": "Inspect South Bridge for faults."
+          },
+          {
+            "code": "80D004F5",
+            "description": "Unknown error 80D004F5 - Possible South Bridge Issue — cause not yet identified.",
+            "solution": "Inspect South Bridge for faults."
+          },
+          {
+            "code": "80D00402",
+            "description": "solid-state drive (SSD) Banks Error — check SSD for faults or disconnection.",
+            "solution": "Check SSD connections and test with a known-good SSD."
+          },
+          {
+            "code": "86000005",
+            "description": "NOR Corrupt - Regenerate with tool and try again!",
+            "solution": "Regenerate or reflash NOR flash using appropriate tools."
+          },
+          {
+            "code": "86000006",
+            "description": "NOR Corrupt - Regenerate with tool and try again!",
+            "solution": "Regenerate or reflash NOR flash using appropriate tools."
+          },
+          {
+            "code": "B0012404",
+            "description": "HDMI Port - (User Submitted: Inspect HDMI Port, Port was damaged)",
+            "solution": "Inspect HDMI port for physical damage. Repair or replace if faulty."
+          },
+          {
+            "code": "B0082108",
+            "description": "Unknown error (Chip or Data)",
+            "solution": null
+          },
+          {
+            "code": "B0085108",
+            "description": "Unknown error (Chip or Data)",
+            "solution": null
+          },
+          {
+            "code": "B0088108",
+            "description": "Unknown error (Chip or Data)",
+            "solution": null
+          },
+          {
+            "code": "B0FFFFFF",
+            "description": "Unknown error B0FFFFFF — cause not yet identified.",
+            "solution": null
+          },
+          {
+            "code": "C0010303",
+            "description": "Unknown error (APU)",
+            "solution": null
+          },
+          {
+            "code": "C0020103",
+            "description": "Accelerated Processing Unit (APU) Not Responding - Trying Initialization or Reboot - 1",
+            "solution": "Inspect APU for faults. Check power delivery and cooling systems."
+          },
+          {
+            "code": "C0020203",
+            "description": "Accelerated Processing Unit (APU) Not Responding - Trying Initialization or Reboot - 2",
+            "solution": "Inspect APU for faults. Check power delivery and cooling systems."
+          },
+          {
+            "code": "C0020303",
+            "description": "Accelerated Processing Unit (APU) Not Responding - Trying Initialization or Reboot - 3 - (User Submitted: System wont start Blue Light Flashes), Inspect Fuses F3501, F7501",
+            "solution": "Inspect fuses F3501 and F7501. Check APU, power delivery, and cooling systems."
+          },
+          {
+            "code": "C00C0002",
+            "description": "Voltage Regulator Module (VRM) Controller Failure, Inspect Mosfet (6414A) Located Side-A, Below Sony Interactive Entertainment Inc. Inspect Infineon XDPE14286A 16 Phase PWM Controller - Located Side-A, Right of fuse 7001 — system beeps once, blue light for 1 second, then shuts off.",
+            "solution": "Inspect Mosfet (6414A) and Infineon XDPE14286A PWM Controller. Check for shorts or faults."
+          },
+          {
+            "code": "C00C0303",
+            "description": "Unknown error (VRM)",
+            "solution": "Inspect VRM components for faults."
+          },
+          {
+            "code": "C00C8000",
+            "description": "Unknown error C00C8000 — cause not yet identified.",
+            "solution": null
+          },
+          {
+            "code": "C0160203",
+            "description": "Unknown error (Storage Controller)",
+            "solution": "Check SSD and storage controller for faults."
+          },
+          {
+            "code": "C0160303",
+            "description": "Unknown error (Storage Controller)",
+            "solution": "Check SSD and storage controller for faults."
+          },
+          {
+            "code": "C0810002",
+            "description": "HDMI IC Problem or Power failure",
+            "solution": "Inspect HDMI IC and power delivery components for faults."
+          },
+          {
+            "code": "C0810303",
+            "description": "HDMI IC Problem or Data Line Short or Power failure",
+            "solution": "Inspect HDMI IC, data lines, and power delivery components for shorts or faults."
+          },
+          {
+            "code": "C0900002",
+            "description": "Unknown error (HDMI)",
+            "solution": "Inspect HDMI port and IC for faults."
+          },
+          {
+            "code": "C0900303",
+            "description": "Unknown error C0900303 - Possible WiFi IC Related — cause not yet identified.",
+            "solution": "Inspect WiFi IC and related components."
+          },
+          {
+            "code": "C0920002",
+            "description": "Unknown error (APU)",
+            "solution": null
+          },
+          {
+            "code": "E0000001",
+            "description": "Southbridge Issue - Cannot Read Errors - Wait & Retry",
+            "solution": "Inspect South Bridge for faults. Retry after waiting."
+          },
+          {
+            "code": "E0000002",
+            "description": "Southbridge Issue - Cannot Read Errors - Wait & Retry",
+            "solution": "Inspect South Bridge for faults. Retry after waiting."
+          },
+          {
+            "code": "E0000003",
+            "description": "Southbridge Issue - Cannot Read Errors - Wait & Retry",
+            "solution": "Inspect South Bridge for faults. Retry after waiting."
+          },
+          {
+            "code": "E0000004",
+            "description": "Southbridge Issue - Cannot Read Errors - Wait & Retry",
+            "solution": "Inspect South Bridge for faults. Retry after waiting."
+          },
+          {
+            "code": "E0000005",
+            "description": "Southbridge Issue - Cannot Read Errors - Wait & Retry",
+            "solution": "Inspect South Bridge for faults. Retry after waiting."
+          },
+          {
+            "code": "E0000006",
+            "description": "Southbridge Issue - Cannot Read Errors - Wait & Retry",
+            "solution": "Inspect South Bridge for faults. Retry after waiting."
+          },
+          {
+            "code": "E1200000",
+            "description": "Unknown error (VRM)",
+            "solution": "Inspect VRM components for faults."
+          },
+          {
+            "code": "E1201A50",
+            "description": "Unknown error E1201A50 - Possible XDPE Related) — cause not yet identified.",
+            "solution": "Inspect XDPE-related components for faults."
+          },
+          {
+            "code": "E1E00619",
+            "description": "Unknown error E1E00619 - Possible XDPE Related — cause not yet identified.",
+            "solution": "Inspect XDPE-related components for faults."
+          },
+          {
+            "code": "E1E0061D",
+            "description": "Unknown error (VRM)",
+            "solution": "Inspect VRM components for faults."
+          },
+          {
+            "code": "E1E0191D",
+            "description": "Unknown error (VRM)",
+            "solution": "Inspect VRM components for faults."
+          },
+          {
+            "code": "E1E01C05",
+            "description": "Unknown error E1E01C05 — cause not yet identified.",
+            "solution": null
+          },
+          {
+            "code": "E1E01D06",
+            "description": "Unknown error E1E01D06 — cause not yet identified.",
+            "solution": null
+          },
+          {
+            "code": "E2200000",
+            "description": "Unknown error (VRM)",
+            "solution": "Inspect VRM components for faults."
+          },
+          {
+            "code": "E2E0061D",
+            "description": "Unknown error (VRM)",
+            "solution": "Inspect VRM components for faults."
+          },
+          {
+            "code": "E2200116",
+            "description": "Unknown error E2200116 — cause not yet identified.",
+            "solution": null
+          },
+          {
+            "code": "E2E0191D",
+            "description": "Unknown error (VRM)",
+            "solution": "Inspect VRM components for faults."
+          },
+          {
+            "code": "E2E01C06",
+            "description": "Unknown error E2E01C06 — cause not yet identified.",
+            "solution": null
+          },
+          {
+            "code": "E2E01D06",
+            "description": "Unknown error (VRM)",
+            "solution": "Inspect VRM components for faults."
+          },
+          {
+            "code": "E31218E9",
+            "description": "Unknown error E31218E9 — cause not yet identified.",
+            "solution": null
+          },
+          {
+            "code": "E3121F70",
+            "description": "Unknown error (VRM)",
+            "solution": "Inspect VRM components for faults."
+          },
+          {
+            "code": "E3122155",
+            "description": "Unknown error (VRM)",
+            "solution": "Inspect VRM components for faults."
+          },
+          {
+            "code": "E312210A",
+            "description": "Unknown error E312210A — cause not yet identified.",
+            "solution": null
+          },
+          {
+            "code": "E3122219",
+            "description": "Unknown error (107 degrees)",
+            "solution": "Check for overheating issues. Ensure proper cooling and thermal paste application."
+          },
+            {
+              "code": "CE-100002-3",
+              "description": "Failed to update the application (update file not installed successfully)",
+              "solution": "Reboot the console (update it if needed); if the error persists, delete the application, reinstall it, and update it"
+            },
+            {
+              "code": "CE-100005-6",
+              "description": "Game or application can't load",
+              "solution": "Delete the game and reinstall it"
+            },
+            {
+              "code": "CE-100006-7",
+              "description": "Cannot recognize external storage drive",
+              "solution": "1) Update system software. 2) If the storage device cannot be recognized, unplug it and plug it back in. If it is connected to a USB hub, connect it directly to the console instead. 3) The storage device needs to be formatted if you are using it as extended storage for the first time. 4) If unable to transfer data all at once, try transferring content individually. 5) Check whether game data can be installed on extended storage. 6) The external storage drive may be bad; try using another device"
+            },
+            {
+              "code": "CE-100008-9",
+              "description": "Error occurred (software out of date or corrupted application)",
+              "solution": "Reboot the console (update it if needed). If the error occurs when launching an application (e.g. a game), delete and reinstall it"
+            },
+            {
+              "code": "CE-100009-0",
+              "description": "Issue with the update file",
+              "solution": "1) Back up your saved data. 2) Delete the application/game and reinstall it. 3) Reboot the console. 4) Go to [Settings] > [Users and Accounts] > [Other] > [Sign Out]. 5) Sign back in. 6) If still having issues, wait 24 hours before trying again"
+            },
+            {
+              "code": "CE-100022-5",
+              "description": "Error occurred (software out of date or corrupted application)",
+              "solution": "Reboot the console (update it if needed). If the error occurs when launching an application (e.g. a game), delete and reinstall it"
+            },
+            {
+              "code": "CE-100028-1",
+              "description": "There is not enough space on the SSD",
+              "solution": "Make sure you have sufficient free space to download, then try the download again"
+            },
+            {
+              "code": "CE-100095-5",
+              "description": "Issue when starting the application (console turned off during installation?)",
+              "solution": "Delete the application and reinstall it. Keep console powered on while the installation is running"
+            },
+            {
+              "code": "CE-100096-6",
+              "description": "Problem loading the application (application error)",
+              "solution": "Update system software; turn off the console and unplug it, then plug it back in and reboot it"
+            },
+            {
+              "code": "CE-105638-3",
+              "description": "Content activation failed",
+              "solution": "1) Reboot the console. 2) Perform an internet connection test to check to see if you are connected to the Internet properly. Review and reconfigure network settings again if necessary. 3) Power cycle the router. 4) When using a wireless connection, try moving the console closer to the router or removing anything interrupting the connection between the devices. Try using a wired connection if possible. 5) The problem may be caused by using the same account on several consoles at the same time. Go to [Settings] > [Users and Accounts] > [Other] > [Console Sharing and Offline Play] and turn it on. 6) This may be a temporary issue, try again later"
+            },
+            {
+              "code": "CE-105771-1",
+              "description": "Error has occurred (software out of date or corrupted application)",
+              "solution": "Reboot the console (update it if needed). If the error occurs when launching an application (e.g. a game), delete and reinstall it"
+            },
+            {
+              "code": "CE-105799-1",
+              "description": "Unable to connect to the server",
+              "solution": "1) Check PSN status if there is any server failure or maintenance. 2) Reboot the console, connect via a wired connection and reconfigure the connection settings. 3) When using a wireless connection, move the console closer to the router or removing anything interrupting the connection between the devices. 4) Power cycle the modem/router. 5) Update router firmware. 6) If possible, try opening these ports: TCP: 80, 443, 3478, 3479, 3480 and UDP: 3478, 3479, 49152～65535. 7) Try setting up a static IP address manually to improve the connection. 8) Try temporarily changing the DNS address to a public DNS (e.g. Google). If none of these work, then try again later (connection temporarily busy)"
+            },
+            {
+              "code": "CE-105841-9",
+              "description": "Error occurred in the application",
+              "solution": "Reboot the console (update it if needed). If the error occurs when launching an application (e.g. a game), delete and reinstall it"
+            },
+            {
+              "code": "CE-106439-3",
+              "description": "Application error (console and/or application software out of date or corrupted application)",
+              "solution": "Reboot the console (update it if needed). Check for updates for the application. If the error persists, delete the application, reinstall it and update it"
+            },
+            {
+              "code": "CE-106444-9",
+              "description": "Error occurred while connecting to PSN",
+              "solution": "1) Check PSN status. 2) Reboot the console and connect via a wired connection if possible. 3) When using a wireless connection, try moving the console closer to the router or removing anything interrupting the connection between the devices. 4) Power cycle the router. 5) Update router firmware. 6) If possible, try opening these ports: TCP: 80, 443, 3478, 3479, 3480 and UDP: 3478, 3479, 49152～65535"
+            },
+            {
+              "code": "CE-106449-4",
+              "description": "Error occurred connecting to the server (server connectivity issue)",
+              "solution": "1) Check PSN status. 2) Reboot the console and connect via a wired connection if possible. 3) Perform a connection test to check if you are connected to the internet properly. 4) Power cycle the router"
+            },
+            {
+              "code": "CE-106485-4",
+              "description": "Possible issue reading the system software or data",
+              "solution": "Update system software"
+            },
+            {
+              "code": "CE-106487-6",
+              "description": "Issue downloading and installing content",
+              "solution": "1) Make sure the console has the latest system software. 2) Go to [Settings] > [Users and Accounts] > [Other] > [Restore Licenses]. 3) Delete the download and try it again. 4) Boot the console in safe mode and select [Clear Cache and Rebuild Database]"
+            },
+            {
+              "code": "CE-107031-2",
+              "description": "Non-allowed characters in video description when trying to upload a video to YouTube",
+              "solution": "Avoid using non-allowed characters in the video description and try uploading again"
+            },
+            {
+              "code": "CE-107255-0",
+              "description": "Subscription to PlayStation Plus cannot be confirmed",
+              "solution": "1) Make sure the console is connected to the Internet and that you are successfully signed in to PSN. 2) Check to see if your subscription has expired. 3) Try again after a short period (temporary issue)"
+            },
+            {
+              "code": "CE-107520-5",
+              "description": "Install the latest system software (update required; failed to update via internet)",
+              "solution": "Connect the console to the internet and update it to the latest version of the system software. If an error occurs during the update, reboot your network equipment and console and try updating again. If possible, try updating via a method other than the Internet, such as USB storage or a game disc"
+            },
+            {
+              "code": "CE-107527-2",
+              "description": "Installation failed (issue with data being installed, possibly due to connection problems)",
+              "solution": "1) Reboot the console 2) Connect via a wired connection if possible. 3) Reconfigure network connection settings. 4) When using a wireless connection, try moving the console closer to the router and removing anything interrupting the connection between them. 5) Power cycle the router. 6) If there is any game data that failed to install, delete the game and reinstall it"
+            },
+            {
+              "code": "CE-107622-8",
+              "description": "Failed to launch the application (update file not applied properly when the application was started)",
+              "solution": "Reboot the console and launch the application. If there is no improvement, delete the application and reinstall the game data"
+            },
+            {
+              "code": "CE-107649-7",
+              "description": "Disc contains content different from the installed data (disc contains additional data or content that is different from the data installed on the console)",
+              "solution": "If you have another disc for the same game, delete the game and related applications and reinstall using this disc"
+            },
+            {
+              "code": "CE-107750-0",
+              "description": "Error occurred while playing the game",
+              "solution": "1) Turn off the console and unplug it, wait 5 minutes, then plug it back in and reboot it. 2) Make sure the game and console system software are updated to their latest versions (update if needed). 3) If still getting the error, try deleting the game and reinstalling it. 4) Boot the console in Safe Mode and select [Clear Cache and Rebuild Database] > [Rebuild Database]. If the error keeps happening, reset the console and install the game again"
+            },
+            {
+              "code": "CE-107857-8",
+              "description": "Error occurred while loading or updating the application (application error)",
+              "solution": "Reboot the console. Make sure the system software and the game/app are both updated to their latest versions (update if needed). If the error keeps happening after starting the game/app, delete it and reinstall it. Boot the console in safe mode and select [Clear Cache and Rebuild Database] > [Rebuild Database]"
+            },
+            {
+              "code": "CE-107858-9",
+              "description": "Happened when trying to download the PS4 Call of Duty Modern Warfare Remaster after external HDD was inserted",
+              "solution": "No specific solution provided; try general troubleshooting like rebooting, checking storage, and reinstalling"
+            },
+            {
+              "code": "CE-107863-5",
+              "description": "Network connection error",
+              "solution": "1) Reboot the console. 2) Update system software if needed. 3) Power cycle the router. 4) If the error occurs while downloading or copying content, try steps 1-3 and then reinstall content. 5) There may be temporary network congestion, try again later"
+            },
+            {
+              "code": "CE-107867-9",
+              "description": "Occurred when trying to load Remnant: From The Ashes (PS4 digital) from external HDD",
+              "solution": "No specific solution provided; try rebooting, checking external HDD connection, and reinstalling the game"
+            },
+            {
+              "code": "CE-107872-5",
+              "description": "Not enough free space on the console storage (not enough free space or storage is bad)",
+              "solution": "Check if you have enough free space on the console storage ([Settings] > [Storage]). When installing data, it may be necessary to reserve approximately twice the free space required. If there is not enough free space, consider using extended storage based on your needs. If the error occurs again even though the free space is reserved, try changing the save destination to either the console storage or the extended storage. If you have another extended storage, try that to see if the situation improves"
+            },
+            {
+              "code": "CE-107891-6",
+              "description": "Content isn't installing properly on console",
+              "solution": "Uninstall the content causing the error and try reinstalling it. If still having issues, try again later"
+            },
+            {
+              "code": "CE-107938-8",
+              "description": "Failed to update the application (console turned off during update)",
+              "solution": "Reboot the console; if the system software is not up to date, then update it; if the error persists, delete the application, reinstall it, and update it again"
+            },
+            {
+              "code": "CE-107958-0",
+              "description": "Can't download or copy - Happened when trying to download the PS4 Spider-Man game after an external HDD was inserted",
+              "solution": "No specific solution provided; try checking storage, rebooting, and reinstalling"
+            },
+            {
+              "code": "CE-108255-1",
+              "description": "Application error (comes up when a game crashes)",
+              "solution": "1) Make sure the system software and game/app are updated (update if needed). 2) If the error occurs after starting the game/app, delete it and reinstall it. 3) Boot the console in Safe Mode and select [Clear Cache and Rebuild Database] > [Rebuild Database]. 4) If the error occurs again, back up all data and reset the console. After resetting the console, try installing the game/app again"
+            },
+            {
+              "code": "CE-108262-9",
+              "description": "Error while reading the system software or application data",
+              "solution": "1) Update the console software to the latest version. 2) If the error occurs after starting the game/app, delete it and reinstall it. 3) Boot the console in Safe Mode and select [Clear Cache and Rebuild Database] > [Rebuild Database]. 4) If the error still keeps happening, back up all data and reset the console. 5) After resetting the console, try reinstalling the game/app. If the issue keeps happening after following the above steps, try again later"
+            },
+            {
+              "code": "CE-108360-8",
+              "description": "Check connection status of HD camera and PS Camera (camera not connected correctly, improper conditions for usage of camera, incorrect settings)",
+              "solution": "1) A dedicated adapter is needed to use PS Camera with the PS5 console; check the connection method according to the device you have; 2) Use the camera in a bright room as much as possible; 3) Check the camera's position and adjust as necessary; 4) Review camera settings on console"
+            },
+            {
+              "code": "CE-108862-5",
+              "description": "Unable to connect to server (server connection issue)",
+              "solution": "1) Check PSN status. 2) Reboot the console and connect via a wired connection if possible. 3) Perform a connection test to see if you are connected to the internet. 4) Power cycle the router. 5) There may be temporary congestion, try again later"
+            },
+            {
+              "code": "CE-108863-6",
+              "description": "Console couldn't connect to the server (during update)",
+              "solution": "1) Go to [Settings] > [System] > [System Software and Settings]. 2) Select [Update System Software]. 3) If the update fails, try updating manually"
+            },
+            {
+              "code": "CE-108877-1",
+              "description": "Error occurred while connecting to the server (PSN possibly under maintenance)",
+              "solution": "1) Check PSN status to see if there are any network issues. 2) This may be a temporary problem. Try again after a few hours"
+            },
+            {
+              "code": "CE-108889-4",
+              "description": "Install the latest system software (update required; failed to update via internet)",
+              "solution": "Connect the console to the internet and update it to the latest version of the system software. If an error occurs during the update, reboot your network equipment and console and try updating again. If possible, try updating via a method other than the Internet, such as USB storage or a game disc"
+            },
+            {
+              "code": "CE-109245-1",
+              "description": "License information of the content cannot be confirmed",
+              "solution": "1) Reboot the console. 2) Sign in with the PSN account that owns the content you are trying to access. 3) Go to [Settings] > [Users and Accounts] > [Other] > [Console Sharing and Offline Play] and enable it"
+            },
+            {
+              "code": "CE-109258-5",
+              "description": "Unable to connect to the server (license information not confirmed due to failed server connection)",
+              "solution": "1) Check PSN status to see if there is any update information for server failure or maintenance. 2) Reboot the console. 3) Power cycle the router and modem. 4) Try going to [Settings] > [Users and Accounts] > [Other] > [Restore Licenses]. 5) This may be a temporary issue, try again later"
+            },
+            {
+              "code": "CE-109503-8",
+              "description": "Error occurred when connecting to PSN",
+              "solution": "1) Check PSN status for outages or maintenance. 2) Reboot the console. 3) If possible, try using a wired connection to connect to the internet. 4) Reconfigure the connection settings. 5) If using a wireless connection, try moving the console closer to the router and removing anything that might block the connection. 4) Power cycle the modem/router. 5) Update router firmware"
+            },
+            {
+              "code": "CE-109573-5",
+              "description": "Error occurred when starting the game on the console",
+              "solution": "Reboot the console. Delete the application and reinstall it. If still having issues go into safe mode and select [Rebuild Database], then start the application. If the problem persists, go back into safe mode and update the system software"
+            },
+            {
+              "code": "CE-109737-7",
+              "description": "Cannot recognize USB storage device",
+              "solution": "1) Unplug the USB cable and plug it back in. Make sure it is fully inserted. 2) If using a USB hub, remove it and connect the USB storage device directly to the console. 3) Try another USB port. 4) Check if another storage device can be recognized. 5) If the USB storage device cannot be recognized when a specific application is running, delete and reinstall the application, then try again."
+            },
+            {
+              "code": "CE-110032-7",
+              "description": "PSN Online ID information does not match (comes up when Online ID was recently changed)",
+              "solution": "Sign out of all other devices (including PS3 and PlayStation Vita), and try again on the PS5. If the situation does not improve, sign out from all devices and try again later."
+            },
+            {
+              "code": "CE-110538-8",
+              "description": "Failed to read Blu-ray disc",
+              "solution": "Make sure the disc has no smudges, fingerprints or scratches. Make sure the disc is inserted correctly. The console may have issues reading discs; try another disc to see if the console can read it. If still having issues, contact Sony or send console in"
+            },
+            {
+              "code": "CE-110551-3",
+              "description": "Failed to read the disc",
+              "solution": "1) Reboot the console. 2) Make sure the disc is clean. 3) Check if the disc is playable on the console. 4) Try another supported disc"
+            },
+            {
+              "code": "CE-110552-4",
+              "description": "Failed to read the disc (possible unsupported disc)",
+              "solution": "Check if other discs can be played. Clean the disc"
+            },
+            {
+              "code": "CE-110555-7",
+              "description": "Disc cannot be read (possible unsupported disc)",
+              "solution": "Check if other discs can be played. Clean the disc"
+            },
+            {
+              "code": "CE-111161-1",
+              "description": "Check connection status of HD camera and PS Camera (camera not connected correctly, improper conditions for usage of camera, incorrect settings)",
+              "solution": "1) A dedicated adapter is needed to use PS Camera with the PS5 console; check the connection method according to the device you have; 2) Use the camera in a bright room as much as possible; 3) Check the camera's position and adjust as necessary; 4) Review camera settings on console"
+            },
+            {
+              "code": "CE-112069-9",
+              "description": "Error occurred on data transfer via a network (PS4 to PS5)",
+              "solution": "1) If the consoles are connected to the network wirelessly, try connecting each console via a wired connection or connect both consoles directly with an ethernet cable. 2) Power cycle the router. 3) Try transferring the data again. 4) If only transferring save data, try transferring via another storage medium such as online storage or USB storage as an alternative method instead, instead of console-to-console."
+            },
+            {
+              "code": "CE-112839-4",
+              "description": "Error occurred while connecting to PSN",
+              "solution": "1) Check if you can sign in. 2) Reboot the console and connect via a wired connection if possible. 3) If using Wi-Fi, try moving the console closer to the router and removing anything interrupting the connection between the devices. 4) Power cycle the router."
+            },
+            {
+              "code": "CE-112840-7",
+              "description": "Problem connecting to the server (server issue)",
+              "solution": "1 Check PSN status for any server issues. To 2) This may be a temporary problem. Try again after a few hours"
+            },
+            {
+              "code": "CE-112841-7",
+              "description": "Not signed in",
+              "solution": "1) Check if you can sign in. 2) Reboot the console and connect via a wired connection if possible. 3) If using Wi-Fi, try moving the console closer to the router and removing anything interrupting the connection between the devices. 4) Power cycle the router."
+            },
+            {
+              "code": "CE-112988-9",
+              "description": "This content cannot be purchased",
+              "solution": "1) Check to see if you have purchased the content before. 2) Check PlayStation Store for the content to see if it is necessary to purchase a service such as PlayStationPlus or the main game entitlement separately. 3) When you can't purchase a product, you can see the reason by selecting [View product] > [More details] on details on the purchase screen.] on the purchase screen."
+            },
+            {
+              "code": "CE-113212-0",
+              "description": "Unable to connect to the server",
+              "solution": "1) Check PSN status if there is any server failure or maintenance. 2) Reboot To the console to connect, connect via a wired connection and reconfigure network connection settings the connection settings. 3) When using a wireless connection, try moving the console closer to the router or removing anything interrupting the connection between devices the devices. 4) Power cycle the modem/router. 5) Update router firmware. 6) If possible, try opening these ports: TCP: 80, 443, 3478, 3479, 3480 and UDP: 3478, 3479, 49152～65535. 7) Try setting up a static IP address manually to improve the connection. 8) Try temporarily changing the DNS address to a public DNS (e.g. Google). If none of these work, then try again later (connection temporarily busy)."
+            },
+            {
+              "code": "CE-113227-6",
+              "description": "Error occurred",
+              "solution": "Reboot the console and update it if needed."
+            },
+            {
+              "code": "CE-113338-9",
+              "description": "Error occurred while updating the PS5 system software",
+              "solution": "Wait 48 hours and then try updating again."
+            },
+            {
+              "code": "CE-113511-2",
+              "description": "Error occurred",
+              "solution": "Reboot the console and update it."
+            },
+            {
+              "code": "CE-113661-8",
+              "description": "Can be triggered when failing to save manual recording (trigger with record start, and then immediately stopping recording)",
+              "solution": "No specific solution provided; avoid rapid start/stop of recordings."
+            },
+            {
+              "code": "CE-116799-3",
+              "description": "Subscription to PlayStationPlus can't be confirmed",
+              "solution": "1) Make sure the console is connected to the Internet and that you are successfully signed in to PSN. 2) Check to see if your subscription has expired. 3) If you can sign into PSN and your PlayStation Plus subscription is still active, try again later."
+            },
+            {
+              "code": "CE-117625-2",
+              "description": "Uploaded too many videos to YouTube in short period of time, need to wait 24 hours before allowed to upload more",
+              "solution": "Wait 24 hours before attempting to upload more videos to YouTube."
+            },
+            {
+              "code": "CE-117722-0",
+              "description": "Streaming connection has an error",
+              "solution": "1) Check to see if you are connected to the internet and perform a connection test. If you can't get connected, make sure the network settings are correctly configured. Reconnect to 2) Reboot the console to the network, connect via a wired connection if possible, and reconfigure network connection settings the connection settings. 3) When connecting to a wireless network wirelessly, connection, try moving closer to the console as close to the router as possible and remove anything that could interrupt the connection between devices the devices.  4) Power cycle the router and modem/modem. 5) Update router firmware to the latest version. 6) Check if there is enough free space on the console, and if there is an option to download, try downloading the game instead. If none of these work, then try again later."
+            },
+            {
+              "code": "CE-117740-0",
+              "description": "Game may have an error",
+              "solution": "1) Make sure the console system software is updated to the latest version of the console system software. 2) Go to [Settings] > [Storage]. Select [Games and Apps] > 3) Delete the game from [Games and Apps]. 4) Reinstall the game. 5) Boot the console in Safe Mode and select [Clear Cache and Rebuild Database] > [Rebuild Database]. If the problem continues persists, contact PlayStation customer support."
+            },
+            {
+              "code": "CE-118415-0",
+              "description": "Subscription may need to be verified",
+              "solution": "1) Check PSN status. 2) Check to see if your PlayStationPlus subscription has expired. 3) Reboot the console. 4) This may be a temporary issue, try again later."
+            },
+            {
+              "code": "CE-118446-4",
+              "description": "Problem updating the system (issue updating various applications related to the console's system software)",
+              "solution": "Update console if needed; check if system features have been updated properly"
+            },
+            {
+              "code": "CE-118527-2",
+              "description": "Problem resolving the hostname (hostname resolution failed due to network connection)",
+              "solution": "1) Perform a connection test and make sure the console is connected to the internet. Reconnect to the network if necessary. 2) Power cycle router/modem. 3) If you selected [Manual] for [IP Address Settings] or [DNS Settings] when setting up your internet connection, make sure the [Primary DNS] and [Secondary DNS] settings are correct. 4) Check with your ISP to see if there is any maintenance. 5) This may a temporary symptom. Wait a few minutes and try again."
+            },
+            {
+              "code": "CE-119224-9",
+              "description": "Error occurred while updating the PS VR2 Sense controller device software",
+              "solution": "1) Unplug the USB cable from the console. 2) Reboot the console. 3) Pair and then unplug your PS VR2 Sense controllers. 4) Follow the on-screen instructions to update the device software."
+            },
+            {
+              "code": "E2-817B122B",
+              "description": "Unable to connect to the server",
+              "solution": "1) Turn off the console and unplug it, then plug it back in and reboot the console. 2) Power cycle the router. 3) Update console if needed."
+            },
+            {
+              "code": "E2-8223b089",
+              "description": "Unable to connect to the server (can't connect to PSN; possible server congestion)",
+              "solution": "1) Check PSN status. 2) Power cycle the router/modem. 3) See PlayStation Repairs for further troubleshooting."
+            },
+            {
+              "code": "E2-8223b400",
+              "description": "Unable to connect to the server (can't connect to PSN; possible server congestion)",
+              "solution": "1) Check PSN status. 2) Power cycle the router/modem. 3) See PlayStation Repairs for further troubleshooting."
+            },
+            {
+              "code": "NP-102937-2",
+              "description": "Signed out of PSN (connection problems or console issue)",
+              "solution": "Sign in; if already signed in, sign out, then back in; power cycle router; if none of this work then see the PlayStation Repairs page for more troubleshooting"
+            },
+            {
+              "code": "NP-102942-8",
+              "description": "This feature is not available due to age restrictions",
+              "solution": "Account does not meet the age restriction for the application"
+            },
+            {
+              "code": "NP-102943-9",
+              "description": "Application cannot be launched with this user (entitlement cannot be confirmed for the signed-in user)",
+              "solution": "Sign out, then back in; check if the application can be used by another user"
+            },
+            {
+              "code": "NP-102944-0",
+              "description": "Install the latest system software (update required; failed to update via internet)",
+              "solution": "Connect the console to the internet and update it to the latest version of the system software. If an error occurs during the update, reboot your network equipment and console and try updating again. If possible, try updating via a method other than the Internet (such as a USB drive or a game disc)."
+            },
+            {
+              "code": "NP-102945-1",
+              "description": "Install the latest system software (update required; failed to update via internet)",
+              "solution": "Connect the console to the internet and update it to the latest version of the system software. If an error occurs during the update, reboot your network equipment and console and try updating again. If possible, try updating via a method other than the Internet (such as a USB drive or a game disc)."
+            },
+            {
+              "code": "NP-102946-2",
+              "description": "Install the latest update file (update required; failed due to insufficient free space)",
+              "solution": "Connect the console to the internet and install the latest update file. If an error occurs during the update, check whether there is enough free space to download the update file. If there isn't enough space, delete any unnecessary data and try updating again. If the update is in progress, wait for it to finish."
+            },
+            {
+              "code": "NP-102947-3",
+              "description": "Internet connection too slow or unstable to perform the update",
+              "solution": "1) Reboot the console, try connecting via a wired connection and check your connection settings. 2) If using a Wi-Fi connection, make sure the console is as close to the router as possible without anything blocking or interrupting the connection between the devices. 3) Power cycle the modem/router. 4) Try updating router firmware (contact ISP on how to do this). If your internet connection has been restored, check for any updates."
+            },
+            {
+              "code": "NP-102955-2",
+              "description": "Account information is incorrect (info entered may be different from the registered account; invalid login?)",
+              "solution": "Check ID and password"
+            },
+            {
+              "code": "NP-103019-4",
+              "description": "Application error",
+              "solution": "1) Close the application and restart it. 2) Reboot the console. 3) Delete the application and reinstall it."
+            },
+            {
+              "code": "NP-103028-4",
+              "description": "Issue signing in",
+              "solution": "1) Go to [Settings] > [Users and Accounts] > [Sign in]. 2) If already signed in, go to [Settings] > [Users and Accounts] > [Other] > [Sign Out], then sign in again. 3) Reboot the console."
+            },
+            {
+              "code": "NP-103047-5",
+              "description": "Unable to connect to the server (cannot connect to PSN; possible server congestion)",
+              "solution": "1) Check PSN status. 2) Power cycle the router. 3) The line is likely to be temporarily busy. Leave it for a while and try again later."
+            },
+            {
+              "code": "NP-103105-0",
+              "description": "Service currently under maintenance",
+              "solution": "Check server status for failure and maintenance information; if not impacted, 1) reset connection settings on console and try a connection test; 2) power cycle the router/modem; if these do not work, then try later (temporary congestion)"
+            },
+            {
+              "code": "NP-103107-2",
+              "description": "Unable to connect to the server (service under maintenance)",
+              "solution": "Service may be undergoing maintenance. Check PSN status. If PSN is active: 1) reset network connection settings on console and perform a connection test. 2) Power cycle the router. 3) If still having issues then try again later."
+            },
+            {
+              "code": "NP-103109-4",
+              "description": "Service currently under maintenance",
+              "solution": "Check server status for failure and maintenance information; if not impacted, 1) reset connection settings on console and try a connection test; 2) power cycle the router/modem; if these do not work, then try later (temporary congestion)"
+            },
+            {
+              "code": "NP-103111-7",
+              "description": "Service currently under maintenance",
+              "solution": "Check server status for failure and maintenance information; if not impacted, 1) reset connection settings on console and try a connection test; 2) power cycle the router/modem; if these do not work, then try later (temporary congestion)"
+            },
+            {
+              "code": "NP-103117-3",
+              "description": "Service currently under maintenance",
+              "solution": "Check server status for failure and maintenance information; if not impacted, 1) reset connection settings on console and try a connection test; 2) power cycle the router/modem; if these do not work, then try later (temporary congestion)"
+            },
+            {
+              "code": "NP-103148-7",
+              "description": "Issue when connecting console to the internet",
+              "solution": "1) Close the application (if possible, save game before exiting). 2) Reboot the console. 3) Power cycle router/modem."
+            },
+            {
+              "code": "NP-103172-4",
+              "description": "Network connection error",
+              "solution": "1) Reboot the console. 2) Perform an Internet connection test. 3) Power cycle the router. 4) If using a wireless connection, try moving the console closer to the router and removing anything interrupting the connection between the devices."
+            },
+            {
+              "code": "NP-103191-2",
+              "description": "Online connection failed (network connection for the application failed)",
+              "solution": "1) Close the application. 2) Restart the application. 3) Reboot the console. 4) Power cycle the router/modem."
+            },
+            {
+                "code": "NP-103539-1",
+                "description": "Unable to connect to the server (unstable network communication)",
+                "solution": "1) Check PSN status. 2) Reboot the console and connect via a wired connection if possible. 3) If using a wireless connection, try moving the console closer to the router and remove anything interrupting the connection. 4) Power cycle the modem/router."
+            },
+            {
+              "code": "NP-104291-7",
+              "description": "Error occurred because license information of the content cannot be confirmed (title information not correctly reflected on the server side)",
+              "solution": "Make sure you are signed in with the PSN account that owns the content entitlement, and if you get this error with a title that may have just been released, wait a few hours and try again later. If the problem persists, then contact Support."
+            },
+            {
+              "code": "NP-104303-1",
+              "description": "Problem communicating with the server (issue on the server side)",
+              "solution": "1) Check PSN status or to see if there are any server failures or if maintenance is in progress. 2) This may be a temporary issue. Try again later after a while. 3) While waiting, update system software to the latest version. 4) Power cycle the router."
+            },
+            {
+              "code": "NP-104433-5",
+              "description": "Possible problem with sign-in issue (issue signing in)",
+              "solution": "1) Go to [Settings] > [Users and Accounts] > [PSN] > [Sign in]. 2) If already signed in to PSN, go to [Settings > Users and Accounts > Other > Sign Out], Out, then sign out and back in again. 3) Reboot the console."
+            },
+            {
+              "code": "NP-104627-0",
+              "description": "Console lost connection to the server",
+              "solution": "1) Try signing in again. 2) Perform a connection test and reconfigure network settings if necessary. 3) Reboot cycle the router/modem. 4) Power cycle the console and reboot the console and connect to the network via a wired connection if possible."
+            },
+            {
+              "code": "NW-102216-2",
+              "description": "Error while connecting to PSN",
+              "solution": "1) Check the PSN status page if there is any network issues. 2) Use a wired (ethernet) connection to the network if possible. 3) If using a wireless connection, try moving the console closer to to the router and removing anything interrupting the connection between the devices. 4) Power cycle the router. 5) Update router firmware to the latest router firmware. Contact your router vendor for support details on how to update. 6) If possible, try opening these ports: TCP: 80, 443, 3478, 3479, 3480 and UDP: 3478, 3479, 49152 to 49152 to 65535. Contact your ISP for assistance for details on how to open ports."
+            },
+            {
+              "code": "NW-102254-4",
+              "description": "Error while connecting to PSN",
+              "solution": "1) Check the PSN status page to see whether there is any there's a server failure or maintenance going on. 2) Reboot To the console, and connect to the internet network using a wired (ethernet) connection to the network if possible and reconfigure the PSN connection settings again. 3) When using a Wi-Fi connection, make sure Wi-Fi, make sure the console is as close as possible to to the router as possible. Otherwise, and remove any items that could may be blocking or interrupting the connection. 4) Power cycle the router/modem. 5) If possible, speak to your update router firmware to the latest version about how to cancel the port filtering function on the router. Contact your ISP or network administrator for support details on how to update router firmware. 6) Try manually setting up a static IP address manually by going to by going to [Settings] > [Network > Settings] > [Set Up Internet Connection]. If still having issues, try again later."
+            },
+            {
+              "code": "NW-102261-2",
+              "description": "Unable to connect to the server (error while connecting to PSN)",
+              "solution": "1) Check the PSN status page if there is any to see if there is a server failure or maintenance going on on. 2) Reboot To the console, and connect using a wired network (ethernet) to connect to the network if possible and reconfigure the PSN connection settings. 3) When using a wireless connection, move Wi-Fi, move the console closer to to the router or remove anything interrupting the connection between the PSN. 4) Power cycle the router/modem. 5) Update router firmware to the latest router firmware. 6) If possible, try opening these ports: TCP: 80, 443, 3478, 3479, 3480 and UDP: 3478, UDP: 3479, 49152~65535. 7) In the network settings, set up a static IP address manually in the network settings to improve it the connection.  8) Try using a public DNS to improve the connection to the network. If the above does not solve the problem, the PSN line is likely to be temporarily busy temporarily busy line. Leave it for a while and try again later."
+            },
+            {
+              "code": "NW-102265-6",
+              "description": "Unable to connect to the server (error while connecting to PSN)",
+              "solution": "1) Check the PSN status page if there is any to see if there is any server failure or maintenance going on. 2) Reboot the console to the console, and connect using a wired network (ethernet) to connect to the network if possible and as possible and reconfigure the PSN connection settings. 3) When using a wireless connection, Wi-Fi, move the console closer to to the router or removing anything that may be interrupting the connection. 4) Power cycle the router/modem. 5) Update router firmware to the latest router firmware. 6) If possible, try opening these ports: TCP: opening these ports: 80, 443, 3478, 3479, 3480 and UDP: 347, 3479, 49152~65535. 7) In the network settings, set up a static IP address manually in the network settings to improve it the connection. 8) Try using a public DNS to improve the connection to the network. If the above does not solve the problem, the PSN line is likely to be temporarily busy temporarily to be a busy line. Try again later. Leave it for a while and try again later."
+            },
+            {
+              "code": "NW-102307-3",
+              "description": "Communication error occurred while connecting to PSN",
+              "solution": "1) Check the PSN status page if there is any to see if there is any server failure or maintenance going on on. To 2) Reboot the console to the console, reboot and connect using a wired network (ethernet) to connect to the network if possible as much as possible and reconfigure the network connection settings again. 3) When using a wireless connection, wireless connection, move the console as close to the router as possible to the router as close as possible. Otherwise, remove any items that could may be interfering with or blocking or interfering with the connection. 4) Power cycle the router/modem. 5) Contact your ISP or your network administrator to update router firmware to the latest router firmware. Contact your ISP or network administrator for support. 6) If possible, speak to how to cancel the port filtering function on your ISP or network administrator about how to cancel the port filtering on the router. To 7) Try manually setting up a static IP address manually by going to [Settings] > [Network > Settings] > [Set Up Internet Connection]. If still having issues, try again later."
+            },
+            {
+              "code": "NW-102308-4",
+              "description": "Communication error (error while connecting to PSN)",
+              "solution": "1) Check the PSN status page if there is any to see if there is any server failure or maintenance going on on. 2) Reboot To the console, and connect using a wired network (ethernet) to connect to the network if possible as much as possible and reconfigure the PSN connection settings. 3) When using a wireless connection, Wi-Fi, move the console closer to to the router or removing anything interrupting the connection to the PSN. 4) Power cycle the router/modem. 5) Update router firmware to the latest router firmware. 6) If possible, try opening these ports: TCP: opening these ports: 80, 443, 3478, 3479, 3480 and UDP: 347, 3479, 49152~65535. 7) In the network settings, set up a static IP address manually in the network settings to improve it the connection. 8) Try using a public DNS to improve the connection to the network. If the above does not solve the problem, the PSN line is likely to be temporarily busy temporarily to be a busy line. Try again later. Leave it for a while and try again later."
+            },
+            {
+              "code": "NW-102311-8",
+              "description": "Communication error occurred while connecting to PSN",
+              "solution": "1) Check the PSN status page to see whether there is any there's a server failure or maintenance going on on. To 2) Reboot the console to the console, and connect to the internet network using a wired (ethernet) connection to the network if possible and reconfigure the PSN connection settings again. 3) When using a Wi-Fi connection, make sure Wi-Fi, make sure the console is as close as possible to to the router as possible. Otherwise, and remove any items that could may be blocking or interrupting or interfering with the connection. 4) Power cycle the router/modem. 5) Update router firmware to the latest router firmware (contact your ISP or your network administrator for support). 6) If possible, speak to how to cancel the port filtering function on the router your ISP about how to cancel the port filtering on the router. To 7) Try manually setting up a static IP address manually by going to by going to [Settings] > [Network > Settings] > [Set Up Internet Connection]. If still having issues, try again later."
+            },
+            {
+              "code": "NW-102314-1",
+              "description": "Communication error occurred while connecting to PSN",
+              "solution": "1) Check the PSN status page to see whether there is any there's a server failure or maintenance going on on. To 2) Reboot the console to the console, and connect to the internet network using a wired (ethernet) connection to the network if possible and reconfigure the PSN connection settings again. 3) When using a Wi-Fi connection, make sure Wi-Fi, make sure the console is as close as possible to to the router as possible. Otherwise, and remove any items that could may be blocking or interrupting or interfering with the connection. 4) Power cycle the router/modem. 5) Update router firmware to the latest router firmware (contact your ISP or your network administrator for support). 6) If possible, speak to how to cancel the port filtering function on the router your ISP about how to cancel the port filtering on the router. To 7) Try manually setting up a static IP address manually by going to by going to [Settings] > [Network > Settings] > [Set Up Internet Connection]. If still having issues, try again later."
+            },
+            {
+              "code": "NW-102315-2",
+              "description": "Communication error (error while connecting to PSN)",
+              "solution": "1) Check the PSN status page if there is any to see if there is any server failure or maintenance going on on. 2) Reboot To the console, and connect using a wired network (ethernet) to connect to the network if possible as much as possible and reconfigure the PSN connection settings. 3) When using a wireless connection, Wi-Fi, move the console closer to to the router or removing anything interrupting the connection to the PSN. 4) Power cycle the router/modem. 5) Update router firmware to the latest router firmware. 6) If possible, try opening these ports: TCP: opening these ports: 80, 443, 3478, 3479, 3480 and UDP: 347, 3479, 49152~65535. 7) In the network settings, set up a static IP address manually in the network settings to improve it the connection. 8) Try using a public DNS to improve the connection to the network. If the above does not solve the problem, the PSN line is likely to be temporarily busy temporarily to be a busy line. Try again later. Leave it for a while and try again later."
+            },
+            {
+              "code": "NW-102379-2",
+              "description": "Error when connecting to PSN",
+              "solution": "1) Check the PSN status page for outages or maintenance. 2) Reboot the console. 3) If possible, try using a wired (ethernet) connection to connect to the internet. 4) Reconfigure network settings. 5) If using a wireless connection, try bringing the console closer to the router and removing anything that might block the connection. 6) Power cycle the router/modem. 7) Update router firmware. Contact your ISP for details on how to update."
+            },
+            {
+              "code": "NW-102417-5",
+              "description": "Network connection timed out (error while connecting to PSN)",
+              "solution": "1) Check the PSN status page if there is any to see if there is any server failure or maintenance going on on. 2) Reboot To the console, and connect using a wired network (ethernet) to connect to the network if possible as much as possible and reconfigure the PSN connection settings. 3) When using a wireless connection, Wi-Fi, move the console closer to to the router or removing anything interrupting the connection to the PSN. 4) Power cycle the router/modem. 5) Update router firmware to the latest router firmware. 6) If possible, try opening these ports: TCP: opening these ports: 80, 443, 3478, 3479, 3480 and UDP: 347, 3479, 49152~65535. 7) In the network settings, set up a static IP address manually in the network settings to improve it the connection. 8) Try using a public DNS to improve the connection to the network. If the above does not solve the problem, the PSN line is likely to be temporarily busy temporarily to be a busy line. Try again later. Leave it for a while and try again later."
+            },
+            {
+              "code": "NW-102468-2",
+              "description": "Issue connecting the console to the network",
+              "solution": "1) Reboot the console. 2) If using a wireless connection, try bringing the console closer to the router and removing anything that might block the connection. 3) Power cycle the router/modem. 4) If possible, connect to the internet using a wired (ethernet) connection. 5) If using multiple NAT routers, remove them."
+            },
+            {
+              "code": "NW-102633-5",
+              "description": "Error while connecting to PSN",
+              "solution": "1) Check the PSN status page to see whether there is any there's a server failure or maintenance going on on. To 2) Reboot the console to the console, and connect to the internet network using a wired (ethernet) connection to the network if possible and reconfigure the PSN connection settings again. 3) When using a Wi-Fi connection, make sure Wi-Fi, make sure the console is as close as possible to to the router as possible. Otherwise, and remove any items that could may be blocking or interrupting or interfering with the connection. 4) Power cycle the router/modem. 5) Update router firmware to the latest router firmware (contact your ISP or your network administrator for support). 6) If possible, speak to how to cancel the port filtering function on the router your ISP about how to cancel the port filtering on the router. To 7) Try manually setting up a static IP address manually by going to by going to [Settings] > [Network > Settings] > [Set Up Internet Connection]. If still having issues, try again later."
+            },
+            {
+              "code": "NW-102636-8",
+              "description": "Connection to PSN timed out",
+              "solution": "1) Review connection settings. 2) Power cycle the router/modem. 3) When using wireless (Wi-Fi) communication, move the console closer to the access point or router and make sure there is nothing interrupting the connection between those devices. 4) Check the status of the game server and PSN. 5) Leave it for a while and try later."
+            },
+            {
+              "code": "NW-102650-4",
+              "description": "Unable to connect to the server (error while connecting to PSN)",
+              "solution": "1) Check the PSN status page if there is any to see if there is any server failure or maintenance going on on. 2) Reboot To the console, and connect using a wired network (ethernet) to connect to the network if possible as much as possible and reconfigure the PSN connection settings. 3) When using a wireless connection, Wi-Fi, move the console closer to to the router or removing anything interrupting the connection to the PSN. 4) Power cycle the router/modem. 5) Update router firmware to the latest router firmware. 6) If possible, try opening these ports: TCP: opening these ports: 80, 443, 3478, 3479, 3480 and UDP: 347, 3479, 49152~65535. 7) In the network settings, set up a static IP address manually in the network settings to improve it the connection. 8) Try using a public DNS to improve the connection to the network. If the above does not solve the problem, the PSN line is likely to be temporarily busy temporarily to be a busy line. Try again later. Leave it for a while and try again later."
+            },
+            {
+              "code": "NW-102655-9",
+              "description": "Application error (issue with the internet connection on the application side)",
+              "solution": "1) Check the PSN status page to see if there is any server failures or if maintenance is in progress. 2) Reboot the console. 3) Perform a connection test by selecting [Settings] > [Network] > [Test Internet Connection] and check if you are connected to the Internet properly. Also review and configure your network settings again if necessary. 4) Power cycle the router/modem. 5) Update console if needed. 6) Highlight the application, press the options button on the controller and select [Check for update]."
+            },
+            {
+              "code": "SU-101193-5",
+              "description": "Update to the latest system software (update required; failed to update via internet)",
+              "solution": "Reboot the console and update the system software. Try using a USB device to update instead."
+            },
+            {
+              "code": "SU-101312-8",
+              "description": "Blu-Ray disc drive does not exist (console does not recognize Blu-Ray drive)",
+              "solution": "If the error occurs but the console Blu-Ray disc drive has not been removed: 1) Turn off the console and unplug it. 2) Power cycle the router. 3) Plug the console back in and reboot it. 4) Go to the control center and select [Notifications]. Highlight the update file, press the OPTIONS button, and select [Delete]. 5) Go to [Settings] > [System] > [System Software] > [System Software Updates and Settings] and restart the update. If the update fails, see these guides for further troubleshooting: 1 2 6) Try resetting the console. Go to [Settings] > [System] > [System Software] > [Reset Options] > [Reset Your Console] (back up all data). If still having issues, console may need to be sent in for repairs"
+            },
+            {
+              "code": "SU-101337-5",
+              "description": "Console may have not booted properly",
+              "solution": "Turn off the console and unplug it, wait 5 minutes, then plug it back in and reboot it; if the console doesn't start properly then boot into safe mode and select [Reset PS5]; if the problem persists or cannot boot into safe mode, console may need to be sent in for repairs"
+            },
+            {
+              "code": "SU-101495-0",
+              "description": "System software is up to date",
+              "solution": "No update is needed"
+            },
+            {
+              "code": "WS-113947-5",
+              "description": "Check that the information for your registered payment method is correct",
+              "solution": "1) Go to [Settings] > [Users and Accounts]. 2) Select [Account] > [Payment and Subscriptions] > [Payment Methods]. 3) Select a registered payment method, press the [options] button and select [Edit] or [Remove]. Check payment information (including expiration date and billing address) and follow the on-screen instructions to make your changes. 4) If still having issues, try a different payment method. 5) This may be a temporary issue. Wait 24 hours and try again. If paying with a credit card isn't necessary, consider using a PS Store gift card instead."
+            },
+            {
+              "code": "WS-114241-3",
+              "description": "Error occurred while connecting to the server",
+              "solution": "1) Check PSN status. 2) Reboot the console. 3) Perform an internet connection test to make sure you are connected to the internet properly and review network settings and reconfigure them if necessary. 4) Reboot the router. 5) This may be a temporary issue, try again later."
+            },
+            {
+              "code": "WS-114298-5",
+              "description": "May not be online (attempting to access an online service while offline)",
+              "solution": "1) Make sure that the online play mode is selected in the game. 2) Perform an internet connection test to make sure you are connected to the internet properly and review network settings and reconfigure them if necessary. 3) There may be a server-side issue; check PSN status or with the game publisher to check for server failures or if maintenance is in progress."
+            },
+            {
+              "code": "WS-115019-7",
+              "description": "Unable to connect to the server (service down/under maintenance or temporary congestion)",
+              "solution": "The service may be undergoing maintenance. Check server status for failure and maintenance information. If not impacted, 1) reset internet connection settings on console and try an Internet connection test. 2) Power cycle the router/modem. 3) If the above do not work, try again later as the line may be temporarily congested."
+            },
+            {
+              "code": "WS-115195-2",
+              "description": "Unable to connect to the server (service down/under maintenance or temporary congestion)",
+              "solution": "The service may be undergoing maintenance. Check server status for failure and maintenance information. If not impacted, 1) reset internet connection settings on console and try an Internet connection test. 2) Power cycle the router/modem. 3) If the above do not work, try again later as the line may be temporarily congested."
+            },
+            {
+              "code": "WS-115338-1",
+              "description": "Unable to connect to the server (service down/under maintenance or incorrect connection settings)",
+              "solution": "The service may be undergoing maintenance. Check PSN status. If PSN is active, 1) reset network settings on console and test the connection. 2) Power cycle the router/modem. 3) If still having issues, try again later."
+            },
+            {
+              "code": "WS-116327-0",
+              "description": "“You’re not signed in. Connect to PlayStation Network to use this feature.”",
+              "solution": "Sign in to PlayStation Network"
+            },
+            {
+              "code": "WS-116328-1",
+              "description": "Install the latest system software (update required; failed to update via internet)",
+              "solution": "Connect the console to the internet and update it to the latest version of the system software. If an error occurs during the update, reboot your network equipment and console and try updating again. If possible, try updating via a method other than the Internet (such as a USB drive or a game disc)."
+            },
+            {
+              "code": "WS-116329-2",
+              "description": "PSN sign-in ID or password do not match",
+              "solution": "Incorrect ID or password, try entering it again; can also try to sign in from another device"
+            },
+            {
+              "code": "WS-116330-4",
+              "description": "Access to PSN has been temporarily suspended",
+              "solution": "1) Check if you can sign in from another device (such as a PC). 2) If unable to sign in from another device, your account is suspended for a violation of the terms of service. Check the terms of service and user agreement before accessing PSN."
+            },
+            {
+              "code": "WS-116331-5",
+              "description": "Access to PSN has been temporarily suspended",
+              "solution": "1) Check if you can sign in from another device (such as a PC or mobile device) 2) If unable to sign in from another device, your account is suspended due to a violation of the terms of service. See the email sent to your sign-in ID (email address) for more information."
+            },
+            {
+              "code": "WS-116332-6",
+              "description": "Access from console may be prohibited or temporarily unavailable (banned from PSN or server issues)",
+              "solution": "Access to PSN from console is prohibited due to reasons such as violations of the terms of service. If not prohibited, server may be down temporarily. Check the game server and PSN status. Temporary network congestion may be possible, try again later."
+            },
+            {
+              "code": "WS-116367-4",
+              "description": "Access to PSN has been suspended (ToS violation)",
+              "solution": "1) Check if you can sign in from another device (such as a PC). 2) If unable to sign in from another device, your account is suspended for a violation of the terms of service. Check the terms of service and user agreement before accessing PSN."
+            },
+            {
+              "code": "WS-116414-7",
+              "description": "Network connection error occurred",
+              "solution": "1) Check PSN status to see if there are any server failures or any maintenance in progress. 2) Reboot the console. 3) Power cycle the router. 4) Try again after a while."
+            },
+            {
+              "code": "WS-116420-5",
+              "description": "Unable to connect to the server (error connecting to PSN)",
+              "solution": "1) Check the PSN status page if there is any server failure or maintenance going on. 2) Reboot the console, and connect using a wired (ethernet) connection as much as possible and reconfigure the connection settings. 3) When using Wi-Fi, move the console closer to the router or removing anything interrupting the connection. 4) Power cycle the router/modem. 5) Update router firmware. 6) If possible, try opening these ports: TCP: 80, 443, 3478, 3479, 3480 and UDP: 3478, 3479, 49152～65535. 7) In the network settings, set up a static IP address manually to improve it. 8) Try using a public DNS (e.g Google) to improve the connection. If the above does not solve the problem, the line is likely to be temporarily busy. Leave it for a while and try again later."
+            },
+            {
+              "code": "WS-116439-4",
+              "description": "Unable to connect to the server (service down/under maintenance or temporary congestion)",
+              "solution": "The service may be undergoing maintenance. Check server status for failure and maintenance information. If not impacted, 1) reset internet connection settings on console and try an Internet connection test. 2) Power cycle the router/modem. 3) If the above do not work, try again later as the line may be temporarily congested."
+            },
+            {
+              "code": "WS-116449-5",
+              "description": "Service currently under maintenance",
+              "solution": "The service may be undergoing maintenance. Check server status for failure and maintenance information. If not impacted, 1) reset internet connection settings on console and try an Internet connection test. 2) Power cycle the router/modem. 3) If the above do not work, try again later as the line may be temporarily congested."
+            },
+            {
+              "code": "WS-116483-3",
+              "description": "Issue connecting to the server (PSN down or connection issues)",
+              "solution": "1) Check PSN status to see if there are any network issues. 2) Reboot the console. 3) Power cycle the router. 4) This may be a temporary issue, try again later."
+            },
+            {
+              "code": "WS-116486-6",
+              "description": "Issue connecting to the server (PSN down, stressed network, or connection issues)",
+              "solution": "1) Check PSN status. 2) Power cycle the router. 3) If multiple devices are connected to the same network, turn those off and try again. 4) This may be a temporary issue. Wait a while before trying again."
+            },
+            {
+              "code": "WS-116489-9",
+              "description": "Error occurred while connecting to PSN from the console (PSN down or connection issues)",
+              "solution": "1) Check PSN status for any issues or maintenance. 2) Power cycle the router/modem. If still having issues, then wait and try again later."
+            },
+            {
+              "code": "WS-116518-5",
+              "description": "Internal error",
+              "solution": "1) Reboot console. 2) Update console if needed. 3) If the problem persists, console may need to be sent in for repairs"
+            },
+            {
+              "code": "WS-116520-5",
+              "description": "Error occurred while connecting to the server",
+              "solution": "1) Check PSN status. 2) Reboot the console and connect to the Internet using a wired connection. 3) When using a wireless connection, try bringing the console closer to the router or remove anything interrupting the connection between the devices. 4) Power cycle the router. 5) Update router to the latest firmware. 6) If possible, try opening these ports: TCP: 80, 443, 3478, 3479, 3480 and UDP: 3478, 3479, 49152～65535. Should the above steps not solve the issue, this may be a temporary problem. Try again after a few hours."
+            },
+            {
+              "code": "WS-116521-6",
+              "description": "Service currently under maintenance",
+              "solution": "The service may be undergoing maintenance. Check server status for failure and maintenance information. If not impacted, 1) reset internet connection settings on console and try an Internet connection test. 2) Power cycle the router/modem. 3) If the above do not work, try again later as the line may be temporarily congested."
+            },
+            {
+              "code": "WS-116522-7",
+              "description": "Update failed because the latest version of the system software was not recognized",
+              "solution": "1) If updating via the internet, reboot the console, connect via Ethernet if possible and reconfigure connection settings. If using a Wi-Fi connection, try moving the console closer to the router or remove any obstructions between the router and console. Power cycle the router/modem. 2) If updating via USB storage device, download the latest system software and make sure the file name and save location are correct. 3) If updating via a game disc, make sure it is free of fingerprints, scratches or smudges and clean it if necessary. If the above do not work, try other update methods if possible."
+            },
+            {
+              "code": "WS-117176-3",
+              "description": "Possible issue with 2-Step Verification settings",
+              "solution": "Phone number registered with another account; delete the phone number and try again, or try another number"
+            },
+            {
+              "code": "WS-117224-7",
+              "description": "Possible issue with 2-Step Verification setting",
+              "solution": "Sign-In ID of PSN account linked to another Sony Group service; unlink the ID and try again"
+            },
+            {
+              "code": "WV-109144-9",
+              "description": "Unable to connect to the server (error connecting to PSN)",
+              "solution": "1) Check PSN status if there is any server failure or maintenance. 2) Reboot the console, connect via a wired connection and reconfigure the connection settings. 3) When using a wireless connection, move the console closer to the router or remove anything interrupting the connection between the devices. 4) Power cycle the modem/router. 5) Update router firmware. 6) If possible, try opening these ports: TCP: 80, 443, 3478, 3479, 3480 and UDP: 3478, 3479, 49152～65535. 7) Try setting up a static IP address manually to improve the connection. 8) Try temporarily changing the DNS address to a public DNS (e.g. Google). If none of these work, then the line is likely to be temporarily busy. Leave it for a while and try again later."
+            },
+            {
+              "code": "WV-109145-0",
+              "description": "Unable to connect to the Internet (error connecting to PSN)",
+              "solution": "1) Check PSN status if there is any server failure or maintenance. 2) Reboot the console, connect via a wired connection and reconfigure the connection settings. 3) When using a wireless connection, move the console closer to the router or remove anything interrupting the connection between the devices. 4) Power cycle the modem/router. 5) Update router firmware. 6) If possible, try opening these ports: TCP: 80, 443, 3478, 3479, 3480 and UDP: 3478, 3479, 49152～65535. 7) Try setting up a static IP address manually to improve the connection. 8) Try temporarily changing the DNS address to a public DNS (e.g. Google). If none of these work, then the line is likely to be temporarily busy. Leave it for a while and try again later."
+            },
+            {
+              "code": "WV-109146-1",
+              "description": "Unable to connect to the server (error connecting to PSN)",
+              "solution": "1) Check PSN status if there is any server failure or maintenance. 2) Reboot the console, connect via a wired connection and reconfigure the connection settings. 3) When using a wireless connection, move the console closer to the router or remove anything interrupting the connection between the devices. 4) Power cycle the modem/router. 5) Update router firmware. 6) If possible, try opening these ports: TCP: 80, 443, 3478, 3479, 3480 and UDP: 3478, 3479, 49152～65535. 7) Try setting up a static IP address manually to improve the connection. 8) Try temporarily changing the DNS address to a public DNS (e.g. Google). If none of these work, then the line is likely to be temporarily busy temporarily. Try again later. Leave it for a while and try again later."
+            },
+            {
+              "code": "WV-109153-9",
+              "description": "Connection to the network timed out (error connecting to the PSN)",
+              "solution": "1) To check PSN status for any to see if there is any server failure or maintenance. 2) Reboot the console to the router, connect via a wired network connection if possible and to reconfigure the network connection settings."
+              },
+              {
+              "code": "When using a wireless connection",
+              "description": "move the console closer to to the router or remove anything interrupting the connection between the devices.",
+              "solution": "4) Power cycle the modem/router/modem."
+            },
+            {
+              "code": "5",
+              "description": "Update router firmware to the latest version.",
+              "solution": "6) If possible, try opening these ports: TCP: opening these ports: 80, 443, 3478, 3479, 3480 and UDP: 347, 3479, 49152~65535."
+            },
+            {
+                  "code": "WV-109166-3",
+                  "description": "Unable to connect to the Internet (error connecting to PSN)",
+                  "solution": "1) Check PSN status if there is any server failure or maintenance. 2) Reboot the console, connect via a wired connection and reconfigure the connection settings. 3) When using a wireless connection, move the console closer to the router or remove anything interrupting the connection between the devices. 4) Power cycle the modem/router. 5) Update router firmware. 6) If possible, try opening these ports: TCP: 80, 443, 3478, 3479, 3480 and UDP: 3478, 3479, 49152～65535. 7) Try setting up a static IP address manually to improve the connection. 8) Try temporarily changing the DNS address to a public DNS (e.g. Google). If none of these work, then the line is likely to be temporarily busy. Leave it for a while and try again later."
+                },
+                {
+                  "code": "WV-109168-5",
+                  "description": "Error while connecting to PSN",
+                  "solution": "1) Check the PSN status page to see whether there's a server failure or maintenance going on. 2) Reboot the console, and connect to the internet using a wired (ethernet) connection if possible and reconfigure the connection settings. 3) When using Wi-Fi, make sure the console is as close as possible to the router. Otherwise, remove any items that could be blocking or interfering with the connection. 4) Power cycle the router/modem. 5) Update router firmware (contact ISP or network administrator). 6) If possible, speak to your ISP about how to cancel the port filtering function on the router. 7) Try manually setting up a static IP address by going to [Settings] > [Network] > [Settings] > [Set Up Internet Connection]. If still having issues, try again later."
+                }
+]

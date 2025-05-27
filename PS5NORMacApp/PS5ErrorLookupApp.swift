@@ -1,6 +1,5 @@
 import SwiftUI
 
-@main
 struct PS5ErrorLookupApp: App {
     var body: some Scene {
         WindowGroup {
@@ -10,54 +9,35 @@ struct PS5ErrorLookupApp: App {
 }
 
 class PS5ErrorCodes: ObservableObject {
-    @Published private(set) var errorMap: [String: String] = [:]
-    
+    @Published private(set) var errorMap: [String: PS5ErrorCode] = [:]
+
     init() {
         loadErrors()
     }
-    
+
     private func loadErrors() {
-        guard let url = Bundle.main.url(forResource: "ps5_errors", withExtension: "json"),
-              let data = try? Data(contentsOf: url),
-              let json = try? JSONSerialization.jsonObject(with: data, options: []),
-              let dict = json as? [String: String] else {
-            print("Failed to load PS5 error codes JSON")
+        guard let url = Bundle.main.url(forResource: "ps5_errors", withExtension: "json") else {
+            print("Failed to find JSON file")
             return
         }
-        errorMap = dict
-    }
-    
-    func description(for code: String) -> String {
-        errorMap[code] ?? "Unknown error code"
-    }
-}
 
-struct ContentView: View {
-    @StateObject private var errorCodes = PS5ErrorCodes()
-    @State private var inputCode: String = ""
-    @State private var description: String = ""
-    
-    var body: some View {
-        VStack(spacing: 20) {
-            Text("PS5 Error Code Lookup")
-                .font(.largeTitle)
-                .padding(.top)
-            
-            TextField("Enter error code (e.g. 80801001)", text: $inputCode)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal)
-                .onChange(of: inputCode) { newValue in
-                    description = errorCodes.description(for: newValue.uppercased())
-                }
-            
-            Text(description)
-                .font(.headline)
-                .foregroundColor(description == "Unknown error code" ? .red : .primary)
-                .padding()
-            
-            Spacer()
+        do {
+            let data = try Data(contentsOf: url)
+            let decoded = try JSONDecoder().decode([PS5ErrorCode].self, from: data)
+            DispatchQueue.main.async {
+                // Create a dictionary keyed by error code
+                self.errorMap = Dictionary(uniqueKeysWithValues: decoded.map { ($0.code, $0) })
+            }
+        } catch {
+            print("Failed to load or decode JSON: \(error)")
         }
-        .padding()
-        .frame(minWidth: 400, minHeight: 200)
+    }
+
+    func description(for code: String) -> String {
+        if let error = errorMap[code] {
+            return error.description
+        } else {
+            return "Unknown error code"
+        }
     }
 }

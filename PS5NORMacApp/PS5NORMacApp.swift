@@ -6,9 +6,8 @@
 //
 
 import SwiftUI
-
 @main
-struct PS5NORMacAppApp: App {
+struct PS5NORMacApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
