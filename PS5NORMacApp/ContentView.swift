@@ -25,7 +25,8 @@ struct ContentView: View {
         @State private var codeInput = ""
         @State private var codeDescription = ""
         @State private var codeSolution = ""
-
+    @State private var command: String = ""
+    @StateObject private var uartViewModel = UARTViewModel() // Added for UART
     
     // Offsets
     private let offsetOne: Int64 = 0x1c7010
@@ -60,7 +61,9 @@ struct ContentView: View {
         case errorCodes = "Error Codes"
         case settings = "Settings"
         case hexEditor = "Hex Editor"
+        case uart = "UART" // Added
         
+
         var id: String { rawValue }
         var iconName: String {
             switch self {
@@ -68,6 +71,8 @@ struct ContentView: View {
             case .errorCodes: return "exclamationmark.triangle"
             case .settings: return "gearshape"
             case .hexEditor: return "chevron.left.slash.chevron.right"
+            case .uart: return "terminal" // Added
+
             }
         }
     }
@@ -198,9 +203,14 @@ struct ContentView: View {
                         errorCodeInput: $errorCodeInput,
                         errorDescription: $errorDescription,
                         errorSolution: $errorSolution,
-                        viewModel: errorLookupViewModel
+                        viewModel: errorLookupViewModel,
+                        uartViewModel: uartViewModel // Added
                     )
                     .padding()
+                case .uart:
+                    UARTView()
+                        .environmentObject(uartViewModel)
+                        .padding()
                 case .settings, .none:
                     VStack {
                         Text("Settings")

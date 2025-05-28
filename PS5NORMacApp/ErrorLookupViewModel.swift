@@ -1,13 +1,15 @@
 import Foundation
 import Combine
 
+
+
 class ErrorLookupViewModel: ObservableObject {
     @Published var errorCodes: [PS5ErrorCode] = []
-
+    
     init() {
         loadErrorCodes()
     }
-
+    
     func loadErrorCodes() {
         guard let url = Bundle.main.url(forResource: "errorCodes", withExtension: "json") else {
             print("Failed to find errorCodes.json")
@@ -21,6 +23,12 @@ class ErrorLookupViewModel: ObservableObject {
             }
         } catch {
             print("Failed to decode JSON: \(error)")
+        }
+        struct ErrorCode: Identifiable {
+            let id = UUID()
+            let code: String
+            let description: String
+            let solution: String?
         }
     }
 }

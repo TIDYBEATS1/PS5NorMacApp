@@ -5,7 +5,7 @@ struct ErrorLookupView: View {
     @Binding var errorDescription: String
     @Binding var errorSolution: String
     @ObservedObject var viewModel: ErrorLookupViewModel
-    
+    @ObservedObject var uartViewModel: UARTViewModel // Fixed
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             Text("Error Code Lookup")
