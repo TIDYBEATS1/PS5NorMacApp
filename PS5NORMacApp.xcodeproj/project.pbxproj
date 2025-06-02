@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		A0C8186C2DEDC31100F8F485 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = A0C8186B2DEDC31100F8F485 /* ZIPFoundation */; };
 		A0C818712DEDCC1F00F8F485 /* UpdaterHelperGUI.app in Copy Files */ = {isa = PBXBuildFile; fileRef = A067FF132DED4B6200C4EB09 /* UpdaterHelperGUI.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A0C818BD2DEDE42400F8F485 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A0C818BC2DEDE42400F8F485 /* FirebaseAuth */; };
+		A0C818BF2DEDE42400F8F485 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = A0C818BE2DEDE42400F8F485 /* FirebaseCore */; };
+		A0C818E82DEE106100F8F485 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A0C818E72DEE106100F8F485 /* FirebaseFirestore */; };
+		A0C818ED2DEE259200F8F485 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A0C818EC2DEE259200F8F485 /* FirebaseAnalytics */; };
+		A0C818EF2DEE259200F8F485 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = A0C818EE2DEE259200F8F485 /* FirebaseCrashlytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +126,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0C8186C2DEDC31100F8F485 /* ZIPFoundation in Frameworks */,
+				A0C818E82DEE106100F8F485 /* FirebaseFirestore in Frameworks */,
+				A0C818BF2DEDE42400F8F485 /* FirebaseCore in Frameworks */,
+				A0C818EF2DEE259200F8F485 /* FirebaseCrashlytics in Frameworks */,
+				A0C818ED2DEE259200F8F485 /* FirebaseAnalytics in Frameworks */,
+				A0C818BD2DEDE42400F8F485 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +227,11 @@
 			name = PS5NORMacApp;
 			packageProductDependencies = (
 				A0C8186B2DEDC31100F8F485 /* ZIPFoundation */,
+				A0C818BC2DEDE42400F8F485 /* FirebaseAuth */,
+				A0C818BE2DEDE42400F8F485 /* FirebaseCore */,
+				A0C818E72DEE106100F8F485 /* FirebaseFirestore */,
+				A0C818EC2DEE259200F8F485 /* FirebaseAnalytics */,
+				A0C818EE2DEE259200F8F485 /* FirebaseCrashlytics */,
 			);
 			productName = PS5NORMacApp;
 			productReference = A0AF6DD82DE3A1A300B0D838 /* PS5NORMacApp.app */;
@@ -308,6 +323,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				A0C8186A2DEDC31100F8F485 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+				A0C818BB2DEDE42400F8F485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A0AF6DD92DE3A1A300B0D838 /* Products */;
@@ -403,13 +419,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UpdaterHelperGUI/UpdaterHelperGUI.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K6293UD486;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -434,13 +451,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_ENTITLEMENTS = UpdaterHelperGUI/UpdaterHelperGUI.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K6293UD486;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -591,11 +610,14 @@
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = PS5NORMacApp/PS5NORMacApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K6293UD486;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "PS5 Nor Tool";
@@ -610,10 +632,11 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 2.2.1;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.PS5NORMacApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -629,11 +652,14 @@
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = PS5NORMacApp/PS5NORMacApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K6293UD486;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "PS5 Nor Tool";
@@ -648,10 +674,11 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 2.2.1;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.PS5NORMacApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -795,6 +822,14 @@
 				minimumVersion = 0.9.19;
 			};
 		};
+		A0C818BB2DEDE42400F8F485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.13.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -802,6 +837,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A0C8186A2DEDC31100F8F485 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
 			productName = ZIPFoundation;
+		};
+		A0C818BC2DEDE42400F8F485 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0C818BB2DEDE42400F8F485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A0C818BE2DEDE42400F8F485 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0C818BB2DEDE42400F8F485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		A0C818E72DEE106100F8F485 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0C818BB2DEDE42400F8F485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		A0C818EC2DEE259200F8F485 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0C818BB2DEDE42400F8F485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		A0C818EE2DEE259200F8F485 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0C818BB2DEDE42400F8F485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

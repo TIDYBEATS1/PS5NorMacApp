@@ -1,29 +1,33 @@
-//
-//  PS5NORMacAppApp.swift
-//  PS5NORMacApp
-//
-//  Created by Sam Stanwell on 25/05/2025.
-//
-
 import SwiftUI
-import AppKit
+import Firebase
+import FirebaseAuth
 
 @main
 struct PS5NORMacApp: App {
     @StateObject private var settings = AppSettings()
-    @StateObject var updater = Updater.shared  // or your Updater instance
+    @StateObject private var auth = AuthManager()
+    @StateObject var updater = Updater.shared
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
+    @StateObject private var authManager = AuthManager()
+
+    init() {
+        FirebaseApp.configure()
+        Auth.auth().useAppLanguage()
+    }
 
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(isDarkMode ? .dark : .light)
                 .environmentObject(settings)
+                .environmentObject(auth)
                 .environmentObject(updater)
-                .onAppear {
-                }
         }
-        // Add a separate window group for Settings window
+
         WindowGroup("Settings") {
             SettingsView()
+              .environmentObject(authManager)
+              .environmentObject(AppSettings.shared)
                 .environmentObject(settings)
         }
         .commands {

@@ -6,7 +6,7 @@ class AppSettings: ObservableObject, Codable {
         case autoCheckUpdates, enableTelemetry, showAdvancedHex, highlightDifferences, darkMode, exportPath, hexFontSize
         case defaultBaudRate, autoConnect, logToFile, showHexOutput, uartTimeout, autoUpdateEnabled
     }
-    
+    static let shared = AppSettings()
     @Published var autoCheckUpdates: Bool = true
     @Published var enableTelemetry: Bool = false
     @Published var showAdvancedHex: Bool = false
@@ -14,7 +14,8 @@ class AppSettings: ObservableObject, Codable {
     @Published var darkMode: Bool = false
     @Published var exportPath: String = ""
     @Published var hexFontSize: Double = 14
-    
+    @Published var isUserLoggedIn: Bool = false
+    @Published var isTelemetryEnabled: Bool = false
     @Published var defaultBaudRate: Int = 115200
     @Published var autoConnect: Bool = false
     @Published var logToFile: Bool = false

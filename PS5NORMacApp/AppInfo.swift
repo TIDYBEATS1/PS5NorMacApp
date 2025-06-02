@@ -10,6 +10,6 @@ import Foundation
 
 struct AppInfo {
     static var currentVersion: String {
-        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "2.2.3"
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "3.0.0"
     }
 }

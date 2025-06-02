@@ -1,6 +1,7 @@
 import SwiftUI
 import AppKit
 import Combine
+import FirebaseAuth
 
 struct ContentView: View {
     @State private var selectedFile: URL? = nil
@@ -20,7 +21,7 @@ struct ContentView: View {
     @State private var errorCodeInput: String = ""
     @State private var errorDescription: String = ""
     @EnvironmentObject var settings: AppSettings  // Make sure this is here!
-    
+    @StateObject var authManager = AuthManager()
     @State private var errorSolution: String = ""
     @StateObject private var errorLookupViewModel = ErrorLookupViewModel()
     @StateObject private var viewModel = ErrorLookupViewModel()
@@ -87,158 +88,161 @@ struct ContentView: View {
     
     @State private var selectedSidebarItem: SidebarItem? = .results
     
-    var body: some View {
-        
-        NavigationSplitView {
-            List(SidebarItem.allCases, selection: $selectedSidebarItem) { item in
-                NavigationLink(value: item) {
-                    Label(item.rawValue, systemImage: item.iconName)
-                        .padding(.vertical, 2)
-                }
-            }
-            .listStyle(.sidebar)
-            .frame(minWidth: 150, idealWidth: 180)
-            .navigationTitle("PS5 NOR Modifier")
-        } detail: {
-            VStack(spacing: 10) {
-                VStack(spacing: 5) {
-                    Image(systemName: "gamecontroller")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50, height: 50)
-                        .foregroundColor(.blue)
-                    
-                    Text("PS5 NOR Modifier")
-                        .font(.title)
-                        .fontWeight(.bold)
-                    
-                    Text("Current Version: \(versionFetcher.currentVersion)")
-                    Text("Latest Version: \(versionFetcher.latestVersion)")
-                    if versionFetcher.checkingUpdate {
-                        ProgressView()
-                    }
-                }
-                .padding()
-                
-                Text("This is in development, use at your own risk")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.red)
-                    .multilineTextAlignment(.center)
-            }
-            .frame(maxWidth: .infinity, alignment: .center)
-            // File picker
-            HStack {
-                Text("Select NOR Dump")
-                    .font(.subheadline)
-                Spacer()
-                Button("Browse") {
-                    let panel = NSOpenPanel()
-                    panel.allowsMultipleSelection = false
-                    panel.canChooseDirectories = false
-                    panel.allowedContentTypes = [.data]
-                    if panel.runModal() == .OK, let url = panel.url {
-                        selectedFile = url
-                        loadFile()
-                    }
-                }
-                .buttonStyle(.bordered)
-            }
-            .padding(.horizontal)
-            .padding(.vertical, 8)
-            
-            Divider()
-            
-            switch selectedSidebarItem {
-            case .results:
-                ScrollView {
-                    HStack(alignment: .top, spacing: 20) {
-                        GroupBox(label: Text("Dump Results").font(.headline)) {
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text("Serial Number: \(serialNumber)")
-                                Divider()
-                                Text("Motherboard Serial: \(motherboardSerial)")
-                                Divider()
-                                Text("Board Variant: \(boardVariant)")
-                                Divider()
-                                Text("PS5 Model: \(ps5Model)")
-                                Divider()
-                                Text("File Size: \(fileSize)")
-                                Divider()
-                                Text("WiFi MAC Address: \(wifiMacAddress)")
-                                Divider()
-                                Text("LAN MAC Address: \(lanMacAddress)")
+        var body: some View {
+            Group {
+                    NavigationSplitView {
+                        List(SidebarItem.allCases, selection: $selectedSidebarItem) { item in
+                            NavigationLink(value: item) {
+                                Label(item.rawValue, systemImage: item.iconName)
+                                    .padding(.vertical, 2)
                             }
-                            .padding()
-                            .frame(maxWidth: .infinity, alignment: .leading)
                         }
-                        .frame(minWidth: 300, idealWidth: 350)
+                        .listStyle(.sidebar)
+                        .frame(minWidth: 150, idealWidth: 180)
+                        .navigationTitle("PS5 NOR Modifier")
+                    } detail: {
+                        // Your entire detail view content here...
+                        VStack(spacing: 10) {
+                                Image(systemName: "gamecontroller")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 50, height: 50)
+                                    .foregroundColor(.blue)
+                                
+                                Text("PS5 NOR Modifier")
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                
+                                Text("Current Version: \(versionFetcher.currentVersion)")
+                                Text("Latest Version: \(versionFetcher.latestVersion)")
+                                if versionFetcher.checkingUpdate {
+                                    ProgressView()
+                                }
+                            
+                            Text("This is in development, use at your own risk")
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.red)
+                                .multilineTextAlignment(.center)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        // File picker
+                        HStack {
+                            Text("Select NOR Dump")
+                                .font(.subheadline)
+                            Spacer()
+                            Button("Browse") {
+                                let panel = NSOpenPanel()
+                                panel.allowsMultipleSelection = false
+                                panel.canChooseDirectories = false
+                                panel.allowedContentTypes = [.data]
+                                if panel.runModal() == .OK, let url = panel.url {
+                                    selectedFile = url
+                                    loadFile()
+                                }
+                            }
+                            .buttonStyle(.bordered)
+                        }
+                        .padding(.horizontal)
+                        .padding(.vertical, 8)
+
                         
-                        GroupBox(label: Text("Modify Values").font(.headline)) {
-                            VStack(alignment: .leading, spacing: 10) {
-                                TextField("Serial Number", text: $modifiedSerialNumber)
-                                    .textFieldStyle(.roundedBorder)
-                                Picker("Board Variant", selection: $modifiedBoardVariant) {
-                                    ForEach(boardVariantOptions, id: \.self) { option in
-                                        Text(option)
+                        Divider()
+                        
+                        switch selectedSidebarItem {
+                        case .results:
+                            ScrollView {
+                                HStack(alignment: .top, spacing: 20) {
+                                    GroupBox(label: Text("Dump Results").font(.headline)) {
+                                        VStack(alignment: .leading, spacing: 8) {
+                                            Text("Serial Number: \(serialNumber)")
+                                            Divider()
+                                            Text("Motherboard Serial: \(motherboardSerial)")
+                                            Divider()
+                                            Text("Board Variant: \(boardVariant)")
+                                            Divider()
+                                            Text("PS5 Model: \(ps5Model)")
+                                            Divider()
+                                            Text("File Size: \(fileSize)")
+                                            Divider()
+                                            Text("WiFi MAC Address: \(wifiMacAddress)")
+                                            Divider()
+                                            Text("LAN MAC Address: \(lanMacAddress)")
+                                        }
+                                        .padding()
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                     }
-                                }
-                                .pickerStyle(.menu)
-                                Picker("PS5 Model", selection: $modifiedPs5Model) {
-                                    ForEach(ps5ModelOptions, id: \.self) { option in
-                                        Text(option)
+                                    .frame(minWidth: 300, idealWidth: 350)
+                                    
+                                    GroupBox(label: Text("Modify Values").font(.headline)) {
+                                        VStack(alignment: .leading, spacing: 10) {
+                                            TextField("Serial Number", text: $modifiedSerialNumber)
+                                                .textFieldStyle(.roundedBorder)
+                                            Picker("Board Variant", selection: $modifiedBoardVariant) {
+                                                ForEach(boardVariantOptions, id: \.self) { option in
+                                                    Text(option)
+                                                }
+                                            }
+                                            .pickerStyle(.menu)
+                                            Picker("PS5 Model", selection: $modifiedPs5Model) {
+                                                ForEach(ps5ModelOptions, id: \.self) { option in
+                                                    Text(option)
+                                                }
+                                            }
+                                            .pickerStyle(.menu)
+                                            TextField("WiFi MAC Address", text: $modifiedWifiMacAddress)
+                                                .textFieldStyle(.roundedBorder)
+                                            TextField("LAN MAC Address", text: $modifiedLanMacAddress)
+                                                .textFieldStyle(.roundedBorder)
+                                            Button("Save New BIOS Information") {
+                                                saveFile()
+                                            }
+                                            .buttonStyle(.borderedProminent)
+                                            .frame(maxWidth: .infinity, alignment: .center)
+                                        }
+                                        .padding()
+                                        .frame(maxWidth: .infinity, alignment: .leading)
                                     }
+                                    .frame(minWidth: 250, idealWidth: 350)
                                 }
-                                .pickerStyle(.menu)
-                                TextField("WiFi MAC Address", text: $modifiedWifiMacAddress)
-                                    .textFieldStyle(.roundedBorder)
-                                TextField("LAN MAC Address", text: $modifiedLanMacAddress)
-                                    .textFieldStyle(.roundedBorder)
-                                Button("Save New BIOS Information") {
-                                    saveFile()
-                                }
-                                .buttonStyle(.borderedProminent)
-                                .frame(maxWidth: .infinity, alignment: .center)
+                                .padding()
                             }
+                        case .hexEditor:
+                            HexEditorView(data: $fileData, referenceData: nil)
+                                .environmentObject(settings)
+                                .frame(minWidth: 700, minHeight: 400)
+                        case .errorCodes:
+                            ErrorLookupView(
+                                errorCodeInput: $errorCodeInput,
+                                errorDescription: $errorDescription,
+                                errorSolution: $errorSolution,
+                                viewModel: errorLookupViewModel,
+                                uartViewModel: uartViewModel
+                            )
                             .padding()
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                        case .uart:
+                            UARTView()
+                                .environmentObject(uartViewModel)
+                                .padding()
+                            
+                        case .settings, .none:
+                            VStack {
+                                SettingsView()
+                                    .environmentObject(authManager)
+                                    .padding(.bottom)
+                                    .frame(minWidth: 600, maxWidth:
+                                            .infinity, maxHeight: .infinity)
+                            }
+                            .frame(minWidth: 800, minHeight: 600)
+                            .onAppear {
+                                errorLookupViewModel.loadErrorCodes()
+                            }
                         }
-                        .frame(minWidth: 250, idealWidth: 350)
                     }
-                    .padding()
-                }
-                case .hexEditor:
-                HexEditorView(data: $fileData, referenceData: nil)
-                            .environmentObject(settings) // inject settings so HexEditor can access it
-                            .frame(minWidth: 700, minHeight: 400)
-                
-            case .errorCodes:
-                ErrorLookupView(
-                    errorCodeInput: $errorCodeInput,
-                    errorDescription: $errorDescription,
-                    errorSolution: $errorSolution,
-                    viewModel: errorLookupViewModel,
-                    uartViewModel: uartViewModel // Added
-                )
-                .padding()
-            case .uart:
-                UARTView()
-                    .environmentObject(uartViewModel)
-                    .padding()
-            case .settings, .none:
-                VStack {
-                    SettingsView()
-                        .padding(.bottom)
-                        .frame(minWidth: 600, maxWidth: .infinity, maxHeight: .infinity)
-                }
-                .frame(minWidth: 800, minHeight: 600)
-                .onAppear {
-                    errorLookupViewModel.loadErrorCodes()
+                    .environmentObject(settings)
                 }
             }
-        }
-    }
-            
+        
             private func loadFile() {
                 guard let fileURL = selectedFile else { return }
                 do {
