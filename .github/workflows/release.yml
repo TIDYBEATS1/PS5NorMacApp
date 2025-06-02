@@ -1,0 +1,41 @@
+name: 2.0
+on:
+  push:
+    tags:
+      - 'v*' # Trigger on tags like v1.0.0, v1.0.1, etc.
+jobs:
+  release:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Set up Xcode
+        uses: actions/setup-xcode@v1
+        with:
+          xcode-version: 'latest'
+      - name: Build App
+        run: |
+          xcodebuild -scheme YourApp -configuration Release clean build
+          cd build/Release
+          zip -r PS5NORMacApp.app.zip PS5NORMacApp.app.zip
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/Release/PS5NORMacApp.app.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Update updates.json
+        run: |
+          echo '{
+            "latestVersion": "${{ github.ref_name }}",
+            "downloadURL": "https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/YourApp.zip",
+            "releaseNotes": "Release ${{ github.ref_name }}"
+          }' > updates.json
+          git config user.name "TISYBEATS1"
+          git config user.email "samstanwell234@gmail.com"
+          git add updates.json
+          git commit -m "Update updates.json for ${{ github.ref_name }}"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
