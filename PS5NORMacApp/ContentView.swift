@@ -32,7 +32,8 @@ struct ContentView: View {
     @State private var someReferenceData: Data? = nil  // optional reference data for highlighting differences
     @StateObject private var uartViewModel = UARTViewModel() // Added for UART
     @State private var referenceData: Data? = nil
-    
+    @StateObject private var versionFetcher = VersionFetcher()  // <-- Declare here
+
     // Offsets
     private let offsetOne: Int64 = 0x1c7010
     private let offsetTwo: Int64 = 0x1c7030
@@ -98,29 +99,34 @@ struct ContentView: View {
             .navigationTitle("PS5 NOR Modifier")
         } detail: {
             VStack(spacing: 10) {
-                // Header
-                HStack(spacing: 15) {
+                VStack(spacing: 5) {
                     Image(systemName: "gamecontroller")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 50, height: 50)
                         .foregroundColor(.blue)
-                    VStack(alignment: .leading) {
-                        Text("PS5 NOR Modifier")
-                            .font(.title)
-                            .fontWeight(.bold)
-                        Text("Use at your own risk!")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                    }
+
+                    Text("PS5 NOR Modifier")
+                        .font(.title)
+                        .fontWeight(.bold)
+
+                    Text(versionFetcher.version)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
                 }
                 .padding(.top, 10)
-                
+                .frame(maxWidth: .infinity)
+                .onAppear {
+                    versionFetcher.fetchVersion()
+                }
+
                 Text("This is in development, use at your own risk")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundColor(.red)
-                
+                    .multilineTextAlignment(.center)
+            }
+            .frame(maxWidth: .infinity, alignment: .center)
                 // File picker
                 HStack {
                     Text("Select NOR Dump")
@@ -229,7 +235,7 @@ struct ContentView: View {
                 }
             }
         }
-    }
+
             
             private func loadFile() {
                 guard let fileURL = selectedFile else { return }
