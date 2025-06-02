@@ -2,69 +2,74 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var settings: AppSettings
-    @State private var showUpdateAlert = false
-    @State private var latestVersion: String?
-    @State private var downloadURL: URL?
-
+    
     var body: some View {
-        VStack {
-            Text("App Version: \(AppInfo.currentVersion)")
+        
+        VStack(alignment: .leading, spacing: 20) {
+            Text("App Settings")
+                .font(.largeTitle)
+                .bold()
+                .padding(.bottom, 10)
+            
             Form {
-                Section(header: Text("UART Settings")) {
-                    Picker("Default Baud Rate", selection: $settings.defaultBaudRate) {
-                        ForEach([9600, 19200, 38400, 57600, 115200], id: \.self) { rate in
-                            Text("\(rate)").tag(rate)
-                        }
-                    }
-                    Stepper(value: $settings.uartTimeout, in: 1...99) {
-                        Text("UART Timeout: \(settings.uartTimeout * 100)ms")
-                    }
-                    Toggle("Auto-connect on launch", isOn: $settings.autoConnect)
-                    Toggle("Log received data to file", isOn: $settings.logToFile)
-                    Toggle("Show output in Hex format", isOn: $settings.showHexOutput)
+                Section(header: Text("General")) {
+                    Toggle("Automatically check for updates", isOn: $settings.autoCheckUpdates)
+                    Toggle("Enable telemetry", isOn: $settings.enableTelemetry)
+                    Toggle("Dark mode", isOn: $settings.darkMode)
                 }
                 
-                Section {
-                    Button("Check for Updates") {
-                        checkForUpdates()
+                Section(header: Text("Hex Viewer")) {
+                    Toggle("Show advanced hex", isOn: $settings.showAdvancedHex)
+                    Toggle("Highlight differences", isOn: $settings.highlightDifferences)
+                    HStack {
+                        Text("Hex font size:")
+                        Slider(value: $settings.hexFontSize, in: 8...24, step: 1)
+                        Text("\(Int(settings.hexFontSize)) pt")
+                            .frame(width: 40, alignment: .leading)
                     }
                 }
+                
+                Section(header: Text("Export")) {
+                    HStack {
+                        Text("Export path:")
+                        TextField("Enter export path", text: $settings.exportPath)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .frame(maxWidth: 400)
+                    }
+                }
+                
+                Section(header: Text("UART Settings")) {
+                    HStack {
+                        Text("Default baud rate:")
+                        TextField("Baud rate", value: $settings.defaultBaudRate, formatter: NumberFormatter())
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .frame(width: 100)
+                    }
+                    Toggle("Auto connect to UART device", isOn: $settings.autoConnect)
+                    Toggle("Log UART output to file", isOn: $settings.logToFile)
+                    Toggle("Show hex output in logs", isOn: $settings.showHexOutput)
+                    HStack {
+                        Text("UART timeout (deciseconds):")
+                        TextField("Timeout", value: $settings.uartTimeout, formatter: NumberFormatter())
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .frame(width: 60)
+                    }
+                }
+                
+                Section(header: Text("Updates")) {
+                    Toggle("Enable auto-update", isOn: $settings.autoUpdateEnabled)
+                }
+                
+                Button("Reset to Defaults") {
+                    settings.resetDefaults()
+                }
+                .padding(.top, 20)
+                .foregroundColor(.red)
             }
             .padding()
+            Spacer()
         }
-        .navigationTitle("Settings")
-        .alert(isPresented: $showUpdateAlert) {
-            if let latest = latestVersion, let downloadURL = downloadURL {
-                return Alert(
-                    title: Text("Update Available"),
-                    message: Text("Version \(latest) is available. Do you want to download it?"),
-                    primaryButton: .default(Text("Download"), action: {
-                        NSWorkspace.shared.open(downloadURL)
-                    }),
-                    secondaryButton: .cancel()
-                )
-            } else {
-                return Alert(title: Text("No Updates"), message: Text("You're running the latest version."), dismissButton: .default(Text("OK")))
-            }
-        }
-        .onAppear {
-            checkForUpdates()
-        }
-    }
-    
-    private func checkForUpdates() {
-        Updater.shared.checkForUpdate { url, latestVersion in
-            DispatchQueue.main.async {
-                if let latest = latestVersion,
-                   Updater.shared.isUpdateAvailable(latestVersion: latest) {
-                    self.latestVersion = latest
-                    self.downloadURL = url
-                    self.showUpdateAlert = true
-                } else {
-                    // Optional: you can notify user they're up to date or silently ignore
-                    print("No updates available")
-                }
-            }
-        }
+        .padding()
+        .frame(minWidth: 500, minHeight: 600)
     }
 }

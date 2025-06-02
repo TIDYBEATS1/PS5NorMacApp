@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		A09B79EB2DED20DE0021CE7C /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = A09B79EA2DED20D80021CE7C /* Info.plist */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		A0AF6DE62DE3A1A500B0D838 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -41,15 +37,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A09B79EA2DED20D80021CE7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A0AF6DD82DE3A1A300B0D838 /* PS5NORMacApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PS5NORMacApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AF6DE52DE3A1A500B0D838 /* PS5NORMacAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PS5NORMacAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AF6DEF2DE3A1A500B0D838 /* PS5NORMacAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PS5NORMacAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A09B79F42DED28910021CE7C /* Exceptions for "PS5NORMacApp" folder in "PS5NORMacApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				release.yml,
+			);
+			target = A0AF6DD72DE3A1A300B0D838 /* PS5NORMacApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A0AF6DDA2DE3A1A300B0D838 /* PS5NORMacApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A09B79F42DED28910021CE7C /* Exceptions for "PS5NORMacApp" folder in "PS5NORMacApp" target */,
+			);
 			path = PS5NORMacApp;
 			sourceTree = "<group>";
 		};
@@ -100,7 +108,6 @@
 		A0AF6DCF2DE3A1A300B0D838 = {
 			isa = PBXGroup;
 			children = (
-				A09B79EA2DED20D80021CE7C /* Info.plist */,
 				A0AF6DDA2DE3A1A300B0D838 /* PS5NORMacApp */,
 				A0AF6DE82DE3A1A500B0D838 /* PS5NORMacAppTests */,
 				A0AF6DF22DE3A1A500B0D838 /* PS5NORMacAppUITests */,
@@ -269,7 +276,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A09B79EB2DED20DE0021CE7C /* Info.plist in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +455,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.PS5NORMacApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -486,7 +492,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.PS5NORMacApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
