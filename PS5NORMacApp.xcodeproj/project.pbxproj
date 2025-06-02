@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A0C818692DEDC09600F8F485 /* UpdaterHelperGUI.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = A0C818682DEDC09500F8F485 /* UpdaterHelperGUI.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A0C8186C2DEDC31100F8F485 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = A0C8186B2DEDC31100F8F485 /* ZIPFoundation */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A0AF6DE62DE3A1A500B0D838 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +29,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		A067FF1F2DED4BF700C4EB09 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Helpers;
+			dstSubfolderSpec = 1;
+			files = (
+				A0C818692DEDC09600F8F485 /* UpdaterHelperGUI.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A099AEF62DED1950005ED7EE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,9 +52,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A067FF132DED4B6200C4EB09 /* UpdaterHelperGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpdaterHelperGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AF6DD82DE3A1A300B0D838 /* PS5NORMacApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PS5NORMacApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AF6DE52DE3A1A500B0D838 /* PS5NORMacAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PS5NORMacAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AF6DEF2DE3A1A500B0D838 /* PS5NORMacAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PS5NORMacAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C818682DEDC09500F8F485 /* UpdaterHelperGUI.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = UpdaterHelperGUI.app; path = "../../Desktop/UpdaterHelperGUI 2025-06-02 12-03-28/UpdaterHelperGUI.app"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -53,6 +70,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		A067FF142DED4B6200C4EB09 /* UpdaterHelperGUI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = UpdaterHelperGUI;
+			sourceTree = "<group>";
+		};
 		A0AF6DDA2DE3A1A300B0D838 /* PS5NORMacApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -74,10 +96,18 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A067FF102DED4B6200C4EB09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0AF6DD52DE3A1A300B0D838 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C8186C2DEDC31100F8F485 /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,9 +138,11 @@
 		A0AF6DCF2DE3A1A300B0D838 = {
 			isa = PBXGroup;
 			children = (
+				A0C818682DEDC09500F8F485 /* UpdaterHelperGUI.app */,
 				A0AF6DDA2DE3A1A300B0D838 /* PS5NORMacApp */,
 				A0AF6DE82DE3A1A500B0D838 /* PS5NORMacAppTests */,
 				A0AF6DF22DE3A1A500B0D838 /* PS5NORMacAppUITests */,
+				A067FF142DED4B6200C4EB09 /* UpdaterHelperGUI */,
 				A099AED82DED1931005ED7EE /* Frameworks */,
 				A0AF6DD92DE3A1A300B0D838 /* Products */,
 			);
@@ -122,6 +154,7 @@
 				A0AF6DD82DE3A1A300B0D838 /* PS5NORMacApp.app */,
 				A0AF6DE52DE3A1A500B0D838 /* PS5NORMacAppTests.xctest */,
 				A0AF6DEF2DE3A1A500B0D838 /* PS5NORMacAppUITests.xctest */,
+				A067FF132DED4B6200C4EB09 /* UpdaterHelperGUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +162,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A067FF122DED4B6200C4EB09 /* UpdaterHelperGUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A067FF1E2DED4B6300C4EB09 /* Build configuration list for PBXNativeTarget "UpdaterHelperGUI" */;
+			buildPhases = (
+				A067FF0F2DED4B6200C4EB09 /* Sources */,
+				A067FF102DED4B6200C4EB09 /* Frameworks */,
+				A067FF112DED4B6200C4EB09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A067FF142DED4B6200C4EB09 /* UpdaterHelperGUI */,
+			);
+			name = UpdaterHelperGUI;
+			packageProductDependencies = (
+			);
+			productName = UpdaterHelperGUI;
+			productReference = A067FF132DED4B6200C4EB09 /* UpdaterHelperGUI.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A0AF6DD72DE3A1A300B0D838 /* PS5NORMacApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0AF6DF92DE3A1A500B0D838 /* Build configuration list for PBXNativeTarget "PS5NORMacApp" */;
@@ -137,6 +192,7 @@
 				A0AF6DD52DE3A1A300B0D838 /* Frameworks */,
 				A0AF6DD62DE3A1A300B0D838 /* Resources */,
 				A099AEF62DED1950005ED7EE /* Embed Frameworks */,
+				A067FF1F2DED4BF700C4EB09 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -147,6 +203,7 @@
 			);
 			name = PS5NORMacApp;
 			packageProductDependencies = (
+				A0C8186B2DEDC31100F8F485 /* ZIPFoundation */,
 			);
 			productName = PS5NORMacApp;
 			productReference = A0AF6DD82DE3A1A300B0D838 /* PS5NORMacApp.app */;
@@ -208,9 +265,12 @@
 				KnownAssetTags = (
 					New,
 				);
-				LastSwiftUpdateCheck = 1630;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
+					A067FF122DED4B6200C4EB09 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					A0AF6DD72DE3A1A300B0D838 = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -234,6 +294,7 @@
 			mainGroup = A0AF6DCF2DE3A1A300B0D838;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				A0C8186A2DEDC31100F8F485 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A0AF6DD92DE3A1A300B0D838 /* Products */;
@@ -243,11 +304,19 @@
 				A0AF6DD72DE3A1A300B0D838 /* PS5NORMacApp */,
 				A0AF6DE42DE3A1A500B0D838 /* PS5NORMacAppTests */,
 				A0AF6DEE2DE3A1A500B0D838 /* PS5NORMacAppUITests */,
+				A067FF122DED4B6200C4EB09 /* UpdaterHelperGUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A067FF112DED4B6200C4EB09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0AF6DD62DE3A1A300B0D838 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +341,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A067FF0F2DED4B6200C4EB09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0AF6DD42DE3A1A300B0D838 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +385,67 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		A067FF1C2DED4B6300C4EB09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sam.UpdaterHelperGUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A067FF1D2DED4B6300C4EB09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sam.UpdaterHelperGUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		A0AF6DF72DE3A1A500B0D838 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -342,6 +479,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = K6293UD486;
@@ -406,6 +544,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = K6293UD486;
@@ -424,6 +563,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -437,6 +577,7 @@
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -455,7 +596,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.PS5NORMacApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -474,6 +615,7 @@
 				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -492,7 +634,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.PS5NORMacApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -579,6 +721,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A067FF1E2DED4B6300C4EB09 /* Build configuration list for PBXNativeTarget "UpdaterHelperGUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A067FF1C2DED4B6300C4EB09 /* Debug */,
+				A067FF1D2DED4B6300C4EB09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A0AF6DD32DE3A1A300B0D838 /* Build configuration list for PBXProject "PS5NORMacApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -616,6 +767,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A0C8186A2DEDC31100F8F485 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.19;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A0C8186B2DEDC31100F8F485 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0C8186A2DEDC31100F8F485 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A0AF6DD02DE3A1A300B0D838 /* Project object */;
 }
