@@ -1,28 +1,16 @@
-//  SettingsView.swift
-//  PS5NORMacApp
-//
-//  Created by Sam Stanwell on 28/05/2025.
-//
-
 import SwiftUI
-import Combine
-import ZIPFoundation   // ← Make sure ZIPFoundation is added via SPM
 
 struct SettingsView: View {
     @EnvironmentObject var settings: AppSettings
-
-    // MARK: – URLs / Constants
-    private let latestReleaseAPI = URL(string: "https://api.github.com/repos/TIDYBEATS1/PS5NORMacApp/releases/latest")!
-    private let downloadBaseURLString = "https://github.com/TIDYBEATS1/PS5NORMacApp/releases/download/"
-
-    @State private var isUpdating     = false
-    @State private var updateMessage  = ""
-    @State private var showUpdateAlert = false
-
+    
+    @State private var isUpdating = false
+    @State private var updateStatus = ""
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("App Settings")
-                .font(.largeTitle).bold()
+                .font(.largeTitle)
+                .bold()
                 .padding(.bottom, 10)
 
             Form {
@@ -72,22 +60,23 @@ struct SettingsView: View {
 
                 Section(header: Text("Updates")) {
                     Toggle("Enable auto-update", isOn: $settings.autoUpdateEnabled)
-
+                    
                     Button(action: {
-                        Task {
-                            await performUpdate()
-                        }
+                        checkForUpdates()
                     }) {
                         HStack {
-                            if isUpdating {
-                                ProgressView()
-                                    .scaleEffect(0.75)
-                                    .padding(.trailing, 4)
-                            }
-                            Text("Update App")
+                            Image(systemName: "arrow.down.circle")
+                            Text("Check for Updates")
                         }
                     }
                     .disabled(isUpdating)
+                    
+                    if !updateStatus.isEmpty {
+                        Text(updateStatus)
+                            .foregroundColor(.secondary)
+                            .font(.caption)
+                            .padding(.top, 5)
+                    }
                 }
 
                 Button("Reset to Defaults") {
@@ -97,115 +86,107 @@ struct SettingsView: View {
                 .foregroundColor(.red)
             }
             .padding()
-            .alert("Update Status", isPresented: $showUpdateAlert) {
-                Button("OK", role: .cancel) { }
-            } message: {
-                Text(updateMessage)
-            }
-
             Spacer()
         }
         .padding()
         .frame(minWidth: 500, minHeight: 600)
     }
 
-    // MARK: – Update Logic
+    func checkForUpdates() {
+        isUpdating = true
+        updateStatus = "Checking for updates..."
 
-    /// 1. Fetch “latest” release info from GitHub API
-    /// 2. Download the ZIP into a temp file
-    /// 3. Unzip to a temp folder
-    /// 4. Locate the .app inside and replace the one in /Applications
-    /// 5. Relaunch the new copy
-    private func performUpdate() async {
-        guard settings.autoUpdateEnabled else {
-            updateMessage = "Auto-update is disabled."
-            showUpdateAlert = true
+        let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0.0"
+        let apiURL = URL(string: "https://api.github.com/repos/TIDYBEATS1/PS5NorMacApp/releases/latest")!
+
+        URLSession.shared.dataTask(with: apiURL) { data, response, error in
+            guard let data = data, error == nil else {
+                DispatchQueue.main.async {
+                    isUpdating = false
+                    updateStatus = "Failed to fetch release info."
+                }
+                return
+            }
+
+            do {
+                if let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
+                   let latestVersion = json["tag_name"] as? String,
+                   let assets = json["assets"] as? [[String: Any]],
+                   let zipURLString = assets.first?["browser_download_url"] as? String {
+
+                    if latestVersion.compare(currentVersion, options: .numeric) == .orderedDescending {
+                        DispatchQueue.main.async {
+                            updateStatus = "Update available: \(latestVersion). Downloading..."
+                        }
+                        downloadAndUnzip(from: zipURLString)
+                    } else {
+                        DispatchQueue.main.async {
+                            isUpdating = false
+                            updateStatus = "You're on the latest version (\(currentVersion))."
+                        }
+                    }
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    isUpdating = false
+                    updateStatus = "Error parsing release info."
+                }
+            }
+        }.resume()
+    }
+
+    func downloadAndUnzip(from urlString: String) {
+        guard let url = URL(string: urlString) else {
+            DispatchQueue.main.async {
+                isUpdating = false
+                updateStatus = "Invalid download URL."
+            }
             return
         }
 
-        isUpdating = true
-        updateMessage = ""
-        showUpdateAlert = false
-
-        do {
-            // 1) Get latest release info
-            let (data, _) = try await URLSession.shared.data(from: latestReleaseAPI)
-            let decoder = JSONDecoder()
-            struct Release: Decodable {
-                let tag_name: String
-            }
-            let release = try decoder.decode(Release.self, from: data)
-            let versionTag = release.tag_name   // e.g. “2.2.0”
-
-            // 2) Build download URL (assumes the .zip is named “PS5NORMacApp.app.zip”)
-            guard let zipURL = URL(string: "\(downloadBaseURLString)\(versionTag)/PS5NORMacApp.app.zip") else {
-                throw NSError(domain: "Updater", code: 1, userInfo: [NSLocalizedDescriptionKey: "Invalid download URL"])
+        let task = URLSession.shared.downloadTask(with: url) { tempURL, response, error in
+            guard let tempURL = tempURL else {
+                DispatchQueue.main.async {
+                    isUpdating = false
+                    updateStatus = "Download failed."
+                }
+                return
             }
 
-            // 3) Download into temp file
-            let tempZip = FileManager.default.temporaryDirectory
-                .appendingPathComponent("PS5NORMacApp_\(versionTag).zip")
-            let (tempData, _) = try await URLSession.shared.data(from: zipURL)
-            try tempData.write(to: tempZip)
+            let fileManager = FileManager.default
+            let downloads = fileManager.urls(for: .downloadsDirectory, in: .userDomainMask).first!
+            let destinationURL = downloads.appendingPathComponent("PS5NORMacApp.zip")
+            let appPath = downloads.appendingPathComponent("PS5NORMacApp.app")
 
-            // 4) Unzip into a temp folder
-            let tempUnzipFolder = FileManager.default.temporaryDirectory
-                .appendingPathComponent("PS5NORMacApp_\(versionTag)_unzipped", isDirectory: true)
-            // Clean up old folder if exists
-            if FileManager.default.fileExists(atPath: tempUnzipFolder.path) {
-                try FileManager.default.removeItem(at: tempUnzipFolder)
+            do {
+                if fileManager.fileExists(atPath: destinationURL.path) {
+                    try fileManager.removeItem(at: destinationURL)
+                }
+                try fileManager.moveItem(at: tempURL, to: destinationURL)
+
+                if fileManager.fileExists(atPath: appPath.path) {
+                    try fileManager.removeItem(at: appPath)
+                }
+
+                // Unzip
+                let unzipTask = Process()
+                unzipTask.launchPath = "/usr/bin/unzip"
+                unzipTask.arguments = ["-o", destinationURL.path, "-d", downloads.path]
+                unzipTask.launch()
+                unzipTask.waitUntilExit()
+
+                DispatchQueue.main.async {
+                    isUpdating = false
+                    updateStatus = "Update downloaded to Downloads folder."
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    isUpdating = false
+                    updateStatus = "Error during update: \(error.localizedDescription)"
+                }
             }
-            try FileManager.default.createDirectory(at: tempUnzipFolder, withIntermediateDirectories: true)
-            // unzip
-            try FileManager.default.unzipItem(at: tempZip, to: tempUnzipFolder)
-
-            // 5) Locate the .app bundle inside
-            let contents = try FileManager.default.contentsOfDirectory(at: tempUnzipFolder, includingPropertiesForKeys: nil)
-            guard let newAppURL = contents.first(where: { $0.pathExtension == "app" }) else {
-                throw NSError(domain: "Updater", code: 2, userInfo: [NSLocalizedDescriptionKey: "No .app found in archive"])
-            }
-
-            // 6) Destination (Applications folder)
-            let destinationURL = URL(fileURLWithPath: "/Applications")
-                .appendingPathComponent(newAppURL.lastPathComponent)
-
-            // 7) Remove existing copy in /Applications (if any)
-            if FileManager.default.fileExists(atPath: destinationURL.path) {
-                try FileManager.default.removeItem(at: destinationURL)
-            }
-
-            // 8) Move the unzipped .app into /Applications
-            try FileManager.default.moveItem(at: newAppURL, to: destinationURL)
-
-            updateMessage = "Update to \(versionTag) installed. Relaunching..."
-            showUpdateAlert = true
-
-            // 9) Relaunch
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                let bundleID = Bundle.main.bundleIdentifier!
-                let task = Process()
-                task.launchPath = "/usr/bin/open"
-                task.arguments = ["-b", bundleID]
-                try? task.run()
-
-                // Quit current app
-                NSApp.terminate(nil)
-            }
-
-        } catch {
-            updateMessage = "Update failed: \(error.localizedDescription)"
-            showUpdateAlert = true
         }
 
-        isUpdating = false
+        task.resume()
     }
 }
-
-#if DEBUG
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
-            .environmentObject(AppSettings())
-    }
-}
-#endif

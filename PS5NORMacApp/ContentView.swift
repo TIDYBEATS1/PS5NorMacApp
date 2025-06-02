@@ -20,6 +20,7 @@ struct ContentView: View {
     @State private var errorCodeInput: String = ""
     @State private var errorDescription: String = ""
     @EnvironmentObject var settings: AppSettings  // Make sure this is here!
+    
     @State private var errorSolution: String = ""
     @StateObject private var errorLookupViewModel = ErrorLookupViewModel()
     @StateObject private var viewModel = ErrorLookupViewModel()
@@ -208,8 +209,11 @@ struct ContentView: View {
                     }
                     .padding()
                 }
-            case .hexEditor:
-                HexEditorView(data: $binData, referenceData: referenceData)
+                case .hexEditor:
+                HexEditorView(data: $fileData, referenceData: nil)
+                            .environmentObject(settings) // inject settings so HexEditor can access it
+                            .frame(minWidth: 700, minHeight: 400)
+                
             case .errorCodes:
                 ErrorLookupView(
                     errorCodeInput: $errorCodeInput,
@@ -235,20 +239,7 @@ struct ContentView: View {
                 }
             }
         }
-        VStack {
-            Button("Run Updater") {
-                runUpdater { success, message in
-                    DispatchQueue.main.async {
-                        updateStatus = message
-                    }
-                }
-            }
-            
-            Text(updateStatus)
-                .padding()
-        }
     }
-
             
             private func loadFile() {
                 guard let fileURL = selectedFile else { return }
