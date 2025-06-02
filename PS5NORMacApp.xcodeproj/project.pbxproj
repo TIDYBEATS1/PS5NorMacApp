@@ -65,10 +65,21 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				release.yml,
+				Version.txt,
 			);
 			target = A0AF6DD72DE3A1A300B0D838 /* PS5NORMacApp */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		A0C818762DEDD14A00F8F485 /* Exceptions for "PS5NORMacApp" folder in "Compile Sources" phase from "PS5NORMacApp" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = A0AF6DD42DE3A1A300B0D838 /* Sources */;
+			membershipExceptions = (
+				Version.txt,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A067FF142DED4B6200C4EB09 /* UpdaterHelperGUI */ = {
@@ -80,6 +91,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				A09B79F42DED28910021CE7C /* Exceptions for "PS5NORMacApp" folder in "PS5NORMacApp" target */,
+				A0C818762DEDD14A00F8F485 /* Exceptions for "PS5NORMacApp" folder in "Compile Sources" phase from "PS5NORMacApp" target */,
 			);
 			path = PS5NORMacApp;
 			sourceTree = "<group>";

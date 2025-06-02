@@ -112,15 +112,13 @@ struct ContentView: View {
                         .font(.title)
                         .fontWeight(.bold)
                     
-                    Text(versionFetcher.version)
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+                    Text("Current Version: \(versionFetcher.currentVersion)")
+                    Text("Latest Version: \(versionFetcher.latestVersion)")
+                    if versionFetcher.checkingUpdate {
+                        ProgressView()
+                    }
                 }
-                .padding(.top, 10)
-                .frame(maxWidth: .infinity)
-                .onAppear {
-                    versionFetcher.fetchVersion()
-                }
+                .padding()
                 
                 Text("This is in development, use at your own risk")
                     .font(.subheadline)

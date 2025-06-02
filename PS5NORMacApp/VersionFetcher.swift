@@ -1,34 +1,56 @@
-import Foundation
+import SwiftUI
 import Combine
 
-class VersionFetcher: ObservableObject {
-    @Published private(set) var version: String = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0"
+struct GitHubRelease: Decodable {
+    let tag_name: String
+}
 
-    func fetchVersion() {
-        guard let url = URL(string: "https://raw.githubusercontent.com/your-repo/your-project/main/version.txt") else {
+class VersionFetcher: ObservableObject {
+    @Published var currentVersion: String = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0"
+    @Published var latestVersion: String = "N/A"
+    @Published var updateAvailable: Bool = false
+    @Published var checkingUpdate: Bool = false
+
+    private var cancellables = Set<AnyCancellable>()
+    
+    init() {
+        fetchLatestVersion()  // Always fetch latest version at startup
+    }
+    
+    func fetchLatestVersion() {
+        checkingUpdate = true
+        let urlString = "https://api.github.com/repos/TIDYBEATS1/PS5NORMacApp/releases/latest"
+        guard let url = URL(string: urlString) else {
+            DispatchQueue.main.async {
+                self.latestVersion = "Invalid URL"
+                self.checkingUpdate = false
+            }
             return
         }
-
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard error == nil,
-                  let data = data,
-                  let fetchedVersion = String(data: data, encoding: .utf8)?.trimmingCharacters(in: .whitespacesAndNewlines)
-            else {
-                return
-            }
-
-            DispatchQueue.main.async {
-                if self.isVersion(fetchedVersion, newerThan: self.version) {
-                    self.version = fetchedVersion
+        
+        URLSession.shared.dataTaskPublisher(for: url)
+            .map { $0.data }
+            .decode(type: GitHubRelease.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                self.checkingUpdate = false
+                if case let .failure(error) = completion {
+                    self.latestVersion = "Error: \(error.localizedDescription)"
                 }
-            }
-        }.resume()
+            }, receiveValue: { release in
+                self.latestVersion = release.tag_name
+                self.updateAvailable = self.isVersion(release.tag_name, newerThan: self.currentVersion)
+            })
+            .store(in: &cancellables)
     }
-
+    
     private func isVersion(_ versionA: String, newerThan versionB: String) -> Bool {
-        let partsA = versionA.split(separator: ".").compactMap { Int($0) }
-        let partsB = versionB.split(separator: ".").compactMap { Int($0) }
-
+        let cleanA = versionA.trimmingCharacters(in: CharacterSet(charactersIn: "v"))
+        let cleanB = versionB.trimmingCharacters(in: CharacterSet(charactersIn: "v"))
+        
+        let partsA = cleanA.split(separator: ".").compactMap { Int($0) }
+        let partsB = cleanB.split(separator: ".").compactMap { Int($0) }
+        
         for i in 0..<max(partsA.count, partsB.count) {
             let a = i < partsA.count ? partsA[i] : 0
             let b = i < partsB.count ? partsB[i] : 0
