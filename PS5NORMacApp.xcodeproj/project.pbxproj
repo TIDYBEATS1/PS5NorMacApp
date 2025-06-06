@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A007F5892DEF8F0500FE1E99 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A007F5882DEF8F0500FE1E99 /* CryptoSwift */; };
+		A05EC9D02DF1F9D800A9E8DE /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = A05EC9CF2DF1F9D800A9E8DE /* PythonKit */; };
 		A0C8186C2DEDC31100F8F485 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = A0C8186B2DEDC31100F8F485 /* ZIPFoundation */; };
-		A0C818712DEDCC1F00F8F485 /* UpdaterHelperGUI.app in Copy Files */ = {isa = PBXBuildFile; fileRef = A067FF132DED4B6200C4EB09 /* UpdaterHelperGUI.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A0C818BD2DEDE42400F8F485 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A0C818BC2DEDE42400F8F485 /* FirebaseAuth */; };
 		A0C818BF2DEDE42400F8F485 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = A0C818BE2DEDE42400F8F485 /* FirebaseCore */; };
 		A0C818E82DEE106100F8F485 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A0C818E72DEE106100F8F485 /* FirebaseFirestore */; };
@@ -34,13 +35,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		A05EC9D82DF20C5500A9E8DE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		A067FF1F2DED4BF700C4EB09 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Contents/Helpers;
 			dstSubfolderSpec = 1;
 			files = (
-				A0C818712DEDCC1F00F8F485 /* UpdaterHelperGUI.app in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,38 +64,43 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A0B276BB2DF10F43003F0B18 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A067FF132DED4B6200C4EB09 /* UpdaterHelperGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpdaterHelperGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A05EC9DA2DF20C5500A9E8DE /* EmcLogGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EmcLogGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AF6DD82DE3A1A300B0D838 /* PS5NORMacApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PS5NORMacApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AF6DE52DE3A1A500B0D838 /* PS5NORMacAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PS5NORMacAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AF6DEF2DE3A1A500B0D838 /* PS5NORMacAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PS5NORMacAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0C818682DEDC09500F8F485 /* UpdaterHelperGUI.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = UpdaterHelperGUI.app; path = "../../Desktop/UpdaterHelperGUI 2025-06-02 12-03-28/UpdaterHelperGUI.app"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		A09B79F42DED28910021CE7C /* Exceptions for "PS5NORMacApp" folder in "PS5NORMacApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				release.yml,
-				Version.txt,
-			);
-			target = A0AF6DD72DE3A1A300B0D838 /* PS5NORMacApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		A0C818762DEDD14A00F8F485 /* Exceptions for "PS5NORMacApp" folder in "Compile Sources" phase from "PS5NORMacApp" target */ = {
+		A05EC9E32DF211BD00A9E8DE /* Exceptions for "EmcLogGenerator" folder in "Copy Files" phase from "EmcLogGenerator" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = A0AF6DD42DE3A1A300B0D838 /* Sources */;
+			buildPhase = A05EC9D82DF20C5500A9E8DE /* CopyFiles */;
 			membershipExceptions = (
-				Version.txt,
+				decode_emc.py,
 			);
 		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		A05EC9DB2DF20C5500A9E8DE /* EmcLogGenerator */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A05EC9E32DF211BD00A9E8DE /* Exceptions for "EmcLogGenerator" folder in "Copy Files" phase from "EmcLogGenerator" target */,
+			);
+			path = EmcLogGenerator;
+			sourceTree = "<group>";
+		};
 		A067FF142DED4B6200C4EB09 /* UpdaterHelperGUI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = UpdaterHelperGUI;
@@ -94,10 +108,6 @@
 		};
 		A0AF6DDA2DE3A1A300B0D838 /* PS5NORMacApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				A09B79F42DED28910021CE7C /* Exceptions for "PS5NORMacApp" folder in "PS5NORMacApp" target */,
-				A0C818762DEDD14A00F8F485 /* Exceptions for "PS5NORMacApp" folder in "Compile Sources" phase from "PS5NORMacApp" target */,
-			);
 			path = PS5NORMacApp;
 			sourceTree = "<group>";
 		};
@@ -114,7 +124,7 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A067FF102DED4B6200C4EB09 /* Frameworks */ = {
+		A05EC9D72DF20C5500A9E8DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,9 +138,11 @@
 				A0C8186C2DEDC31100F8F485 /* ZIPFoundation in Frameworks */,
 				A0C818E82DEE106100F8F485 /* FirebaseFirestore in Frameworks */,
 				A0C818BF2DEDE42400F8F485 /* FirebaseCore in Frameworks */,
+				A05EC9D02DF1F9D800A9E8DE /* PythonKit in Frameworks */,
 				A0C818EF2DEE259200F8F485 /* FirebaseCrashlytics in Frameworks */,
 				A0C818ED2DEE259200F8F485 /* FirebaseAnalytics in Frameworks */,
 				A0C818BD2DEDE42400F8F485 /* FirebaseAuth in Frameworks */,
+				A007F5892DEF8F0500FE1E99 /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,11 +173,11 @@
 		A0AF6DCF2DE3A1A300B0D838 = {
 			isa = PBXGroup;
 			children = (
-				A0C818682DEDC09500F8F485 /* UpdaterHelperGUI.app */,
 				A0AF6DDA2DE3A1A300B0D838 /* PS5NORMacApp */,
 				A0AF6DE82DE3A1A500B0D838 /* PS5NORMacAppTests */,
 				A0AF6DF22DE3A1A500B0D838 /* PS5NORMacAppUITests */,
 				A067FF142DED4B6200C4EB09 /* UpdaterHelperGUI */,
+				A05EC9DB2DF20C5500A9E8DE /* EmcLogGenerator */,
 				A099AED82DED1931005ED7EE /* Frameworks */,
 				A0AF6DD92DE3A1A300B0D838 /* Products */,
 			);
@@ -177,7 +189,7 @@
 				A0AF6DD82DE3A1A300B0D838 /* PS5NORMacApp.app */,
 				A0AF6DE52DE3A1A500B0D838 /* PS5NORMacAppTests.xctest */,
 				A0AF6DEF2DE3A1A500B0D838 /* PS5NORMacAppUITests.xctest */,
-				A067FF132DED4B6200C4EB09 /* UpdaterHelperGUI.app */,
+				A05EC9DA2DF20C5500A9E8DE /* EmcLogGenerator */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,27 +197,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A067FF122DED4B6200C4EB09 /* UpdaterHelperGUI */ = {
+		A05EC9D92DF20C5500A9E8DE /* EmcLogGenerator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A067FF1E2DED4B6300C4EB09 /* Build configuration list for PBXNativeTarget "UpdaterHelperGUI" */;
+			buildConfigurationList = A05EC9DE2DF20C5500A9E8DE /* Build configuration list for PBXNativeTarget "EmcLogGenerator" */;
 			buildPhases = (
-				A067FF0F2DED4B6200C4EB09 /* Sources */,
-				A067FF102DED4B6200C4EB09 /* Frameworks */,
-				A067FF112DED4B6200C4EB09 /* Resources */,
+				A05EC9D62DF20C5500A9E8DE /* Sources */,
+				A05EC9D72DF20C5500A9E8DE /* Frameworks */,
+				A05EC9D82DF20C5500A9E8DE /* CopyFiles */,
+				A05EC9F22DF228F400A9E8DE /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				A067FF142DED4B6200C4EB09 /* UpdaterHelperGUI */,
+				A05EC9DB2DF20C5500A9E8DE /* EmcLogGenerator */,
 			);
-			name = UpdaterHelperGUI;
+			name = EmcLogGenerator;
 			packageProductDependencies = (
 			);
-			productName = UpdaterHelperGUI;
-			productReference = A067FF132DED4B6200C4EB09 /* UpdaterHelperGUI.app */;
-			productType = "com.apple.product-type.application";
+			productName = EmcLogGenerator;
+			productReference = A05EC9DA2DF20C5500A9E8DE /* EmcLogGenerator */;
+			productType = "com.apple.product-type.tool";
 		};
 		A0AF6DD72DE3A1A300B0D838 /* PS5NORMacApp */ = {
 			isa = PBXNativeTarget;
@@ -216,6 +229,7 @@
 				A0AF6DD62DE3A1A300B0D838 /* Resources */,
 				A099AEF62DED1950005ED7EE /* Embed Frameworks */,
 				A067FF1F2DED4BF700C4EB09 /* Copy Files */,
+				A0B276BB2DF10F43003F0B18 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -232,6 +246,8 @@
 				A0C818E72DEE106100F8F485 /* FirebaseFirestore */,
 				A0C818EC2DEE259200F8F485 /* FirebaseAnalytics */,
 				A0C818EE2DEE259200F8F485 /* FirebaseCrashlytics */,
+				A007F5882DEF8F0500FE1E99 /* CryptoSwift */,
+				A05EC9CF2DF1F9D800A9E8DE /* PythonKit */,
 			);
 			productName = PS5NORMacApp;
 			productReference = A0AF6DD82DE3A1A300B0D838 /* PS5NORMacApp.app */;
@@ -289,14 +305,14 @@
 		A0AF6DD02DE3A1A300B0D838 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = NO;
+				BuildIndependentTargetsInParallel = YES;
 				KnownAssetTags = (
 					New,
 				);
 				LastSwiftUpdateCheck = 1640;
-				LastUpgradeCheck = 1630;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					A067FF122DED4B6200C4EB09 = {
+					A05EC9D92DF20C5500A9E8DE = {
 						CreatedOnToolsVersion = 16.4;
 					};
 					A0AF6DD72DE3A1A300B0D838 = {
@@ -324,6 +340,8 @@
 			packageReferences = (
 				A0C8186A2DEDC31100F8F485 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 				A0C818BB2DEDE42400F8F485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A007F5872DEF8F0500FE1E99 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				A05EC9CE2DF1F9D800A9E8DE /* XCRemoteSwiftPackageReference "PythonKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A0AF6DD92DE3A1A300B0D838 /* Products */;
@@ -333,19 +351,12 @@
 				A0AF6DD72DE3A1A300B0D838 /* PS5NORMacApp */,
 				A0AF6DE42DE3A1A500B0D838 /* PS5NORMacAppTests */,
 				A0AF6DEE2DE3A1A500B0D838 /* PS5NORMacAppUITests */,
-				A067FF122DED4B6200C4EB09 /* UpdaterHelperGUI */,
+				A05EC9D92DF20C5500A9E8DE /* EmcLogGenerator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A067FF112DED4B6200C4EB09 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A0AF6DD62DE3A1A300B0D838 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,8 +380,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A05EC9F22DF228F400A9E8DE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Path to built app bundle\nAPP_BUNDLE=\"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}\"\n\n# Path to CLI binary inside app bundle\nCLI_BIN=\"${APP_BUNDLE}/Contents/Resources/EmcLogGenerator\"\n\n# Only try to sign if the file exists\nif [ -f \"$CLI_BIN\" ]; then\n    echo \"Codesigning $CLI_BIN...\"\n    # Use your identity (from security find-identity -v -p codesigning)\n    codesign --force --deep --sign \"Apple Development: menacingtube@gmail.com (9H8685BEDY)\" \"$CLI_BIN\"\n    codesign -dvv \"$CLI_BIN\"\nelse\n    echo \"EmcLogGenerator not found at $CLI_BIN\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		A067FF0F2DED4B6200C4EB09 /* Sources */ = {
+		A05EC9D62DF20C5500A9E8DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -414,67 +445,37 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		A067FF1C2DED4B6300C4EB09 /* Debug */ = {
+		A05EC9DF2DF20C5500A9E8DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = UpdaterHelperGUI/UpdaterHelperGUI.entitlements;
+				CODE_SIGN_ENTITLEMENTS = EmcLogGenerator/EmcLogGenerator.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K6293UD486;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sam.UpdaterHelperGUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sam.EmcLogGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				REGISTER_APP_GROUPS = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		A067FF1D2DED4B6300C4EB09 /* Release */ = {
+		A05EC9E02DF20C5500A9E8DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = UpdaterHelperGUI/UpdaterHelperGUI.entitlements;
+				CODE_SIGN_ENTITLEMENTS = EmcLogGenerator/EmcLogGenerator.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = K6293UD486;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sam.UpdaterHelperGUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sam.EmcLogGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				REGISTER_APP_GROUPS = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -514,6 +515,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 79GPTCMC4X;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -579,6 +581,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 79GPTCMC4X;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -614,13 +617,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = K6293UD486;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "PS5 Nor Tool";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -632,7 +638,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 4.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.PS5NORMacApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -656,13 +662,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = K6293UD486;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "PS5 Nor Tool";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -674,7 +683,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 4.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.PS5NORMacApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -693,6 +702,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
@@ -713,6 +723,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
@@ -732,6 +743,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -750,6 +762,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -766,11 +779,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A067FF1E2DED4B6300C4EB09 /* Build configuration list for PBXNativeTarget "UpdaterHelperGUI" */ = {
+		A05EC9DE2DF20C5500A9E8DE /* Build configuration list for PBXNativeTarget "EmcLogGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A067FF1C2DED4B6300C4EB09 /* Debug */,
-				A067FF1D2DED4B6300C4EB09 /* Release */,
+				A05EC9DF2DF20C5500A9E8DE /* Debug */,
+				A05EC9E02DF20C5500A9E8DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -814,6 +827,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A007F5872DEF8F0500FE1E99 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.4;
+			};
+		};
+		A05EC9CE2DF1F9D800A9E8DE /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		A0C8186A2DEDC31100F8F485 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
@@ -833,6 +862,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A007F5882DEF8F0500FE1E99 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A007F5872DEF8F0500FE1E99 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+		A05EC9CF2DF1F9D800A9E8DE /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A05EC9CE2DF1F9D800A9E8DE /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
 		A0C8186B2DEDC31100F8F485 /* ZIPFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A0C8186A2DEDC31100F8F485 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;

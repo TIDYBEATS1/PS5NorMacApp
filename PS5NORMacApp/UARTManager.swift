@@ -45,20 +45,29 @@ class UARTManager: ObservableObject {
     }
     
     func loadErrorCodes() {
-        guard let url = Bundle.main.url(forResource: "ps5_error_codes", withExtension: "json") else {
-            print("UARTManager Error: JSON file 'ps5_error_codes.json' not found in bundle")
+        guard let url = Bundle.main.url(forResource: "errorCodes", withExtension: "json") else {
+            print("UARTManager Error: JSON file 'errorCodes.json' not found in bundle")
             return
         }
         
         do {
             let data = try Data(contentsOf: url)
-            let decoded: PS5ErrorCodeDictionary = try JSONDecoder().decode(PS5ErrorCodeDictionary.self, from: data)
+            
+            // Decode the top‐level array into [PS5ErrorCode]
+            let decodedArray = try JSONDecoder().decode([PS5ErrorCode].self, from: data)
+            
+            // Convert the array into a dictionary keyed by `.code`
+            let dictionary = Dictionary(
+                uniqueKeysWithValues: decodedArray.map { ($0.code, $0) }
+            )
+            
             DispatchQueue.main.async {
-                self.errorCodes = decoded
-                print("UARTManager: Loaded \(decoded.count) PS5 error codes.")
+                self.errorCodes = dictionary
+                print("UARTManager: ✅ Loaded \(dictionary.count) PS5 error codes.")
             }
-        } catch {
-            print("UARTManager Error decoding JSON: \(error)")
+        }
+        catch {
+            print("UARTManager ❌ Error decoding JSON: \(error)")
         }
     }
     
