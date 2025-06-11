@@ -87,7 +87,7 @@ struct SettingsView: View {
                                 }
                             }
                         } label: {
-                            Label("EMC Log Decoder CLI Tool", systemImage: "terminal")
+                            Label("EMC Log Decoder CLI Tool By apewalkers ", systemImage: "terminal")
                         }
                     }
                 }

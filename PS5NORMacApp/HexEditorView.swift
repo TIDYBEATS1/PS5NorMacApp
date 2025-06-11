@@ -1,6 +1,7 @@
 import SwiftUI
 import UniformTypeIdentifiers
 import AppKit
+import CryptoKit
 
 let highlightedOffsets: [Int] = Array(
     Set(
@@ -14,11 +15,17 @@ let highlightedOffsets: [Int] = Array(
 
 struct HexEditorView: View {
     @EnvironmentObject var settings: AppSettings
-
+    @Binding var data: Data        // Data being edited
     @State private var editableData: Data = Data()
     @State private var fileURL: URL?
     @State private var showFileImporter = false
     @State private var invalidBytes: Set<Int> = []
+
+    @State private var searchText: String = ""
+    @State private var searchResults: [Int] = []
+    @State private var currentMatchIndex: Int = 0
+    @State private var findOffset: String = ""   // User enters offset (hex or decimal)
+    @State private var highlightedRange: Range<Int>? = nil
 
     let bytesPerRow = 16
 
@@ -44,13 +51,34 @@ struct HexEditorView: View {
             }
             .padding([.horizontal, .top])
 
+            HStack {
+                TextField("Search (e.g., 4F 52 42 or text)", text: $searchText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(width: 300)
+
+                Button("Find") {
+                    goToOffset()
+                }
+
+                if !searchResults.isEmpty {
+                    Button("Next") {
+                        currentMatchIndex = (currentMatchIndex + 1) % searchResults.count
+                    }
+
+                    Text("\(currentMatchIndex + 1) of \(searchResults.count)")
+                        .foregroundColor(.gray)
+                }
+            }
+            .padding(.horizontal)
+
             Divider()
 
             ScrollView(.vertical) {
                 LazyVStack(alignment: .leading, spacing: 2) {
                     if !editableData.isEmpty {
                         GroupBox(label: Text("Highlighted Sections")) {
-                            ForEach(highlightedOffsets.map { $0 / bytesPerRow }.removingDuplicates(), id: \.self) { row in                                VStack(alignment: .leading, spacing: 4) {
+                            ForEach(highlightedOffsets.map { $0 / bytesPerRow }.removingDuplicates(), id: \.self) { row in
+                                VStack(alignment: .leading, spacing: 4) {
                                     if let label = labelForOffsetRow(row) {
                                         Text(label)
                                             .font(.caption)
@@ -73,15 +101,14 @@ struct HexEditorView: View {
             Divider()
 
             HStack {
-                let checksumValue = calculateChecksum(from: editableData)
-                Text("Checksum: 0x\(String(format: "%02X", checksumValue)) (\(checksumValue))")
-                    .font(.system(size: 14, design: .monospaced))
-                    .foregroundColor(isChecksumValid(checksumValue) ? .green : .red)
+                Text("Checksum: \(calculateChecksum(from: editableData))")
+                    .font(.caption)
+                    .monospaced()
+                    .padding(4)
 
                 Spacer()
             }
-            .padding(.vertical, 6)
-            .padding(.horizontal)
+            .background(Color.secondary.opacity(0.1))
         }
         .frame(minWidth: 600, minHeight: 300)
         .fileImporter(
@@ -94,6 +121,8 @@ struct HexEditorView: View {
                 self.fileURL = selected
                 self.editableData = try Data(contentsOf: selected)
                 self.invalidBytes.removeAll()
+                self.searchResults.removeAll()
+                self.searchText = ""
                 print("Loaded editable file: \(selected.lastPathComponent)")
             } catch {
                 print("Failed to load editable file: \(error)")
@@ -114,6 +143,17 @@ struct HexEditorView: View {
             }
         }
     }
+    func goToOffset() {
+           let offsetStr = findOffset.trimmingCharacters(in: .whitespacesAndNewlines)
+           let offset: Int?
+           if offsetStr.lowercased().hasPrefix("0x") {
+               offset = Int(offsetStr.dropFirst(2), radix: 16)
+           } else {
+               offset = Int(offsetStr)
+           }
+           guard let off = offset, off >= 0, off < data.count else { return }
+           highlightedRange = off..<(off+1)
+       }
 
     private func hexBytesView(for row: Int) -> some View {
         let startOffset = row * bytesPerRow
@@ -121,8 +161,8 @@ struct HexEditorView: View {
 
         return HStack(spacing: 4) {
             ForEach(startOffset..<endOffset, id: \.self) { i in
-                let byte = editableData[i]
                 let isHighlighted = highlightedOffsets.contains(i)
+                let isMatch = !searchResults.isEmpty && searchResults[currentMatchIndex..<min(searchResults.count, currentMatchIndex + bytesPerRow)].contains(i)
 
                 TextField("", text: Binding(
                     get: { String(format: "%02X", editableData[i]) },
@@ -139,7 +179,9 @@ struct HexEditorView: View {
                 .font(.system(size: CGFloat(settings.hexFontSize), design: .monospaced))
                 .frame(width: 32)
                 .padding(2)
-                .background(invalidBytes.contains(i) ? Color.red.opacity(0.5) : isHighlighted ? Color.yellow.opacity(0.4) : Color.clear)
+                .background(invalidBytes.contains(i) ? Color.red.opacity(0.5) :
+                                isMatch ? Color.blue.opacity(0.6) :
+                                isHighlighted ? Color.yellow.opacity(0.4) : Color.clear)
                 .cornerRadius(3)
                 .textFieldStyle(PlainTextFieldStyle())
             }
@@ -195,13 +237,9 @@ struct HexEditorView: View {
         data.reduce(0) { $0 + Int($1) } & 0xFF
     }
 
-    private func isChecksumValid(_ value: Int) -> Bool {
-        (0x00...0xFF).contains(value)
-    }
-
     private func saveEditedHex() {
         let panel = NSSavePanel()
-        panel.allowedFileTypes = ["bin"]
+        panel.allowedContentTypes = [.data]
         panel.nameFieldStringValue = "EditedPS5Nor.bin"
 
         if panel.runModal() == .OK, let url = panel.url {
@@ -209,6 +247,31 @@ struct HexEditorView: View {
                 try editableData.write(to: url)
             } catch {
                 print("Failed to save edited file: \(error)")
+            }
+        }
+    }
+
+    private func performSearch() {
+        searchResults.removeAll()
+        currentMatchIndex = 0
+
+        guard !searchText.isEmpty else { return }
+
+        let searchLower = searchText.lowercased()
+        var pattern: [UInt8] = []
+
+        if searchLower.contains(" ") || searchLower.allSatisfy({ "0123456789abcdef ".contains($0) }) {
+            let parts = searchLower.split(separator: " ")
+            pattern = parts.compactMap { UInt8($0, radix: 16) }
+        } else {
+            pattern = Array(searchLower.utf8)
+        }
+
+        guard !pattern.isEmpty, pattern.count <= editableData.count else { return }
+
+        for i in 0...(editableData.count - pattern.count) {
+            if editableData[i..<i + pattern.count].elementsEqual(pattern) {
+                searchResults.append(contentsOf: i..<i + pattern.count)
             }
         }
     }
