@@ -8,7 +8,7 @@
 
     <item>
       <title>Version 4.0.0</title>
-      <sparkle:releaseNotesLink>https://yourusername.github.io/yourrepo/release-notes/4.6.0.html</sparkle:releaseNotesLink>
+      <sparkle:releaseNotesLink>https://raw.githubusercontent.com/TIDYBEATS1/PS5NorMacApp/refs/heads/main/release-notes/4.6.0.xml</sparkle:releaseNotesLink>
       <pubDate>Sun, 15 Jun 2025 10:00:00 +0000</pubDate>
       <enclosure
         url="https://github.com/TIDYBEATS1/PS5NORMacApp/releases/download/v4.6.0/PS5NORMacApp.zip"
