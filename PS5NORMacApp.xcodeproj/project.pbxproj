@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A007F5892DEF8F0500FE1E99 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A007F5882DEF8F0500FE1E99 /* CryptoSwift */; };
 		A05EC9D02DF1F9D800A9E8DE /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = A05EC9CF2DF1F9D800A9E8DE /* PythonKit */; };
+		A06ACE202E01D6B6005158D9 /* UpdateKit in Frameworks */ = {isa = PBXBuildFile; productRef = A06ACE1F2E01D6B6005158D9 /* UpdateKit */; };
+		A0C0AE5D2E00351C003FC9E1 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = A0C0AE5C2E00351C003FC9E1 /* FirebaseRemoteConfig */; };
 		A0C8186C2DEDC31100F8F485 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = A0C8186B2DEDC31100F8F485 /* ZIPFoundation */; };
 		A0C818BD2DEDE42400F8F485 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A0C818BC2DEDE42400F8F485 /* FirebaseAuth */; };
 		A0C818BF2DEDE42400F8F485 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = A0C818BE2DEDE42400F8F485 /* FirebaseCore */; };
@@ -101,11 +103,6 @@
 			path = EmcLogGenerator;
 			sourceTree = "<group>";
 		};
-		A067FF142DED4B6200C4EB09 /* UpdaterHelperGUI */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = UpdaterHelperGUI;
-			sourceTree = "<group>";
-		};
 		A0AF6DDA2DE3A1A300B0D838 /* PS5NORMacApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PS5NORMacApp;
@@ -135,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C0AE5D2E00351C003FC9E1 /* FirebaseRemoteConfig in Frameworks */,
 				A0C8186C2DEDC31100F8F485 /* ZIPFoundation in Frameworks */,
 				A0C818E82DEE106100F8F485 /* FirebaseFirestore in Frameworks */,
 				A0C818BF2DEDE42400F8F485 /* FirebaseCore in Frameworks */,
@@ -142,6 +140,7 @@
 				A0C818EF2DEE259200F8F485 /* FirebaseCrashlytics in Frameworks */,
 				A0C818ED2DEE259200F8F485 /* FirebaseAnalytics in Frameworks */,
 				A0C818BD2DEDE42400F8F485 /* FirebaseAuth in Frameworks */,
+				A06ACE202E01D6B6005158D9 /* UpdateKit in Frameworks */,
 				A007F5892DEF8F0500FE1E99 /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,7 +175,6 @@
 				A0AF6DDA2DE3A1A300B0D838 /* PS5NORMacApp */,
 				A0AF6DE82DE3A1A500B0D838 /* PS5NORMacAppTests */,
 				A0AF6DF22DE3A1A500B0D838 /* PS5NORMacAppUITests */,
-				A067FF142DED4B6200C4EB09 /* UpdaterHelperGUI */,
 				A05EC9DB2DF20C5500A9E8DE /* EmcLogGenerator */,
 				A099AED82DED1931005ED7EE /* Frameworks */,
 				A0AF6DD92DE3A1A300B0D838 /* Products */,
@@ -248,6 +246,8 @@
 				A0C818EE2DEE259200F8F485 /* FirebaseCrashlytics */,
 				A007F5882DEF8F0500FE1E99 /* CryptoSwift */,
 				A05EC9CF2DF1F9D800A9E8DE /* PythonKit */,
+				A0C0AE5C2E00351C003FC9E1 /* FirebaseRemoteConfig */,
+				A06ACE1F2E01D6B6005158D9 /* UpdateKit */,
 			);
 			productName = PS5NORMacApp;
 			productReference = A0AF6DD82DE3A1A300B0D838 /* PS5NORMacApp.app */;
@@ -342,6 +342,7 @@
 				A0C818BB2DEDE42400F8F485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A007F5872DEF8F0500FE1E99 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 				A05EC9CE2DF1F9D800A9E8DE /* XCRemoteSwiftPackageReference "PythonKit" */,
+				A06ACE1E2E01D6B6005158D9 /* XCRemoteSwiftPackageReference "UpdateKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A0AF6DD92DE3A1A300B0D838 /* Products */;
@@ -638,7 +639,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 4.5.0;
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.PS5NORMacApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -646,6 +647,7 @@
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_SKIP_AUTOLINKING_ALL_FRAMEWORKS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -683,7 +685,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
-				MARKETING_VERSION = 4.5.0;
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sam.PS5NORMacApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -691,6 +693,7 @@
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_SKIP_AUTOLINKING_ALL_FRAMEWORKS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -843,6 +846,14 @@
 				kind = branch;
 			};
 		};
+		A06ACE1E2E01D6B6005158D9 /* XCRemoteSwiftPackageReference "UpdateKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TIDYBEATS1/UpdateKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		A0C8186A2DEDC31100F8F485 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
@@ -871,6 +882,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A05EC9CE2DF1F9D800A9E8DE /* XCRemoteSwiftPackageReference "PythonKit" */;
 			productName = PythonKit;
+		};
+		A06ACE1F2E01D6B6005158D9 /* UpdateKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A06ACE1E2E01D6B6005158D9 /* XCRemoteSwiftPackageReference "UpdateKit" */;
+			productName = UpdateKit;
+		};
+		A0C0AE5C2E00351C003FC9E1 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0C818BB2DEDE42400F8F485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
 		};
 		A0C8186B2DEDC31100F8F485 /* ZIPFoundation */ = {
 			isa = XCSwiftPackageProductDependency;

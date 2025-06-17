@@ -1,5 +1,5 @@
 {
-  "originHash" : "925688ee56895dd32bcdea58cc620b5f16e4512317c5b2f993875b8c513c9b59",
+  "originHash" : "9d2f918069b964d4747899e363a91bdf39d0811f6a2735944d55e64eb709a3fc",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -134,6 +134,15 @@
       "state" : {
         "revision" : "102a647b573f60f73afdce5613a51d71349fe507",
         "version" : "1.30.0"
+      }
+    },
+    {
+      "identity" : "updatekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/TIDYBEATS1/UpdateKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "44b3da2ae05be1a85dfaffe274c010df142d6e75"
       }
     },
     {

@@ -6,37 +6,29 @@ struct PatchNotesSheetView: View {
     let onCancel: () -> Void
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            Text("New Update Available")
-                .font(.title)
+        VStack(spacing: 20) {
+            Text("🚀 New Version Available")
+                .font(.title2)
                 .bold()
 
             ScrollView {
                 Text(notes)
-                    .font(.body)
-                    .padding()
-                    .background(Color(NSColor.textBackgroundColor))
-                    .cornerRadius(8)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
             }
-            .frame(minHeight: 200)
 
-            HStack {
-                Spacer()
-                Button("Cancel") {
+            HStack(spacing: 16) {
+                Button("Later") {
                     onCancel()
                 }
-                .keyboardShortcut(.cancelAction)
-
                 Button("Update Now") {
                     onUpdate()
                 }
                 .buttonStyle(.borderedProminent)
-                .keyboardShortcut(.defaultAction)
             }
         }
-        .padding(24)
-        .frame(width: 500)
+        .padding()
+        .frame(minWidth: 400, minHeight: 300)
     }
 }
 

@@ -11,7 +11,8 @@ import SwiftUI
 struct MainContentView: View {
     @EnvironmentObject var settings: AppSettings
     @EnvironmentObject var auth: AuthManager
-    @EnvironmentObject var updater: Updater
+    @EnvironmentObject var updateChecker: UpdateChecker
+    @StateObject private var versionChecker = VersionChecker()
 
     @State private var skipLogin = false
 
@@ -19,6 +20,8 @@ struct MainContentView: View {
         ZStack {
             ContentView()
                 .environmentObject(settings)
+                .environmentObject(versionChecker)
+
             
         }
     }

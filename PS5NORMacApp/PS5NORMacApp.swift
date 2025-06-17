@@ -1,34 +1,42 @@
 import SwiftUI
 import Firebase
-import FirebaseAuth
 import FirebaseCore
+import FirebaseAuth
+import UpdateKit
 
 @main
 struct PS5NORMacApp: App {
-    @StateObject private var settings = AppSettings()
-    @StateObject private var auth = AuthManager()
-    @StateObject var updater = Updater.shared
+    @StateObject private var settings       = AppSettings()
+    @StateObject private var auth           = AuthManager()
     @AppStorage("isDarkMode") private var isDarkMode: Bool = false
-    @StateObject private var authManager = AuthManager()
-    @State private var selectedBinFile: URL? = nil
+    @StateObject private var authManager    = AuthManager()
+    @State private   var selectedBinFile: URL? = nil
+    @StateObject private var updateManager = UpdateManager(repo: "TIDYBEATS1/PS5NorMacApp")
+
+    // ↓ New UpdateKit properties ↓
+    @State private var updateInfo: UpdateInfo?
+    
     init() {
         setupFirebase()
         Auth.auth().useAppLanguage()
     }
-
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .preferredColorScheme(isDarkMode ? .dark : .light)
                 .environmentObject(settings)
                 .environmentObject(auth)
-                .environmentObject(updater)
+                .environmentObject(updateManager)   // if you want to inject it
+                .onAppear {
+                    updateManager.checkForUpdates()
+                }
         }
-
+        
         WindowGroup("Settings") {
             SettingsView(selectedBinFile: $selectedBinFile)
-              .environmentObject(authManager)
-              .environmentObject(AppSettings.shared)
+                .environmentObject(authManager)
+                .environmentObject(AppSettings.shared)
                 .environmentObject(settings)
         }
         .commands {
@@ -43,7 +51,9 @@ struct PS5NORMacApp: App {
     
     private func setupFirebase() {
         if let data = PlistDecryptor.decryptedPlistData() {
-            let tempPlistURL = FileManager.default.temporaryDirectory.appendingPathComponent("GoogleService-Info.plist")
+            let tempPlistURL = FileManager.default
+                .temporaryDirectory
+                .appendingPathComponent("GoogleService-Info.plist")
             do {
                 try data.write(to: tempPlistURL)
                 if let options = FirebaseOptions(contentsOfFile: tempPlistURL.path) {
@@ -53,7 +63,7 @@ struct PS5NORMacApp: App {
                     print("❌ Could not create FirebaseOptions")
                 }
             } catch {
-                print("❌ Failed to write decrypted plist: \(error)")
+                print("❌ Failed to write decrypted plist:", error)
             }
         } else {
             print("❌ Could not decrypt plist")

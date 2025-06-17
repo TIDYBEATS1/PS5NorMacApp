@@ -1,87 +1,51 @@
-// Updater.swift
 import Foundation
-import SwiftUI
-import ZIPFoundation
+import FirebaseRemoteConfig
+import AppKit
+import Firebase
 
-class Updater: ObservableObject {
-    static let shared = Updater()
 
-    @Published var isUpdating = false
-    @Published var updateStatusMessage: String? = nil
-    @Published var showPatchNotes = false
-    @Published var patchNotes: String? = nil
-
-    func fetchLatestPatchNotes(completion: @escaping (String?) -> Void) {
-        let url = URL(string: "https://api.github.com/repos/TIDYBEATS1/PS5NorMacApp/releases/latest")!
-
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            if let data = data,
-               let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
-               let body = json["body"] as? String {
-                completion(body)
+class UpdateChecker: ObservableObject {
+    private let remoteConfig = RemoteConfig.remoteConfig()
+    
+    @Published var latestVersion: String = ""
+    @Published var releaseNotes: String = ""
+    @Published var forceUpdate: Bool = false
+    @Published var updateAvailable: Bool = false
+    @Published var showPatchNotes: Bool = false
+    
+    func checkForUpdate(currentVersion: String) {
+        print("📡 Checking for updates...")
+        
+        // Debug check to ensure Firebase is configured
+        print("🧪 Firebase Apps: \(FirebaseApp.allApps ?? [:])")
+        
+        remoteConfig.fetchAndActivate { [weak self] status, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                print("❌ RemoteConfig fetch error: \(error.localizedDescription)")
+                return
+            }
+            
+            self.latestVersion = self.remoteConfig["latest_version"].stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
+            self.releaseNotes = self.remoteConfig["release_notes"].stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
+            self.forceUpdate = self.remoteConfig["force_update"].boolValue
+            
+            print("✅ RemoteConfig fetch succeeded.")
+            print("📦 Latest Version: \(self.latestVersion)")
+            print("📝 Release Notes: \(self.releaseNotes)")
+            print("🔒 Force Update: \(self.forceUpdate)")
+            
+            self.updateAvailable = self.latestVersion.compare(currentVersion, options: .numeric) == .orderedDescending
+            
+            if self.updateAvailable {
+                print("🚀 Update available. Showing patch notes.")
+                DispatchQueue.main.async {
+                    self.showPatchNotes = true
+                }
             } else {
-                completion(nil)
-            }
-        }.resume()
-    }
-
-    func downloadAndUpdateApp(from urlString: String) {
-        guard let url = URL(string: urlString) else {
-            updateStatusMessage = "Invalid update URL"
-            return
-        }
-
-        isUpdating = true
-        updateStatusMessage = "Starting download..."
-
-        let tempDir = FileManager.default.temporaryDirectory
-        let zipFileURL = tempDir.appendingPathComponent("PS5NORMacApp.app.zip")
-        let unzipDestination = tempDir.appendingPathComponent("UnzippedApp")
-
-        try? FileManager.default.removeItem(at: zipFileURL)
-        try? FileManager.default.removeItem(at: unzipDestination)
-
-        let downloadTask = URLSession.shared.downloadTask(with: url) { localURL, _, error in
-            DispatchQueue.main.async {
-                if let error = error {
-                    self.updateStatusMessage = "Download error: \(error.localizedDescription)"
-                    self.isUpdating = false
-                    return
-                }
-
-                guard let localURL = localURL else {
-                    self.updateStatusMessage = "Download error: no file"
-                    self.isUpdating = false
-                    return
-                }
-
-                do {
-                    try FileManager.default.moveItem(at: localURL, to: zipFileURL)
-                    self.updateStatusMessage = "Unzipping update..."
-
-                    try FileManager.default.unzipItem(at: zipFileURL, to: unzipDestination)
-
-                    let newAppURL = unzipDestination.appendingPathComponent("PS5NORMacApp.app")
-                    let runningAppURL = Bundle.main.bundleURL
-                    let backupURL = runningAppURL.deletingLastPathComponent().appendingPathComponent("PS5NORMacApp_backup.app")
-
-                    if FileManager.default.fileExists(atPath: backupURL.path) {
-                        try FileManager.default.removeItem(at: backupURL)
-                    }
-                    try FileManager.default.moveItem(at: runningAppURL, to: backupURL)
-                    try FileManager.default.moveItem(at: newAppURL, to: runningAppURL)
-
-                    try FileManager.default.removeItem(at: zipFileURL)
-                    try FileManager.default.removeItem(at: unzipDestination)
-
-                    self.updateStatusMessage = "Update succeeded! Please restart the app."
-                } catch {
-                    self.updateStatusMessage = "Update failed: \(error.localizedDescription)"
-                }
-
-                self.isUpdating = false
+                print("✅ App is up to date.")
             }
         }
-        downloadTask.resume()
     }
 }
